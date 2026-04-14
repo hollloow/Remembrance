@@ -13,7 +13,11 @@ public class PlayerBehavior : MonoBehaviour
     float jumpTimer = 0;
     private Rigidbody2D rb;
     float gravity;
-    
+
+    //para o atack
+    PlayerAtack Attack;
+    Vector2 lastInput;
+
     //script do InputSystem
     private InputControls inputC;
     
@@ -35,16 +39,28 @@ public class PlayerBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         gravity = rb.gravityScale;
+        Attack = GetComponent<PlayerAtack>();
     }
 
     //update q faz o player andar e pular
     private void FixedUpdate()
     {
         //movimentação por linearVelocity
+        if(inputC.Player.Move.ReadValue<Vector2>().x !=0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
+        {
+            lastInput = inputC.Player.Move.ReadValue<Vector2>();
+        }        
         move = inputC.Player.Move.ReadValue<Vector2>().x;
         rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
         
         Jumping();
+
+        //se o botão de attack foi apertado chame a função de attake
+        if (inputC.Player.Attack.IsPressed() && Attack.attacking==false)
+        {
+            Attack.Atack(lastInput);
+        }
+        
     }
 
     void Jumping()
@@ -58,7 +74,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (inputC.Player.Jump.IsInProgress())
             {
-                if (jumpTimer >= 0.5f)
+                if (jumpTimer >= 0.25f)
                 {
                     rb.gravityScale = gravity;
                     canJump = false;
@@ -74,7 +90,7 @@ public class PlayerBehavior : MonoBehaviour
             
         }
     }
-
+    
     private void Update()
     {
         //IMPORTANTE 
