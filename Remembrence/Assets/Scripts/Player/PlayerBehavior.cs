@@ -1,12 +1,14 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBehavior : MonoBehaviour
 {
     // variaveis para a movimentação
     [SerializeField] private int playerSpeed;
     private float move;
-    
+
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
     bool canJump = true;
@@ -16,19 +18,21 @@ public class PlayerBehavior : MonoBehaviour
 
     //para o atack
     PlayerAtack Attack;
-    Vector2 lastInput;
+    private Vector2 lastInput;
 
     //script do InputSystem
     private InputControls inputC;
-    
+
 
     //setando o inputSystem
     private void OnEnable()
     {
-        
         inputC = new InputControls();
         inputC.Enable();
+        inputC.Player.Jump.canceled += OnJumpButonReleased;
+        inputC.Player.Attack.started += OnAttack;
     }
+
     private void OnDisable()
     {
         inputC.Disable();
@@ -46,26 +50,21 @@ public class PlayerBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         //movimentação por linearVelocity
-        if(inputC.Player.Move.ReadValue<Vector2>().x !=0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
+        if (inputC.Player.Move.ReadValue<Vector2>().x != 0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
         {
             lastInput = inputC.Player.Move.ReadValue<Vector2>();
-        }        
+        }
+
         move = inputC.Player.Move.ReadValue<Vector2>().x;
         rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
-        
+
         Jumping();
 
         //se o botão de attack foi apertado chame a função de attake
-        if (inputC.Player.Attack.IsPressed() && Attack.attacking==false)
-        {
-            Attack.Atack(lastInput);
-        }
-        
     }
 
     void Jumping()
     {
-
         //primeiro checa se já apertou o botão de pulo
         //ao apertar espaço a gravidade é 0
         //adiciona força no player pra cima por linearVelocity enquanto o player segurar espaço por 0.5 segundos
@@ -85,28 +84,27 @@ public class PlayerBehavior : MonoBehaviour
                     rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, jumpForce);
                     PickOfTheJump();
                 }
-            
             }
-            
         }
     }
-    
-    private void Update()
+
+    private void OnJumpButonReleased(InputAction.CallbackContext obj)
     {
-        //IMPORTANTE 
-        //precisa melhorar
-        // isso esta parando o pulo quando solta o espaço
-        //como fazer isso fora do update
-        if(inputC.Player.Jump.WasReleasedThisFrame())
-        {
-            rb.gravityScale = gravity;
-            canJump = false;
-        }
+        rb.gravityScale = gravity;
+        canJump = false;
     }
 
     void PickOfTheJump()
     {
         jumpTimer += Time.deltaTime;
+    }
+    
+    private void OnAttack(InputAction.CallbackContext obj)
+    {
+        if (!Attack.attacking)
+        {
+            Attack.Atack(lastInput);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerAtack : MonoBehaviour
@@ -6,18 +7,21 @@ public class PlayerAtack : MonoBehaviour
     [SerializeField] GameObject hitBox;
     Transform trans;
     public bool attacking;
-    float attackTimer;
+    [SerializeField]float attackTimer;
+    private bool count;
 
     private void Start()
     {
         trans = hitBox.GetComponent<Transform>();
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public Vector2 Atack(Vector2 lastInput)
     {
-        //ao apertar o botão de ataque
-        //defina a posição do ataque dependendo do ultimo botão q o player apertou
+        //ao apertar o botï¿½o de ataque
+        //defina a posiï¿½ï¿½o do ataque dependendo do ultimo botï¿½o q o player apertou
         attacking = true;
+        count = true;
         if (lastInput.x > 0)
         {
             trans.transform.rotation = Quaternion.Euler(0, 0, -90);
@@ -47,15 +51,16 @@ public class PlayerAtack : MonoBehaviour
     private void FixedUpdate()
     {
         //contador para desativar o ataque
-        if (attacking)
+        if (count)
         {
             attackTimer += Time.deltaTime;
         }
         if (attackTimer >= 0.2f) 
         {
-            attacking = false;
+            count = false;  
             attackTimer = 0;
             CancelAttack();
+            StartCoroutine(Colldown());
         }
     }
     //cancelando o ataque
@@ -63,5 +68,11 @@ public class PlayerAtack : MonoBehaviour
     {
         hitBox.GetComponent<BoxCollider2D>().enabled = false;
         hitBox.GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    IEnumerator Colldown()
+    {
+        yield return  new WaitForSeconds(0.1f);
+        attacking = false;
     }
 }
