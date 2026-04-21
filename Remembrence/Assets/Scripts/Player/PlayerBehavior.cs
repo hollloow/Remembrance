@@ -60,6 +60,13 @@ public class PlayerBehavior : MonoBehaviour
 
         Jumping();
 
+        //checando se o player ta morto
+        if (PlayerStats.Dead)
+        {
+            //  ESPAÇO PARA ANIMAÇÃO DE MORTE E MAIS COISAS LEGAIS :D
+            Destroy(gameObject);
+        }
+
         //se o botão de attack foi apertado chame a função de attake
     }
 
