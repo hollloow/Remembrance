@@ -68,6 +68,7 @@ public class PlayerAtack : MonoBehaviour
     {
         hitBox.GetComponent<BoxCollider2D>().enabled = false;
         hitBox.GetComponent<SpriteRenderer>().enabled = false;
+        hitBox.GetComponent<Attack>().hit = false;
     }
 
     IEnumerator Colldown()

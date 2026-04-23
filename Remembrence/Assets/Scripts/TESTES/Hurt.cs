@@ -8,14 +8,15 @@ public class Hurt : MonoBehaviour
     
     [SerializeField] private int damage;
     private PlayerReactions _playerReactions = new PlayerReactions();
-    
+    public bool hit = false;
     
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !hit)
         {
             _playerReactions.OnHurt(damage);
+            hit = true;
         }
     }
 }

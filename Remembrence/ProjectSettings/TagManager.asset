@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Attack
   - UI
+  - Damageble
   layers:
   - Default
   - TransparentFX
