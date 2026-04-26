@@ -11,6 +11,7 @@ public class PlayerBehavior : MonoBehaviour
 
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
+    [SerializeField] private float jumpHolding;
     bool canJump = true;
     float jumpTimer = 0;
     private Rigidbody2D rb;
@@ -80,7 +81,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (inputC.Player.Jump.IsInProgress())
             {
-                if (jumpTimer >= 0.25f)
+                if (jumpTimer >= jumpHolding)
                 {
                     rb.gravityScale = gravity;
                     canJump = false;
