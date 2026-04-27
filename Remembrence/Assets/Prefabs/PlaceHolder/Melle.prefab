@@ -317,7 +317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 10
-  enemyDamage: 0
-  enemySpeed: 3
+  enemyDamage: 5
+  enemySpeed: 80
   detectRange: 10
+  rb: {fileID: 0}
   attackPrefab: {fileID: 5677722956176801737}

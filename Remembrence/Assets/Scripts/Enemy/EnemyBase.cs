@@ -9,8 +9,13 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected int enemyDamage;
     [SerializeField] protected int enemySpeed;
     [SerializeField] protected float detectRange;
+    [SerializeField] protected Rigidbody2D rb;
 
-    
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     //código de tomar dano e morrer
     public void Damaged(int damage)
     {
@@ -26,15 +31,4 @@ public class EnemyBase : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
-    //andar até o player (essa função sera chamada pelo codigo do inimigo especifico)
-    protected void FollowPlayer(Vector3 playerPosition)
-    {
-        //movetoeards n é a melhor opção, ver outras
-        transform.position = Vector3.MoveTowards(transform.position,
-            playerPosition, enemySpeed*Time.deltaTime);
-        
-    }
-
-   
 }
