@@ -115,6 +115,7 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         //ao encostar no chao o player pod pular dnovo

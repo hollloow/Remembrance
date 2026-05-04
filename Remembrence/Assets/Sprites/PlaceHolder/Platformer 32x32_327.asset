@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TileSetGramaOWO (1)_1
+  m_Name: Platformer 32x32_327
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 85256448, guid: 6e221259790089442a17f59c40a791f7, type: 3}
+  m_Sprite: {fileID: -7736774, guid: ef0f88f9e7012884b938519d96238ab1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
