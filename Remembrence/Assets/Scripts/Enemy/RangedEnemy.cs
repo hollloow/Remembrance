@@ -4,8 +4,14 @@ using UnityEngine;
 public class RangedEnemy : EnemyBase
 {
     [SerializeField] private float range;
+    [SerializeField] private float collDown;
     [SerializeField] private GameObject projectile;
+    [SerializeField] private float distanceShoot;
     [SerializeField] private float cooldown;
+
+    PlayerReactions _playerReactions = new PlayerReactions();
+
+    //detect > range
 
     private void FixedUpdate()
     {
@@ -14,6 +20,10 @@ public class RangedEnemy : EnemyBase
     
     private void CheckPlayerPosition()
     {
+        //passando o tempo do collDown
+        collDown -= Time.deltaTime;
+
+        //checando a posição do player, direção do player e a distancia do player para o inimigo
         Vector3 playerPosition = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x,
             GameObject.FindGameObjectWithTag("Player").transform.position.y, 1);
         
@@ -22,24 +32,50 @@ public class RangedEnemy : EnemyBase
         float distanceFromPlayer =
             Mathf.Abs(Vector3.Distance(playerPosition, transform.position));
 
-        if (distanceFromPlayer <= detectRange)
-        {
-            Walk(direction);
-        }
+        //se o player tiver detectavel, se aproxime
+        //se o player tiver a alcance ataque
+        //se o player tiver muito perto corra
 
-        if (distanceFromPlayer <= range)
+        //PRECISA DE ALTERAÇÕES PARA GAMEFELL
+        if (distanceFromPlayer <= range/2)
         {
-            Attack();
+            WalkAway(direction);
         }
+        else if (distanceFromPlayer >= range && distanceFromPlayer <= detectRange)
+        {
+            GetCloser(direction);
+        }
+        else if (distanceFromPlayer <= range && collDown <= 0)
+        {
+            Attack(direction);
+        }
+        
     }
 
-    private void Walk(float direction)
+    private void WalkAway(float direction)
     {
         rb.linearVelocityX =direction * -1 * enemySpeed *Time.deltaTime;
     }
-
-    private void Attack()
+    private void GetCloser(float direction)
     {
+        rb.linearVelocityX = direction  * enemySpeed * Time.deltaTime;
+    }
+
+    private void Attack(float direction)
+    {
+        //casta um raycast, se acertar o player o player toma dano
         
+
+        //PRECISA DE GAMEFELL
+            RaycastHit2D acertou = Physics2D.Raycast(transform.position, Vector2.right * direction, distanceShoot);
+
+            if (acertou.collider.gameObject.CompareTag("Player"))
+            {
+                _playerReactions.OnHurt(enemyDamage);
+            }
+
+
+        //reseta o collDown
+        collDown = 2.5f;
     }
 }
