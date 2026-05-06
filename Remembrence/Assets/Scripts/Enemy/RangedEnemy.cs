@@ -1,17 +1,24 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class RangedEnemy : EnemyBase
 {
     [SerializeField] private float range;
     [SerializeField] private float collDown;
-    [SerializeField] private GameObject projectile;
     [SerializeField] private float distanceShoot;
-    [SerializeField] private float cooldown;
+    private float direction;
+    private bool attacking;
+    private SpriteRenderer sr;
 
     PlayerReactions _playerReactions = new PlayerReactions();
 
     //detect > range
+
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
 
     private void FixedUpdate()
     {
@@ -27,7 +34,7 @@ public class RangedEnemy : EnemyBase
         Vector3 playerPosition = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x,
             GameObject.FindGameObjectWithTag("Player").transform.position.y, 1);
         
-        float direction = Math.Sign(playerPosition.x - transform.position.x) ;
+        direction = Math.Sign(playerPosition.x - transform.position.x) ;
         
         float distanceFromPlayer =
             Mathf.Abs(Vector3.Distance(playerPosition, transform.position));
@@ -37,45 +44,59 @@ public class RangedEnemy : EnemyBase
         //se o player tiver muito perto corra
 
         //PRECISA DE ALTERAÇÕES PARA GAMEFELL
-        if (distanceFromPlayer <= range/2)
+        if (!attacking)
         {
-            WalkAway(direction);
-        }
-        else if (distanceFromPlayer >= range && distanceFromPlayer <= detectRange)
-        {
-            GetCloser(direction);
-        }
-        else if (distanceFromPlayer <= range && collDown <= 0)
-        {
-            Attack(direction);
+            if (distanceFromPlayer <= range / 1.5)
+            {
+                WalkAway();
+            }
+            else if (distanceFromPlayer >= range && distanceFromPlayer <= detectRange)
+            {
+                GetCloser();
+            }
+            else if (distanceFromPlayer <= range && collDown <= 0)
+            {
+                StartCoroutine(Attack());
+            }
         }
         
     }
 
-    private void WalkAway(float direction)
+    private void WalkAway()
     {
-        rb.linearVelocityX =direction * -1 * enemySpeed *Time.deltaTime;
+        rb.linearVelocityX = direction * -1 * enemySpeed *Time.deltaTime;
     }
-    private void GetCloser(float direction)
+    private void GetCloser()
     {
         rb.linearVelocityX = direction  * enemySpeed * Time.deltaTime;
     }
 
-    private void Attack(float direction)
+    
+    IEnumerator Attack()
     {
         //casta um raycast, se acertar o player o player toma dano
-        
+
 
         //PRECISA DE GAMEFELL
-            RaycastHit2D acertou = Physics2D.Raycast(transform.position, Vector2.right * direction, distanceShoot);
+        attacking = true;
+        sr.color = Color.yellow;
 
+
+        yield return new WaitForSeconds(1);
+        RaycastHit2D acertou = Physics2D.Raycast(transform.position, Vector2.right * direction, distanceShoot);
+
+        if (acertou)
+        {
             if (acertou.collider.gameObject.CompareTag("Player"))
             {
-                _playerReactions.OnHurt(enemyDamage);
+                    _playerReactions.OnHurt(enemyDamage);
             }
-
+        }
+        
+        sr.color = Color.white;
 
         //reseta o collDown
+        attacking = false;
         collDown = 2.5f;
     }
 }

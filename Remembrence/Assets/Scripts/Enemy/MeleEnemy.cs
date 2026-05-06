@@ -7,7 +7,9 @@ public class MeleEnemy : EnemyBase
     //precisa melhorar o game feel
     
     [SerializeField] private GameObject attackPrefab;
+    [SerializeField] private float howCloseToAttack;
     private bool attacking = false;
+    private float colldown;
     
     private void FixedUpdate()
     {
@@ -23,6 +25,8 @@ public class MeleEnemy : EnemyBase
     //siga o player
     private void CheckPlayerInRange()
     {
+        colldown -= Time.deltaTime;
+
         Vector3 playerPosition = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x,
             GameObject.FindGameObjectWithTag("Player").transform.position.y, 1);
         
@@ -31,10 +35,10 @@ public class MeleEnemy : EnemyBase
         float distanceFromPlayer =
             Mathf.Abs(Vector3.Distance(playerPosition, transform.position));
     
-        if (distanceFromPlayer <= 3)
+        if (distanceFromPlayer <= howCloseToAttack && colldown <= 0)
         {
             //se o inimigo tiver perto attack
-            Attack(direction);   
+           StartCoroutine(Attack(direction));   
         }
         
         if (distanceFromPlayer <= detectRange && !attacking)
@@ -50,8 +54,12 @@ public class MeleEnemy : EnemyBase
         rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;
     }
 
-    void Attack(float playerPosition)
+    IEnumerator Attack(float playerPosition)
     {
+        attacking = true;
+
+        yield return new WaitForSeconds(0.35f);
+
         //coloca o attack na posição certa
         if (playerPosition > 0)
         {
@@ -65,22 +73,18 @@ public class MeleEnemy : EnemyBase
         }
         //seta q ta atacando
         //revela o attack e ativa a hitbox
-        attacking = true;
         attackPrefab.GetComponent<BoxCollider2D>().enabled = true;
         attackPrefab.GetComponent<SpriteRenderer>().enabled = true;
-        StartCoroutine(Atacando());
-    }
 
-    IEnumerator Atacando()
-    {
         //cooldown para o attack e para poder atacar e andar dnovo
         yield return new WaitForSeconds(0.8f);
         attackPrefab.GetComponent<BoxCollider2D>().enabled = false;
         attackPrefab.GetComponent<SpriteRenderer>().enabled = false;
         attackPrefab.GetComponent<Hurt>().hit =  false;
         
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.15f);
         attacking = false;
+        colldown = 1;
     }
 }
 

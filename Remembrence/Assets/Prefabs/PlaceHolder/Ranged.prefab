@@ -176,12 +176,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 10
-  enemyDamage: 5
+  enemyDamage: 10
   enemySpeed: 40
-  detectRange: 7
+  detectRange: 10
   rb: {fileID: 0}
-  range: 4
+  range: 5
   collDown: 0
   projectile: {fileID: 0}
-  distanceShoot: 3
+  distanceShoot: 5
   cooldown: 0

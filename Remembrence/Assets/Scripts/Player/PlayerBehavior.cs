@@ -8,6 +8,7 @@ public class PlayerBehavior : MonoBehaviour
     // variaveis para a movimentação
     [SerializeField] private int playerSpeed;
     private float move;
+    public bool moving;
 
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
@@ -57,7 +58,15 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         move = inputC.Player.Move.ReadValue<Vector2>().x;
-        rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
+        if(move != 0)
+        {
+            moving = true;
+        }
+        else
+        {
+            moving = false;
+        }
+            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
 
         Jumping();
 
