@@ -8,7 +8,6 @@ public class PlayerBehavior : MonoBehaviour
     // variaveis para a movimentação
     [SerializeField] private int playerSpeed;
     private float move;
-    public bool moving;
 
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
@@ -24,7 +23,9 @@ public class PlayerBehavior : MonoBehaviour
 
     //script do InputSystem
     private InputControls inputC;
-
+    
+    public float directionX;
+    public float directionY;
 
     //setando o inputSystem
     private void OnEnable()
@@ -58,16 +59,16 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         move = inputC.Player.Move.ReadValue<Vector2>().x;
-        if(move != 0)
-        {
-            moving = true;
-        }
-        else
-        {
-            moving = false;
-        }
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
 
+            if (move != 0)
+            {
+                directionX = move;
+            }
+            else
+            {
+                directionX = 0;
+            }
         Jumping();
 
         //checando se o player ta morto
@@ -86,29 +87,30 @@ public class PlayerBehavior : MonoBehaviour
         //ao apertar espaço a gravidade é 0
         //adiciona força no player pra cima por linearVelocity enquanto o player segurar espaço por 0.5 segundos
         //ao soltar espaço ou dpois de 0.5 segundos a gravidade volta e esse código n pod tocar até encostar no chao
-        if (canJump)
-        {
-            if (inputC.Player.Jump.IsInProgress())
+            if (inputC.Player.Jump.IsInProgress() && canJump)
             {
                 if (jumpTimer >= jumpHolding)
                 {
                     rb.gravityScale = gravity;
                     canJump = false;
+                    directionY = 0;
+                    jumpTimer = 0;
                 }
                 else
                 {
+                    directionY = 1;
                     rb.gravityScale = 0;
                     rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, jumpForce);
                     PickOfTheJump();
                 }
             }
-        }
     }
 
     private void OnJumpButonReleased(InputAction.CallbackContext obj)
     {
         rb.gravityScale = gravity;
         canJump = false;
+        directionY = 0;
     }
 
     void PickOfTheJump()
@@ -125,10 +127,9 @@ public class PlayerBehavior : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
-        //ao encostar no chao o player pod pular dnovo
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && !canJump)
         {
             jumpTimer = 0;
             canJump = true;
