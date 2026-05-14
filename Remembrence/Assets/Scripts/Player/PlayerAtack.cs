@@ -45,7 +45,6 @@ public class PlayerAtack : MonoBehaviour
 
         //ative o collider e o sprite
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
-        hitBox.GetComponent<SpriteRenderer>().enabled = true;
         return new Vector2();
     }
     private void FixedUpdate()
@@ -67,7 +66,6 @@ public class PlayerAtack : MonoBehaviour
     void CancelAttack()
     {
         hitBox.GetComponent<BoxCollider2D>().enabled = false;
-        hitBox.GetComponent<SpriteRenderer>().enabled = false;
         hitBox.GetComponent<Attack>().hit = false;
     }
 

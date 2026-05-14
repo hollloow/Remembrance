@@ -1,9 +1,10 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerBehavior : MonoBehaviour
+public class PlayerBehavior : PlayerAnimation
 {
     // variaveis para a movimentação
     [SerializeField] private int playerSpeed;
@@ -24,6 +25,7 @@ public class PlayerBehavior : MonoBehaviour
     //script do InputSystem
     private InputControls inputC;
     
+    //testes da camera
     public float directionX;
     public float directionY;
 
@@ -78,32 +80,45 @@ public class PlayerBehavior : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //se o botão de attack foi apertado chame a função de attake
+        //se o player tomou dano, por um segundo n toma mais nenhum dano.
+        if (PlayerStats.invincibility)
+        {
+            PlayerStats.InInvincibility += Time.deltaTime;
+            if (PlayerStats.InInvincibility >= PlayerStats.invincibilityTime)
+            {
+                PlayerStats.InInvincibility = 0;
+                PlayerStats.invincibility = false;
+                //animação invencibilidade
+            }
+        }
     }
 
+    #region Pulando
+    
     void Jumping()
     {
+        
         //primeiro checa se já apertou o botão de pulo
         //ao apertar espaço a gravidade é 0
         //adiciona força no player pra cima por linearVelocity enquanto o player segurar espaço por 0.5 segundos
         //ao soltar espaço ou dpois de 0.5 segundos a gravidade volta e esse código n pod tocar até encostar no chao
-            if (inputC.Player.Jump.IsInProgress() && canJump)
+        if (inputC.Player.Jump.IsInProgress() && canJump)
+        {
+            if (jumpTimer >= jumpHolding)
             {
-                if (jumpTimer >= jumpHolding)
-                {
-                    rb.gravityScale = gravity;
-                    canJump = false;
-                    directionY = 0;
-                    jumpTimer = 0;
-                }
-                else
-                {
-                    directionY = 1;
-                    rb.gravityScale = 0;
-                    rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, jumpForce);
-                    PickOfTheJump();
-                }
+                rb.gravityScale = gravity;
+                canJump = false;
+                directionY = 0;
+                jumpTimer = 0;
             }
+            else
+            {
+                directionY = 1;
+                rb.gravityScale = 0;
+                rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, jumpForce);
+                PickOfTheJump();
+            }
+        }
     }
 
     private void OnJumpButonReleased(InputAction.CallbackContext obj)
@@ -118,11 +133,17 @@ public class PlayerBehavior : MonoBehaviour
         jumpTimer += Time.deltaTime;
     }
     
+    #endregion
+
+    
+    
+    
     private void OnAttack(InputAction.CallbackContext obj)
     {
         if (!Attack.attacking)
         {
             Attack.Atack(lastInput);
+            OnAttackTrigger();
         }
     }
 

@@ -11,15 +11,13 @@ public class EnemyPatrol : EnemyBase
         wallkingTime += Time.deltaTime;
         transform.Translate(new(enemySpeed * Time.deltaTime * canMoveX, enemySpeed * Time.deltaTime * canMoveY, 0));
 
-        //se andar por esse tempo, mude a direção do movimento
+        //se andar por esse tempo, mude a direï¿½ï¿½o do movimento
         if (wallkingTime >= patrolTime)
         {
-            //anaimação de virar
+            //anaimaï¿½ï¿½o de virar
 
             enemySpeed *= -1;
             wallkingTime = 0;
         }
     }
-
-    
 }

@@ -6,6 +6,11 @@ public class PlayerStats
     //aqui ta todos os estatus do player
     public static int PlayerHp = 15;
     public static int PlayerMaxHp = 15;
+    
+    public static bool invincibility  = false;
+    public static float InInvincibility =0f;
+    public static float invincibilityTime =1.0f;
+    
     public static bool Dead = false;
 
     public static int PlayerMana = 20;

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerReactions
@@ -14,7 +15,17 @@ public class PlayerReactions
         if (PlayerStats.PlayerHp <= 0)
         {
             PlayerStats.Dead = true;
-            
         }
+        PlayerStats.invincibility = true;
     }
+
+    public void Invincibility()
+    {
+        PlayerStats.InInvincibility = 0;
+        PlayerStats.invincibility = false;
+        //tocar uma animação de invencibilidade
+    }
+    
+    
+    
 }

@@ -80,7 +80,6 @@ public class MeleEnemy : EnemyBase
         yield return new WaitForSeconds(0.8f);
         attackPrefab.GetComponent<BoxCollider2D>().enabled = false;
         attackPrefab.GetComponent<SpriteRenderer>().enabled = false;
-        attackPrefab.GetComponent<Hurt>().hit =  false;
         
         yield return new WaitForSeconds(0.15f);
         attacking = false;
