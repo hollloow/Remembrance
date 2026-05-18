@@ -4,8 +4,8 @@ using UnityEngine;
 public class PlayerStats
 {
     //aqui ta todos os estatus do player
-    public static int PlayerHp = 15;
-    public static int PlayerMaxHp = 15;
+    public static int PlayerHp = 30;
+    public static int PlayerMaxHp = 30;
     
     public static bool invincibility  = false;
     public static float InInvincibility =0f;
