@@ -24,10 +24,6 @@ public class PlayerBehavior : PlayerAnimation
 
     //script do InputSystem
     private InputControls inputC;
-    
-    //testes da camera
-    public float directionX;
-    public float directionY;
 
     //setando o inputSystem
     private void OnEnable()
@@ -54,23 +50,20 @@ public class PlayerBehavior : PlayerAnimation
     //update q faz o player andar e pular
     private void FixedUpdate()
     {
-        //movimentação por linearVelocity
+        
+        //determinando ond o ataque vai ser direcionado pela ultima tecla q o jogador clicou 
         if (inputC.Player.Move.ReadValue<Vector2>().x != 0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
         {
             lastInput = inputC.Player.Move.ReadValue<Vector2>();
         }
+        else
+        {
+            lastInput = new Vector2(lastInput.x, 0);
+        }
 
+        //movimentação por linearVelocity
         move = inputC.Player.Move.ReadValue<Vector2>().x;
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
-
-            if (move != 0)
-            {
-                directionX = move;
-            }
-            else
-            {
-                directionX = 0;
-            }
         Jumping();
 
         //checando se o player ta morto
@@ -108,12 +101,10 @@ public class PlayerBehavior : PlayerAnimation
             {
                 rb.gravityScale = gravity;
                 canJump = false;
-                directionY = 0;
                 jumpTimer = 0;
             }
             else
             {
-                directionY = 1;
                 rb.gravityScale = 0;
                 rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, jumpForce);
                 PickOfTheJump();
@@ -125,7 +116,6 @@ public class PlayerBehavior : PlayerAnimation
     {
         rb.gravityScale = gravity;
         canJump = false;
-        directionY = 0;
     }
 
     void PickOfTheJump()
@@ -143,6 +133,8 @@ public class PlayerBehavior : PlayerAnimation
         if (!Attack.attacking)
         {
             Attack.Atack(lastInput);
+            
+            //chamar animação
             OnAttackTrigger();
         }
     }

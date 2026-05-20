@@ -22,26 +22,35 @@ public class PlayerAtack : MonoBehaviour
         //defina a posi��o do ataque dependendo do ultimo bot�o q o player apertou
         attacking = true;
         count = true;
-        if (lastInput.x > 0)
-        {
-            trans.transform.rotation = Quaternion.Euler(0, 0, -90);
-            trans.transform.localPosition = new(0.8f, 0, 0);
-        }
-        else if (lastInput.x < 0)
-        {
-            trans.transform.rotation = Quaternion.Euler(0, 0, 90);
-            trans.transform.localPosition = new(-0.8f,0,0);
-        }
-        else if (lastInput.y > 0)
+
+        if (lastInput.y > 0)
         {
             trans.transform.rotation = Quaternion.Euler(0, 0, 0);
             trans.transform.localPosition = new(0, 0.8f, 0);
+
         }
         else if (lastInput.y < 0)
         {
             trans.transform.rotation = Quaternion.Euler(0, 0, 180);
             trans.transform.localPosition = new(0, -0.8f, 0);
+
         }
+        else
+        {
+            if (lastInput.x > 0)
+            {
+                trans.transform.rotation = Quaternion.Euler(0, 0, -90);
+                trans.transform.localPosition = new(0.8f, 0, 0);
+
+            }
+            else if(lastInput.x < 0)
+            {
+                trans.transform.rotation = Quaternion.Euler(0, 0, 90);
+            trans.transform.localPosition = new(-0.8f,0,0);
+
+            }
+        }
+        
 
         //ative o collider e o sprite
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
