@@ -33,6 +33,7 @@ public class PlayerBehavior : PlayerAnimation
         inputC.Enable();
         inputC.Player.Jump.canceled += OnJumpButonReleased;
         inputC.Player.Attack.started += OnAttack;
+        inputC.Player.Magic.started += OnSpecial; 
     }
 
     private void OnDisable()
@@ -111,6 +112,21 @@ public class PlayerBehavior : PlayerAnimation
             }
         }
     }
+    
+    //cancelar movimentação
+    //se eu quiser cancelar a movimentação quando o player tiver atacando
+    
+    // void CancelMove()
+    // {
+    //     if (playerSpeed != 0 && canJump)
+    //     {
+    //         playerSpeed = 0;
+    //     }
+    //     else
+    //     {
+    //         playerSpeed = 200;
+    //     }
+    // }
 
 
     #region Na_morte
@@ -120,16 +136,16 @@ public class PlayerBehavior : PlayerAnimation
         
         //cmc a animação de morte
         animator.SetTrigger(Dying);
-        StartCoroutine(Dead());
+        
+       
     }
 
-    IEnumerator Dead()
+    void OnFinishDeathAnimation()
     {
-        //esperar um pouco antes de reiniciar
-        yield return new WaitForSeconds(0.5f);
+        //quando acabar a animação de morte
         Destroy(gameObject);
         
-        //coisas pra fazer depois q o player morre (sla porra)
+        //coisas que acontecem após a morte do player (sla)
     }
     #endregion
     
@@ -194,6 +210,21 @@ public class PlayerBehavior : PlayerAnimation
         {
             Attack.Atack(lastInput);
             OnAttackTrigger();
+        }
+    }
+    
+    private void OnSpecial(InputAction.CallbackContext obj)
+    {
+        //se tiver desbloqueado uma magia e apertar o botão de magia e tiver mana suficiente
+        if (PlayerStats.Magic.GetComponent<BaseMagic>().manaCost <= PlayerStats.PlayerMana
+            && PlayerStats.Magic != null)
+        {
+            //lance a magia q vc escolheu e gaste a mana q vc tinha
+            GameObject magia=Instantiate(PlayerStats.Magic, transform.position,PlayerStats.Magic.transform.rotation );
+            magia.GetComponent<BaseMagic>().ApplyMagicEffect(lastInput.x);
+            PlayerReactions playerReac = new PlayerReactions();
+            playerReac.OnManaCost(magia.GetComponent<BaseMagic>().manaCost);
+
         }
     }
     

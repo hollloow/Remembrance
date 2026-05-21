@@ -20,13 +20,9 @@ public class PlayerReactions
         PlayerStats.invincibility = true;
     }
 
-    public void Invincibility()
+    public void OnManaCost(int cost)
     {
-        PlayerStats.InInvincibility = 0;
-        PlayerStats.invincibility = false;
-        //tocar uma animação de invencibilidade
+        PlayerStats.PlayerMana -= cost;
+        GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
     }
-    
-    
-    
 }

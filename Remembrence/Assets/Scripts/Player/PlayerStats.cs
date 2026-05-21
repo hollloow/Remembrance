@@ -15,6 +15,7 @@ public class PlayerStats
 
     public static int PlayerMana = 20;
     public static int PlayerManaMax = 20;
+    public static GameObject Magic;
     
     public static int PlayerBasicAttackDamage = 5;
     

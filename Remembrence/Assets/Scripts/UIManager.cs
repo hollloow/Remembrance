@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    //aqui vai ser o script q tem todos as alterações da UI
+    //aqui vai ser o script q tem todas as alterações da UI
     
     //UI do HP
     [SerializeField] private TextMeshProUGUI txtHP;
-    [SerializeField] private Image HPFiller;
+    [SerializeField] private Image hpFiller;
     
     //UI do MP
     [SerializeField] private TextMeshProUGUI txtMana;
-    [SerializeField] private Image MPFiller;
+    [SerializeField] private Image mpFiller;
 
     private void Awake()
     {
@@ -29,15 +29,15 @@ public class UIManager : MonoBehaviour
         txtHP.text = "HP: " + PlayerStats.PlayerHp;
 
         //mudar a barra de HP
-        HPFiller.fillAmount = PlayerStats.PlayerHp * 0.0334f;
+        hpFiller.fillAmount =(float)PlayerStats.PlayerHp / PlayerStats.PlayerMaxHp;
     }
 
     public void TxtManaMudar()
     {
+        //atualizar o texto
         txtMana.text = "Mana: " + PlayerStats.PlayerMana;
-
-        //Mudar a barra de MP
-        MPFiller.fillAmount = PlayerStats.PlayerMana * 0.2f;
+        //atualizar a barra de MP
+        mpFiller.fillAmount = (float)PlayerStats.PlayerMana / PlayerStats.PlayerManaMax;
     }
     
 }
