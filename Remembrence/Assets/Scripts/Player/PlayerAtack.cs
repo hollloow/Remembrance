@@ -14,8 +14,7 @@ public class PlayerAtack : MonoBehaviour
     {
         trans = hitBox.GetComponent<Transform>();
     }
-
-    // ReSharper disable Unity.PerformanceAnalysis
+    
     public Vector2 Atack(Vector2 lastInput)
     {
         //ao apertar o bot�o de ataque
@@ -80,7 +79,7 @@ public class PlayerAtack : MonoBehaviour
 
     IEnumerator Colldown()
     {
-        yield return  new WaitForSeconds(0.1f);
+        yield return  new WaitForSeconds(0.6f);
         attacking = false;
     }
 }

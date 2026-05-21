@@ -15,6 +15,7 @@ public class PlayerReactions
         if (PlayerStats.PlayerHp <= 0)
         {
             PlayerStats.Dead = true;
+            GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().OnDeath();
         }
         PlayerStats.invincibility = true;
     }

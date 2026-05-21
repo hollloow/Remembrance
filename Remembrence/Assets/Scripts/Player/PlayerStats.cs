@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerStats
 {
-    //aqui ta todos os estatus do player
+    //aqui ta todos os status do player
     public static int PlayerHp = 30;
     public static int PlayerMaxHp = 30;
     
