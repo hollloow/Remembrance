@@ -49,8 +49,6 @@ public class PlayerAtack : MonoBehaviour
 
             }
         }
-        
-
         //ative o collider e o sprite
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
         return new Vector2();
@@ -67,7 +65,7 @@ public class PlayerAtack : MonoBehaviour
             count = false;  
             attackTimer = 0;
             CancelAttack();
-            StartCoroutine(Colldown());
+            StartCoroutine(Cooldown());
         }
     }
     //cancelando o ataque
@@ -77,9 +75,9 @@ public class PlayerAtack : MonoBehaviour
         hitBox.GetComponent<Attack>().hit = false;
     }
 
-    IEnumerator Colldown()
+    IEnumerator Cooldown()
     {
-        yield return  new WaitForSeconds(0.6f);
+        yield return  new WaitForSeconds(0.4f);
         attacking = false;
     }
 }

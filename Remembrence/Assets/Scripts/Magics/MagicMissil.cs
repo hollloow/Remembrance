@@ -4,14 +4,16 @@ using UnityEngine;
 public class MagicMissil : BaseMagic
 {
     private int damage = 20;
-    private float travelSpeed =4;
-    private float lifeTime = 5;
+    private float travelSpeed = 12;
+    private float lifeTime = 1;
     private float living;
 
     public override void ApplyMagicEffect(float direction)
     {
+        //setando variaveis de acordo com a direção do player
         travelSpeed *= direction;
-
+        PlayerStats.MagicCoolDown = true;
+        
         if (direction > 0)
         {
             GetComponent<SpriteRenderer>().flipY = true;
@@ -22,22 +24,33 @@ public class MagicMissil : BaseMagic
         }
     }
 
+    //movimentação e timer de vida do missil
     private void FixedUpdate()
     {
-        transform.Translate(Vector2.down * travelSpeed * Time.fixedDeltaTime);
+        transform.Translate(Vector2.right * travelSpeed * Time.fixedDeltaTime);
         lifeTime -= Time.fixedDeltaTime;
         if(lifeTime <= 0)
         {
             Destroy(gameObject);
         }
     }
-
-    private void OnCollisionEnter(Collision other)
+    //colider do missil e dar dano ao contato com um inimigo
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("damager"))
+        if (other.gameObject.CompareTag("Damageble"))
         {
             other.gameObject.GetComponent<EnemyBase>().Damaged(damage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (!other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    //resetar o coolDown de magias
+    private void OnDestroy()
+    {
+        PlayerStats.MagicCoolDown = false;
     }
 }

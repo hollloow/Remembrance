@@ -6,8 +6,9 @@ public class PlayerReactions
     //aqui vai ser um script pra todos as funções que envolva os status do player
     
     
-    //função de tomar dano
-    //primeiro diminui a vida do player, dpois atualiza a UI e por fim verifica se o player ta morto
+    //função de tomar dano e curar
+    //quando são chamadas elas mudão os status de acordo com a função e o valor dado
+    //e dão update na UI
     public void OnHurt(int dano)
     {
         PlayerStats.PlayerHp -= dano;
@@ -20,9 +21,33 @@ public class PlayerReactions
         PlayerStats.invincibility = true;
     }
 
-    public void OnManaCost(int cost)
+    public void OnHeal()
+    {
+        PlayerStats.PlayerHp += PlayerStats.HealingEffectiveness;
+        if (PlayerStats.PlayerHp > PlayerStats.PlayerMaxHp)
+        {
+            PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
+        }
+        GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtHPMudar();
+    }
+
+    
+    //funções de aumentar e diminuir a mana
+    //quando são chamadas elas mudão os status de acordo com a função e o valor dado
+    //e dão update na UI
+    public void OnManaCost(float cost)
     {
         PlayerStats.PlayerMana -= cost;
+        GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
+    }
+
+    public void OnManaIncrease(int value)
+    {
+        PlayerStats.PlayerMana += value;
+        if (PlayerStats.PlayerMana > PlayerStats.PlayerManaMax)
+        {
+            PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
+        }
         GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
     }
 }

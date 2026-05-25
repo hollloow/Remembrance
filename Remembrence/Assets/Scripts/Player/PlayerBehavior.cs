@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.U2D.Animation;
 
 public class PlayerBehavior : PlayerAnimation
 {
@@ -21,19 +23,27 @@ public class PlayerBehavior : PlayerAnimation
     //para o attack
     PlayerAtack Attack;
     private Vector2 lastInput;
+    
+    //para a cura
+    private float healingTime;
+    private bool healing;
 
     //script do InputSystem
     private InputControls inputC;
+    
+    private SpriteRenderer _spriteRenderer;
 
 
     #region Setando_Variaveis
+    
     private void OnEnable()
     {
         inputC = new InputControls();
         inputC.Enable();
         inputC.Player.Jump.canceled += OnJumpButonReleased;
         inputC.Player.Attack.started += OnAttack;
-        inputC.Player.Magic.started += OnSpecial; 
+        inputC.Player.Magic.started += OnSpecial;
+        inputC.Player.Heal.started += OnHealStart;
     }
 
     private void OnDisable()
@@ -45,8 +55,9 @@ public class PlayerBehavior : PlayerAnimation
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        gravity = rb.gravityScale;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         Attack = GetComponent<PlayerAtack>();
+        gravity = rb.gravityScale;
     }
     
 
@@ -56,8 +67,10 @@ public class PlayerBehavior : PlayerAnimation
     //update q faz o player andar e pular
     private void FixedUpdate()
     {
-        //verifica se o player ta morto
-        if (!PlayerStats.Dead)
+        OnHeal();
+        
+        //verifica se o player ta morto ou curando
+        if (!PlayerStats.Dead && !healing)
         {
             //determinando ond o ataque vai ser direcionado pela ultima tecla q o jogador clicou 
             if (inputC.Player.Move.ReadValue<Vector2>().x != 0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
@@ -93,13 +106,13 @@ public class PlayerBehavior : PlayerAnimation
                 PlayerStats.InInvincibility += Time.deltaTime;
                 
                 //animação invencibilidade
-                if (GetComponent<SpriteRenderer>().enabled == true)
+                if (_spriteRenderer.enabled == true)
                 {
-                    GetComponent<SpriteRenderer>().enabled = false;
+                    _spriteRenderer.enabled = false;
                 }
                 else
                 {
-                    GetComponent<SpriteRenderer>().enabled = true;
+                    _spriteRenderer.enabled = true;
                 }
                 
                 //quando acabar a invencibilidade: reseta as variaveis
@@ -107,7 +120,7 @@ public class PlayerBehavior : PlayerAnimation
                 {
                     PlayerStats.InInvincibility = 0;
                     PlayerStats.invincibility = false;
-                    GetComponent<SpriteRenderer>().enabled = true;
+                    _spriteRenderer.enabled = true;
                 }
             }
         }
@@ -206,7 +219,7 @@ public class PlayerBehavior : PlayerAnimation
     //se n tiver atacando, chama o script de attack e cmc a animação de attack
     private void OnAttack(InputAction.CallbackContext obj)
     {
-        if (!Attack.attacking)
+        if (!Attack.attacking && !healing)
         {
             Attack.Atack(lastInput);
             OnAttackTrigger();
@@ -216,18 +229,71 @@ public class PlayerBehavior : PlayerAnimation
     private void OnSpecial(InputAction.CallbackContext obj)
     {
         //se tiver desbloqueado uma magia e apertar o botão de magia e tiver mana suficiente
+        
         if (PlayerStats.Magic.GetComponent<BaseMagic>().manaCost <= PlayerStats.PlayerMana
-            && PlayerStats.Magic != null)
+            && PlayerStats.Magic != null && !PlayerStats.MagicCoolDown)
         {
             //lance a magia q vc escolheu e gaste a mana q vc tinha
-            GameObject magia=Instantiate(PlayerStats.Magic, transform.position,PlayerStats.Magic.transform.rotation );
+            
+            GameObject magia = Instantiate(PlayerStats.Magic, transform.position,PlayerStats.Magic.transform.rotation );
             magia.GetComponent<BaseMagic>().ApplyMagicEffect(lastInput.x);
             PlayerReactions playerReac = new PlayerReactions();
             playerReac.OnManaCost(magia.GetComponent<BaseMagic>().manaCost);
 
         }
     }
+
+    // ReSharper disable Unity.PerformanceAnalysis
+    void OnHeal()
+    {
+        PlayerReactions pr = new PlayerReactions();
+        
+        //cmc um timer q aumenta enquanto o botão de cura estiver precionado
+        //enquanto isso o player estara tocando uma animação, n pode se mexer e tera a mana drenada
+        //se o timer terminar ele ira se curar e a animação acabarar
+        //se ele soltar no meio do timer ele n se curarar, mas a animação ira acabar
+        if (healing)
+        {
+            
+            if (healingTime >= PlayerStats.HealingTime)
+            {
+                healing = false;
+                pr.OnHeal();
+                _spriteRenderer.color = Color.white;
+            }
+            else if(inputC.Player.Heal.IsInProgress())
+            {
+                healingTime += Time.deltaTime;
+                _spriteRenderer.color = new Color(76, 255, 231);
+                float manaCost = PlayerStats.HealingCost / PlayerStats.HealingTime * Time.deltaTime;
+                pr.OnManaCost(manaCost);
+            
+            }
+            else
+            {
+                healing = false;
+                _spriteRenderer.color = Color.white;
+               
+            }
+        }
+
+        
+        //só corrigindo a mana se tiver decimal quebrado
+        if (!healing)
+        {
+            PlayerStats.PlayerMana = Mathf.RoundToInt(PlayerStats.PlayerMana);
+            GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
+        }
+    }
     
+    void OnHealStart(InputAction.CallbackContext obj)
+    {
+        if (PlayerStats.PlayerMana >= PlayerStats.HealingCost)
+        {
+            healing = true;
+        }
+      
+    }
 
     #endregion
     
