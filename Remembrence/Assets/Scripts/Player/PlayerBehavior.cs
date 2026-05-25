@@ -234,12 +234,12 @@ public class PlayerBehavior : PlayerAnimation
             && PlayerStats.Magic != null && !PlayerStats.MagicCoolDown)
         {
             //lance a magia q vc escolheu e gaste a mana q vc tinha
+            //ativando uma função abstrata q ativa os efeitos especificos da magia
             
             GameObject magia = Instantiate(PlayerStats.Magic, transform.position,PlayerStats.Magic.transform.rotation );
             magia.GetComponent<BaseMagic>().ApplyMagicEffect(lastInput.x);
             PlayerReactions playerReac = new PlayerReactions();
             playerReac.OnManaCost(magia.GetComponent<BaseMagic>().manaCost);
-
         }
     }
 
@@ -260,6 +260,7 @@ public class PlayerBehavior : PlayerAnimation
                 healing = false;
                 pr.OnHeal();
                 _spriteRenderer.color = Color.white;
+                healingTime = 0;
             }
             else if(inputC.Player.Heal.IsInProgress())
             {
@@ -273,7 +274,9 @@ public class PlayerBehavior : PlayerAnimation
             {
                 healing = false;
                 _spriteRenderer.color = Color.white;
-               
+                healingTime = 0;
+
+
             }
         }
 
@@ -288,11 +291,20 @@ public class PlayerBehavior : PlayerAnimation
     
     void OnHealStart(InputAction.CallbackContext obj)
     {
+        
         if (PlayerStats.PlayerMana >= PlayerStats.HealingCost)
         {
             healing = true;
         }
-      
+        Debug.Log(healing);
+    }
+
+    //cancelar a cura caso o player toma algum tipo de dano
+    public void HealingCancelOnDamage()
+    {
+        healing = false;
+        healingTime = 0;
+        _spriteRenderer.color = Color.white;
     }
 
     #endregion

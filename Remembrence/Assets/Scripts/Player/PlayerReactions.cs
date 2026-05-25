@@ -18,7 +18,11 @@ public class PlayerReactions
             PlayerStats.Dead = true;
             GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().OnDeath();
         }
+        //ativar a invencibilidade
         PlayerStats.invincibility = true;
+
+        //caso esteja se curando, cancelar
+        GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().HealingCancelOnDamage();
     }
 
     public void OnHeal()
