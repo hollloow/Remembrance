@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1401200599822029569}
   - component: {fileID: 3758011254786137802}
   - component: {fileID: 5514474784035334099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Attack
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 0
-  Increase: 3
+  increase: 3
 --- !u!1 &6120903829556704851
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +164,8 @@ GameObject:
   - component: {fileID: 6325242331464177809}
   - component: {fileID: 3877652884650732346}
   - component: {fileID: 4608699607786466681}
-  m_Layer: 0
+  - component: {fileID: 163212799548023162}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -233,7 +234,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -429674787, guid: 6e9d92b3ef158f4498fd979abaa19879, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -367,3 +368,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &163212799548023162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120903829556704851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73d84f0c3bdf7740bd560f44667656d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectID: 0

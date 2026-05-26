@@ -313,7 +313,6 @@ public class PlayerBehavior : PlayerAnimation
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        
         //ao encostar no chão
         //reseta as variáeis do pulo e termina a animação de queda
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && !canJump)
