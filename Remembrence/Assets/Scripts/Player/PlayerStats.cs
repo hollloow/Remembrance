@@ -30,5 +30,9 @@ public class PlayerStats
     
     //para o dano do attack basico
     public static int PlayerBasicAttackDamage = 5;
-    
+
+    //para o reposicionamento na próxima scene
+    public static Vector3 posicao = Vector3.zero;
+
+
 }
