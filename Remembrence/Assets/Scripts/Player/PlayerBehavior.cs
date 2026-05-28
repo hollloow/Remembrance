@@ -230,8 +230,9 @@ public class PlayerBehavior : PlayerAnimation
     {
         //se tiver desbloqueado uma magia e apertar o botão de magia e tiver mana suficiente
         
-        if (PlayerStats.Magic.GetComponent<BaseMagic>().manaCost <= PlayerStats.PlayerMana
-            && PlayerStats.Magic != null && !PlayerStats.MagicCoolDown)
+        if ( PlayerStats.Magic != null &&
+             PlayerStats.Magic.GetComponent<BaseMagic>().manaCost <= PlayerStats.PlayerMana && 
+             !PlayerStats.MagicCoolDown)
         {
             //lance a magia q vc escolheu e gaste a mana q vc tinha
             //ativando uma função abstrata q ativa os efeitos especificos da magia

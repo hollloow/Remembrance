@@ -182,6 +182,4 @@ MonoBehaviour:
   rb: {fileID: 0}
   range: 5
   collDown: 0
-  projectile: {fileID: 0}
   distanceShoot: 5
-  cooldown: 0
