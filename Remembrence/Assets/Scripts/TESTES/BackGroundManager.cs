@@ -14,18 +14,21 @@ public class BackGroundManager : MonoBehaviour
         lenght = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
+
     private void FixedUpdate()
     {
         float dist =cam.transform.position.x * paralaxEffect;
         float movement = cam.transform.position.x - (1-paralaxEffect);
 
-        // if (movement > startPos + lenght)
-        // {
-        //     startPos += lenght;
-        // }
-        // else if (movement < startPos - lenght)
-        // {
-        //     startPos -= lenght;
-        // }
+        transform.position = new Vector3(startPos + dist,transform.position.y,transform.position.z);
+
+         if (movement > startPos + lenght)
+         {
+             startPos += lenght;
+         }
+         else if (movement < startPos - lenght)
+         {
+            startPos -= lenght;
+         }
     }
 }

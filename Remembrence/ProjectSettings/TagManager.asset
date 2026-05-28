@@ -48,8 +48,14 @@ TagManager:
   - name: BackGround
     uniqueID: 3995851787
     locked: 0
+  - name: TileSet
+    uniqueID: 1223257921
+    locked: 0
   - name: Player
     uniqueID: 756816097
+    locked: 0
+  - name: UI
+    uniqueID: 4157409057
     locked: 0
   m_RenderingLayers:
   - Default
