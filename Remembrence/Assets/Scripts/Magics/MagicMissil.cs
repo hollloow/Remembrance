@@ -42,7 +42,7 @@ public class MagicMissil : BaseMagic
             other.gameObject.GetComponent<EnemyBase>().Damaged(damage);
             Destroy(gameObject);
         }
-        else if (!other.gameObject.CompareTag("Player"))
+        else if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Attack"))
         {
             Destroy(gameObject);
         }

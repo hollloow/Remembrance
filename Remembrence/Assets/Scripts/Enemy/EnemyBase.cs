@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
@@ -20,10 +21,17 @@ public class EnemyBase : MonoBehaviour
     public void Damaged(int damage)
     {
         enemyHP -= damage;
+        StartCoroutine(Attacked());
         if (enemyHP <= 0)
-        {
-            HandleDeath();
-        }
+        { HandleDeath();}
+    }
+
+    IEnumerator Attacked()
+    {
+        //só uma resposta visual pra quando tomar dano
+        GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
     private  void HandleDeath()
     {

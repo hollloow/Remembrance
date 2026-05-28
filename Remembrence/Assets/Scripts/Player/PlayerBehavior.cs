@@ -44,6 +44,8 @@ public class PlayerBehavior : PlayerAnimation
         inputC.Player.Attack.started += OnAttack;
         inputC.Player.Magic.started += OnSpecial;
         inputC.Player.Heal.started += OnHealStart;
+        
+        //Pegar infos do player
     }
 
     private void OnDisable()
@@ -54,6 +56,11 @@ public class PlayerBehavior : PlayerAnimation
     ////setando variaveis iniciais
     private void Awake()
     {
+        //n ta funcionando PQQQQQQQ
+        if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
+        {
+            transform.position = PlayerStats.SpawnPosition;
+        }
         rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         Attack = GetComponent<PlayerAtack>();
@@ -219,7 +226,7 @@ public class PlayerBehavior : PlayerAnimation
     //se n tiver atacando, chama o script de attack e cmc a animação de attack
     private void OnAttack(InputAction.CallbackContext obj)
     {
-        if (!Attack.attacking && !healing)
+        if (!Attack.coolDown && !healing)
         {
             Attack.Atack(lastInput);
             OnAttackTrigger();

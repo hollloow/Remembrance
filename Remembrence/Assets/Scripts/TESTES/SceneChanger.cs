@@ -11,9 +11,8 @@ public class SceneChanger : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
-            PlayerStats.posicao = coordenadas;
+          PlayerStats.SpawnPosition = coordenadas; 
             SceneManager.LoadScene(nextScene);
-            
       }
    }
 }

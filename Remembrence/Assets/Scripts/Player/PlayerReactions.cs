@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerReactions
 {
-    //aqui vai ser um script pra todos as funções que envolva os status do player
+    //aqui vai ser um script pra todas as funções que envolva os status do player
     
     
     //função de tomar dano e curar
@@ -53,5 +53,12 @@ public class PlayerReactions
             PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
         }
         GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
+    }
+    
+    //Para salvar a posição q o player tá quando o jogo fechar
+    public void OnGameClose(Vector2 newPosition)
+    {
+        PlayerPrefs.GetFloat("SpawnPosX",newPosition.x);
+        PlayerPrefs.GetFloat("SpawnPosY",newPosition.y);
     }
 }
