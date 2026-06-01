@@ -1,6 +1,14 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //o game manager sla se vai precisar
+    public static float TimerDoJogo;
+    private void FixedUpdate() => TimerDoJogo = +Time.unscaledTime;
+
+    public void Freze(float freezeAmount) => StartCoroutine(FreezeTime(freezeAmount));
+    IEnumerator FreezeTime(float freezeAmount)
+    {
+        yield return new WaitForSecondsRealtime(freezeAmount);
+    }
 }

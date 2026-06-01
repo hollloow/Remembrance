@@ -40,6 +40,8 @@ public class MagicMissil : BaseMagic
         if (other.gameObject.CompareTag("Damageble"))
         {
             other.gameObject.GetComponent<EnemyBase>().Damaged(damage);
+            GameManager freze = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+            freze.Freze(0.5f);
             Destroy(gameObject);
         }
         else if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Attack"))

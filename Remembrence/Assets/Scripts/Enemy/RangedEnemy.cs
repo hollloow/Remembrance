@@ -94,9 +94,9 @@ public class RangedEnemy : EnemyBase
         }
         
         sr.color = Color.white;
-
         //reseta o collDown
         attacking = false;
         collDown = 2.5f;
+
     }
 }
