@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public void Freze(float freezeAmount) => StartCoroutine(FreezeTime(freezeAmount));
     IEnumerator FreezeTime(float freezeAmount)
     {
+        Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(freezeAmount);
+        Time.timeScale = 1;
     }
 }
