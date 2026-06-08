@@ -29,9 +29,11 @@ public class EnemyBase : MonoBehaviour
     IEnumerator Attacked()
     {
         //só uma resposta visual pra quando tomar dano
+        Color corOriginal = gameObject.GetComponent<SpriteRenderer>().color;
+        
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<SpriteRenderer>().color = corOriginal;
     }
     private  void HandleDeath()
     {
