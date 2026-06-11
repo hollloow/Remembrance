@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Gameplay_Scene
+  m_Name: Gameplay_Floresta_Scene 1
   m_EditorClassIdentifier: 
-  templateScene: {fileID: 102900000, guid: e5b75142fbec61d40958828ddedf650b, type: 3}
-  templateName: Template For normal screens
+  templateScene: {fileID: 102900000, guid: 87074d1bbb4471447aa58e4fb31819e1, type: 3}
+  templateName: Template For Florest Screens
   description: template para telas normais
   preview: {fileID: 0}
   dependencies:

@@ -15,10 +15,12 @@ public class PlayerBehavior : PlayerAnimation
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
     [SerializeField] private float jumpHolding;
-    bool canJump = true;
+    int canJump;
     float jumpTimer = 0;
     private Rigidbody2D rb;
     float gravity;
+    [SerializeField] private PhysicsMaterial2D air;
+    [SerializeField] Transform groundCheck;
 
     //para o attack
     PlayerAtack Attack;
@@ -102,7 +104,7 @@ public class PlayerBehavior : PlayerAnimation
             {
                 animator.SetBool(Running, false);
             }
-            
+            IsOnGround();
             Jumping();
         
 
@@ -172,19 +174,32 @@ public class PlayerBehavior : PlayerAnimation
     
 
     #region Pulando
+
+    //checagem se encostou no chao
+    private void IsOnGround()
+    {
+        if (Physics2D.OverlapCircle(groundCheck.position,0.1f,LayerMask.GetMask("Ground")))
+        {
+            jumpTimer = 0;
+            canJump = PlayerStats.DoubleJump ? 2 : 1;
+            animator.SetBool(Falling,false);
+            rb.sharedMaterial = null;
+        }
+        
+    }
     
     void Jumping()
     {
         
         //primeiro checa se já apertou o botão de pulo
-        if (inputC.Player.Jump.IsInProgress() && canJump)
+        if (inputC.Player.Jump.IsInProgress() && canJump > 0)
         {
-            //checa se já esta pulando por mais de 0.5 seg
+            //checa se já está pulando por mais de 0.5 seg
             //se sim, a gravidade volta ao normal e cmc a animação de queda
             if (jumpTimer >= jumpHolding)
             {
                 rb.gravityScale = gravity;
-                canJump = false;
+                canJump -= 1;
                 jumpTimer = 0;
                 OnFall();
             }
@@ -206,7 +221,7 @@ public class PlayerBehavior : PlayerAnimation
     private void OnJumpButonReleased(InputAction.CallbackContext obj)
     {
         rb.gravityScale = gravity;
-        canJump = false;
+        canJump -= 1;
         OnFall();
     }
     
@@ -323,11 +338,9 @@ public class PlayerBehavior : PlayerAnimation
     {
         //ao encostar no chão
         //reseta as variáeis do pulo e termina a animação de queda
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && !canJump)
+        if (other.gameObject.GetComponent<Rigidbody2D>()&& other.gameObject.GetComponent<Rigidbody2D>().sharedMaterial == air)
         {
-            jumpTimer = 0;
-            canJump = true;
-            animator.SetBool(Falling,false);
+            rb.sharedMaterial = air;
         }
     }
 }

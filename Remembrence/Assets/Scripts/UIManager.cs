@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
     //funções de alterar o texto e a barra (vão ser chamadas por fora)
     public void TxtHPMudar()
     {
-        txtHP.text = "HP: " + PlayerStats.PlayerHp;
+      //  txtHP.text = "HP: " + PlayerStats.PlayerHp;
 
         //mudar a barra de HP
         hpFiller.fillAmount =(float)PlayerStats.PlayerHp / PlayerStats.PlayerMaxHp;
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     public void TxtManaMudar()
     {
         //atualizar o texto
-        txtMana.text = "Mana: " + PlayerStats.PlayerMana;
+//        txtMana.text = "Mana: " + PlayerStats.PlayerMana;
         //atualizar a barra de MP
         mpFiller.fillAmount = (float)PlayerStats.PlayerMana / PlayerStats.PlayerManaMax;
     }
