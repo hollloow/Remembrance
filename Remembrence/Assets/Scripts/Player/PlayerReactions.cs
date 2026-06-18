@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -23,6 +24,15 @@ public class PlayerReactions
 
         //caso esteja se curando, cancelar
         GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().HealingCancelOnDamage();
+        
+        //fazer a camera mexer
+        OnScreenShake(0.1f);
+    }
+
+    void OnScreenShake(float impulseAmount)
+    {
+        GameObject.FindWithTag("Player").GetComponent<CinemachineImpulseSource>().
+            GenerateImpulseWithForce(impulseAmount);
     }
 
     public void OnHeal()

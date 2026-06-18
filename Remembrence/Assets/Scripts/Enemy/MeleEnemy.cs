@@ -13,7 +13,7 @@ public class MeleEnemy : EnemyBase
     
     private void FixedUpdate()
     {
-        if (!attacking)
+        if (!attacking && canWalk)
         {
             CheckPlayerInRange();
         }
@@ -21,7 +21,7 @@ public class MeleEnemy : EnemyBase
 
     
     //checara a localização do player
-    //se a distancia do inimigo pro player for menor ou igual ao alcance de detectação do inimigo e n tiver atacando
+    //se a distância do inimigo pro player for menor ou igual ao alcance de detectação do inimigo e n tiver atacando
     //siga o player
     private void CheckPlayerInRange()
     {

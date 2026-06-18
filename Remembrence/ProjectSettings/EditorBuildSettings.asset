@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Teste_Scene.unity
     guid: f35e710ced3d85049bdfd290adc63d94
   - enabled: 1
-    path: Assets/Scenes/Teste_Sprites.unity
-    guid: 81094157fe119e84cbe28ab636df950f
-  - enabled: 1
     path: Assets/Scenes/Screens/Screen2.unity
     guid: 55a391a579f363e49837c2abe02a09ae
   - enabled: 1

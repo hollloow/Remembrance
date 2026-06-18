@@ -180,7 +180,7 @@ MonoBehaviour:
   enemySpeed: 40
   detectRange: 10
   rb: {fileID: 0}
-  knockbackForce: 0
+  knockbackForce: 50
   range: 5
-  collDown: 0
+  collDown: 1.5
   distanceShoot: 5

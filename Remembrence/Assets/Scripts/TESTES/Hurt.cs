@@ -6,6 +6,7 @@ public class Hurt : MonoBehaviour
     //place holder de um código de tomar dano
     
     [SerializeField] private int damage;
+    [SerializeField] private float impulseAmount;
     private PlayerReactions _playerReactions = new PlayerReactions();
     
 

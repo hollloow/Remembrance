@@ -15,7 +15,7 @@ public class PlayerBehavior : PlayerAnimation
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
     [SerializeField] private float jumpHolding;
-    int canJump;
+    bool canJump;
     float jumpTimer = 0;
     private Rigidbody2D rb;
     float gravity;
@@ -181,9 +181,14 @@ public class PlayerBehavior : PlayerAnimation
         if (Physics2D.OverlapCircle(groundCheck.position,0.1f,LayerMask.GetMask("Ground")))
         {
             jumpTimer = 0;
-            canJump = PlayerStats.DoubleJump ? 2 : 1;
+            canJump = true;
             animator.SetBool(Falling,false);
             rb.sharedMaterial = null;
+        }
+        else
+        {
+            canJump = false;
+            OnFall();
         }
         
     }
@@ -192,19 +197,20 @@ public class PlayerBehavior : PlayerAnimation
     {
         
         //primeiro checa se já apertou o botão de pulo
-        if (inputC.Player.Jump.IsInProgress() && canJump > 0)
+        if (inputC.Player.Jump.IsInProgress() && canJump)
         {
             //checa se já está pulando por mais de 0.5 seg
             //se sim, a gravidade volta ao normal e cmc a animação de queda
             if (jumpTimer >= jumpHolding)
             {
                 rb.gravityScale = gravity;
-                canJump -= 1;
+                canJump = false;
                 jumpTimer = 0;
                 OnFall();
             }
             else
             {
+                print("porra");
                 //ao apertar espaço a gravidade é 0
                 //adiciona força no player pra cima, por linearVelocity
                 //enquanto o player segurar espaço, por até 0.5 segundos
@@ -221,7 +227,7 @@ public class PlayerBehavior : PlayerAnimation
     private void OnJumpButonReleased(InputAction.CallbackContext obj)
     {
         rb.gravityScale = gravity;
-        canJump -= 1;
+        canJump = false;
         OnFall();
     }
     

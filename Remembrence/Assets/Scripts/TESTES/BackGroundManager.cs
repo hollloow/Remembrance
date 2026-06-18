@@ -20,7 +20,7 @@ public class BackGroundManager : MonoBehaviour
         float dist =cam.transform.position.x * paralaxEffect;
         float movement = cam.transform.position.x - (1-paralaxEffect);
 
-        transform.position = new Vector3(startPos + dist,cam.transform.position.y * 0.3f,transform.position.z);
+        transform.position = new Vector3(startPos + dist,transform.position.y,transform.position.z);
 
          if (movement > startPos + lenght)
          {

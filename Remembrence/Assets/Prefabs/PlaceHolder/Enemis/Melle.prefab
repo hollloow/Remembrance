@@ -320,6 +320,6 @@ MonoBehaviour:
   enemySpeed: 70
   detectRange: 10
   rb: {fileID: 0}
-  knockbackForce: 0
+  knockbackForce: 100
   attackPrefab: {fileID: 5677722956176801737}
   howCloseToAttack: 2

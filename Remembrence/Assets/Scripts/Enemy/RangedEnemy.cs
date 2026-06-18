@@ -11,7 +11,7 @@ public class RangedEnemy : EnemyBase
     private bool attacking;
     private SpriteRenderer sr;
 
-    PlayerReactions _playerReactions = new PlayerReactions();
+    private PlayerReactions _playerReactions = new PlayerReactions();
 
     //detect > range
 
@@ -22,7 +22,10 @@ public class RangedEnemy : EnemyBase
 
     private void FixedUpdate()
     {
-        CheckPlayerPosition();
+        if (canWalk)
+        {
+            CheckPlayerPosition();
+        }
     }
     
     private void CheckPlayerPosition()
@@ -30,7 +33,7 @@ public class RangedEnemy : EnemyBase
         //passando o tempo do collDown
         collDown -= Time.deltaTime;
 
-        //checando a posição do player, direção do player e a distancia do player para o inimigo
+        //checando a posiÃ§Ã£o do player, direÃ§Ã£o do player e a distÃ¢ncia do player para o inimigo
         Vector3 playerPosition = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x,
             GameObject.FindGameObjectWithTag("Player").transform.position.y, 1);
         
@@ -43,7 +46,7 @@ public class RangedEnemy : EnemyBase
         //se o player tiver a alcance ataque
         //se o player tiver muito perto corra
 
-        //PRECISA DE ALTERAÇÕES PARA GAMEFELL
+        //PRECISA DE ALTERAÃ‡Ã•ES PARA GAME FELL
         if (!attacking)
         {
             if (distanceFromPlayer <= range / 1.5)
