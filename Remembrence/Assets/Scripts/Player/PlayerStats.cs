@@ -33,6 +33,7 @@ public class PlayerStats
 
     //para o reposicionamento na pr�xima scene
     public static Vector3 SpawnPosition = Vector3.zero;
+    public static Vector3 RespawnPosition = Vector3.zero;
     
     //desbloqueio de hablidades
     public static bool DoubleJump = false;
