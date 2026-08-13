@@ -4,6 +4,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     //os parametros q estão sendo usados pelo animator
     protected static readonly int Attacking = Animator.StringToHash("Attacking");
+    protected static readonly int Landing = Animator.StringToHash("Landing");
     protected static readonly int Dying = Animator.StringToHash("Dying");
     protected static readonly int Falling = Animator.StringToHash("Falling");
     protected static readonly int Running = Animator.StringToHash("Running");
@@ -45,4 +46,11 @@ public class PlayerAnimation : MonoBehaviour
         animator.SetBool("Falling",true);
         animator.SetBool("Jumping",false);
     }
+
+    protected void OnLanding()
+    {
+        animator.SetBool("Falling",false);
+        animator.SetTrigger(Landing);
+    }
+    
 }

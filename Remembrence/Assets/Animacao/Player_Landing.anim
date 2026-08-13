@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Idle
+  m_Name: Player_Landing
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -8884658521883750403, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
-    - time: 0.125
-      value: {fileID: -3074646569714170492, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
+      value: {fileID: -6719467738613578714, guid: 5c06f607b5d25ca46bc7e6ac84d491dc, type: 3}
     - time: 0.25
-      value: {fileID: 8128128342015624960, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
-    - time: 0.375
-      value: {fileID: 3545781456684327803, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
+      value: {fileID: 6367370878763128641, guid: 5c06f607b5d25ca46bc7e6ac84d491dc, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,21 +46,19 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -8884658521883750403, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
-    - {fileID: -3074646569714170492, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
-    - {fileID: 8128128342015624960, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
-    - {fileID: 3545781456684327803, guid: 7bb15461d83844649a8e948da57d2530, type: 3}
+    - {fileID: -6719467738613578714, guid: 5c06f607b5d25ca46bc7e6ac84d491dc, type: 3}
+    - {fileID: 6367370878763128641, guid: 5c06f607b5d25ca46bc7e6ac84d491dc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.375
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

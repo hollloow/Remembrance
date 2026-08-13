@@ -15,8 +15,9 @@ public class PlayerBehavior : PlayerAnimation
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
     [SerializeField] private float jumpHolding;
-    bool canJump =true;
+    private bool canJump =true;
     private bool isJumping = false;
+    private float coyoteTimer;
     float jumpTimer = 0;
     private Rigidbody2D rb;
     float gravity;
@@ -181,26 +182,39 @@ public class PlayerBehavior : PlayerAnimation
     {
         if (Physics2D.OverlapCircle(groundCheck.position,0.1f,LayerMask.GetMask("Ground")))
         {
+            print("ss");
             jumpTimer = 0;
+            coyoteTimer = 0;
             canJump = true;
             isJumping = false;
-            animator.SetBool(Falling,false);
             rb.sharedMaterial = null;
+            animator.SetBool("Falling",false);
         }
         else
         {
+            print(coyoteTimer);
             if (!isJumping)
             {
-                canJump = false;
-                OnFall(); 
+                OnCoyote();
+                if (coyoteTimer > 0.15f)
+                {
+                    canJump = false;
+                    OnLanding();
+                    OnFall();    
+                }
+
             }
         }
         
     }
+
+    private void OnCoyote()
+    {
+        coyoteTimer += Time.deltaTime;
+    }
     
     void Jumping()
     {
-        print(canJump);
        
         
         //primeiro checa se já apertou o botão de pulo
@@ -257,6 +271,7 @@ public class PlayerBehavior : PlayerAnimation
     {
         if (!Attack.coolDown && !healing)
         {
+
             Attack.Atack(lastInput);
             OnAttackTrigger();
         }
@@ -333,7 +348,6 @@ public class PlayerBehavior : PlayerAnimation
         {
             healing = true;
         }
-        Debug.Log(healing);
     }
 
     //cancelar a cura caso o player toma algum tipo de dano
