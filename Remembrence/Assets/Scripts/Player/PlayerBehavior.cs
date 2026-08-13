@@ -60,7 +60,6 @@ public class PlayerBehavior : PlayerAnimation
     ////setando variaveis iniciais
     private void Awake()
     {
-        //n ta funcionando PQQQQQQQ
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
         {
             transform.position = PlayerStats.SpawnPosition;
@@ -83,7 +82,7 @@ public class PlayerBehavior : PlayerAnimation
         //verifica se o player ta morto ou curando
         if (!PlayerStats.Dead && !healing)
         {
-            //determinando ond o ataque vai ser direcionado pela ultima tecla q o jogador clicou 
+            //determinando ond o ataque vai ser direcionado pela última tecla q o jogador clicou 
             if (inputC.Player.Move.ReadValue<Vector2>().x != 0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
             {
                 lastInput = inputC.Player.Move.ReadValue<Vector2>();
@@ -365,7 +364,7 @@ public class PlayerBehavior : PlayerAnimation
     private void OnCollisionStay2D(Collision2D other)
     {
         //ao encostar no chão
-        //reseta as variáeis do pulo e termina a animação de queda
+        //reseta as variáveis do pulo e termina a animação de queda
         if (other.gameObject.GetComponent<Rigidbody2D>()&& other.gameObject.GetComponent<Rigidbody2D>().sharedMaterial == air)
         {
             rb.sharedMaterial = air;

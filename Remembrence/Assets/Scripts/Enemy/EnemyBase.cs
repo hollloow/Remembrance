@@ -8,6 +8,7 @@ public class EnemyBase : MonoBehaviour
     
     [SerializeField] protected int enemyHP;
     [SerializeField] protected int enemyDamage;
+    [SerializeField] protected float shake;
     [SerializeField] protected int enemySpeed;
     [SerializeField] protected float detectRange;
     protected bool canWalk = true;

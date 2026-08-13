@@ -10,7 +10,7 @@ public class PlayerReactions
     //função de tomar dano e curar
     //quando são chamadas elas mudão os status de acordo com a função e o valor dado
     //e dão update na UI
-    public void OnHurt(int dano)
+    public void OnHurt(int dano,float shake)
     {
         PlayerStats.PlayerHp -= dano;
         GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtHPMudar();
@@ -26,7 +26,7 @@ public class PlayerReactions
         GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().HealingCancelOnDamage();
         
         //fazer a camera mexer
-        OnScreenShake(0.1f);
+        OnScreenShake(shake);
     }
 
     void OnScreenShake(float impulseAmount)

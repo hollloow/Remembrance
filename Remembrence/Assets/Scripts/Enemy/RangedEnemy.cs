@@ -92,7 +92,7 @@ public class RangedEnemy : EnemyBase
         {
             if (acertou.collider.gameObject.CompareTag("Player"))
             {
-                    _playerReactions.OnHurt(enemyDamage);
+                    _playerReactions.OnHurt(enemyDamage,shake);
             }
         }
         
