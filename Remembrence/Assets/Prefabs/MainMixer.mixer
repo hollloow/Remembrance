@@ -61,14 +61,14 @@ AudioMixerController:
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ExposedParameters:
   - guid: 1ae6a1f31849fb24ea9ea21d75682e7a
-    name: Master
+    name: masterVolume
   - guid: d92ea4408e9829549836f9528aca9202
-    name: Music
+    name: musicVolume
   - guid: 1f6f0e17777204c42b875144cca2c042
-    name: SoundEffect
+    name: soundVolume
   m_AudioMixerGroupViews:
   - guids:
     - 377528843281dd44fbc57c6875987920
@@ -87,8 +87,8 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 377528843281dd44fbc57c6875987920
   m_Children:
-  - {fileID: 4344188072928137673}
   - {fileID: -6147898620863432324}
+  - {fileID: 4344188072928137673}
   m_Volume: 1ae6a1f31849fb24ea9ea21d75682e7a
   m_Pitch: 20b07552d073ba6459c9537b41c615c5
   m_Send: 00000000000000000000000000000000
@@ -121,7 +121,10 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 337eeb33aa45479449f3d96ab5c2b65d
-  m_FloatValues: {}
+  m_FloatValues:
+    d92ea4408e9829549836f9528aca9202: -12.082023
+    1ae6a1f31849fb24ea9ea21d75682e7a: -0.025777228
+    1f6f0e17777204c42b875144cca2c042: -46.207085
   m_TransitionOverrides: {}
 --- !u!243 &4344188072928137673
 AudioMixerGroupController:

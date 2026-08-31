@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: a29b6015d2e72654587e0e076b4d9ece
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6777154471068997490
+    second: indio_hurt-export-1-Sheet_0
+  - first:
+      213: 214417538145879260
+    second: indio_hurt-export-1-Sheet_1
+  - first:
+      213: -5234513002894737655
+    second: indio_hurt-export-1-Sheet_2
+  - first:
+      213: 6624239818535560926
+    second: indio_hurt-export-1-Sheet_3
+  - first:
+      213: -3921425284423414335
+    second: indio_hurt-export-1-Sheet_4
+  - first:
+      213: 6250297389662246215
+    second: indio_hurt-export-1-Sheet_5
+  - first:
+      213: -5470979103382312351
+    second: indio_hurt-export-1-Sheet_6
+  - first:
+      213: 7994976565775838996
+    second: indio_hurt-export-1-Sheet_7
+  - first:
+      213: -7582762943891648200
+    second: indio_hurt-export-1-Sheet_8
+  - first:
+      213: 7602690837066719021
+    second: indio_hurt-export-1-Sheet_9
+  - first:
+      213: 3954191935670873016
+    second: indio_hurt-export-1-Sheet_10
+  - first:
+      213: 8945486434283130352
+    second: indio_hurt-export-1-Sheet_11
+  - first:
+      213: 5674325640738374709
+    second: indio_hurt-export-1-Sheet_12
+  - first:
+      213: -3720304792769904353
+    second: indio_hurt-export-1-Sheet_13
+  - first:
+      213: 1479768175264680737
+    second: indio_hurt-export-1-Sheet_14
+  - first:
+      213: 3207140439391024961
+    second: indio_hurt-export-1-Sheet_15
+  - first:
+      213: -8029901911723137086
+    second: indio_hurt-export-1-Sheet_16
+  - first:
+      213: -3295688989687175858
+    second: indio_hurt-export-1-Sheet_17
+  - first:
+      213: 6055099475167672999
+    second: indio_hurt-export-1-Sheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 15
+        width: 122
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e886bfb5ae5b2f1a0800000000000000
+      internalID: -6777154471068997490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 15
+        width: 146
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd48cca6d93c9f200800000000000000
+      internalID: 214417538145879260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 179
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fbb4258264b57b0800000000000000
+      internalID: -5234513002894737655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 15
+        width: 122
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed66fcaa4070eeb50800000000000000
+      internalID: 6624239818535560926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 15
+        width: 138
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd05bcfa7c4499c0800000000000000
+      internalID: -3921425284423414335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 15
+        width: 110
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7459e534c548db650800000000000000
+      internalID: 6250297389662246215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 15
+        width: 122
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16aef41fd7d2314b0800000000000000
+      internalID: -5470979103382312351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 15
+        width: 150
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f24aec3dcd3fe60800000000000000
+      internalID: 7994976565775838996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 167
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831d759174d94c690800000000000000
+      internalID: -7582762943891648200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 123
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f9a78190f228960800000000000000
+      internalID: 7602690837066719021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 135
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb60638d9c10e630800000000000000
+      internalID: 3954191935670873016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 123
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd858a4480c42c70800000000000000
+      internalID: 8945486434283130352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 83
+        width: 38
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5340a1c3b114fbe40800000000000000
+      internalID: 5674325640738374709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3627
+        y: 15
+        width: 314
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1144c28082de5cc0800000000000000
+      internalID: -3720304792769904353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 67
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b4494b051398410800000000000000
+      internalID: 1479768175264680737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 43
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14731bacc3d028c20800000000000000
+      internalID: 3207140439391024961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 4115
+        y: 11
+        width: 354
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c7238a61ce009090800000000000000
+      internalID: -8029901911723137086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 4619
+        y: 11
+        width: 366
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45a78f335c5342d0800000000000000
+      internalID: -3295688989687175858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5131
+        y: 11
+        width: 370
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaf50134e8080450800000000000000
+      internalID: 6055099475167672999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      indio_hurt-export-1-Sheet_0: -6777154471068997490
+      indio_hurt-export-1-Sheet_1: 214417538145879260
+      indio_hurt-export-1-Sheet_10: 3954191935670873016
+      indio_hurt-export-1-Sheet_11: 8945486434283130352
+      indio_hurt-export-1-Sheet_12: 5674325640738374709
+      indio_hurt-export-1-Sheet_13: -3720304792769904353
+      indio_hurt-export-1-Sheet_14: 1479768175264680737
+      indio_hurt-export-1-Sheet_15: 3207140439391024961
+      indio_hurt-export-1-Sheet_16: -8029901911723137086
+      indio_hurt-export-1-Sheet_17: -3295688989687175858
+      indio_hurt-export-1-Sheet_18: 6055099475167672999
+      indio_hurt-export-1-Sheet_2: -5234513002894737655
+      indio_hurt-export-1-Sheet_3: 6624239818535560926
+      indio_hurt-export-1-Sheet_4: -3921425284423414335
+      indio_hurt-export-1-Sheet_5: 6250297389662246215
+      indio_hurt-export-1-Sheet_6: -5470979103382312351
+      indio_hurt-export-1-Sheet_7: 7994976565775838996
+      indio_hurt-export-1-Sheet_8: -7582762943891648200
+      indio_hurt-export-1-Sheet_9: 7602690837066719021
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
