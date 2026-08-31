@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAtack : MonoBehaviour
 {
     [SerializeField] GameObject hitBox;
+    [SerializeField] AudioClip attackAudio;
     Transform trans;
     
     public bool coolDown = false;
@@ -52,6 +53,9 @@ public class PlayerAtack : MonoBehaviour
         }
         //ative o collider e o sprite
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
+        
+        //Tocar audio
+        GameObject.FindWithTag("GameController").GetComponent<GameManager>().AudioManager(attackAudio,transform,10f);
     }
 
     void OnAttackCancel()

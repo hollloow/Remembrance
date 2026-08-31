@@ -181,7 +181,6 @@ public class PlayerBehavior : PlayerAnimation
     {
         if (Physics2D.OverlapCircle(groundCheck.position,0.1f,LayerMask.GetMask("Ground")))
         {
-            print("ss");
             jumpTimer = 0;
             coyoteTimer = 0;
             canJump = true;
@@ -191,7 +190,6 @@ public class PlayerBehavior : PlayerAnimation
         }
         else
         {
-            print(coyoteTimer);
             if (!isJumping)
             {
                 OnCoyote();
@@ -270,7 +268,6 @@ public class PlayerBehavior : PlayerAnimation
     {
         if (!Attack.coolDown && !healing)
         {
-
             Attack.Atack(lastInput);
             OnAttackTrigger();
         }
