@@ -235,10 +235,10 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_0
       rect:
         serializedVersion: 2
-        x: 175
-        y: 15
-        width: 122
-        height: 214
+        x: 0
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_1
       rect:
         serializedVersion: 2
-        x: 667
-        y: 15
-        width: 146
-        height: 234
+        x: 512
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,35 +276,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 1187
-        y: 179
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 90fbb4258264b57b0800000000000000
-      internalID: -5234513002894737655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: indio_hurt-export-1-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1199
-        y: 15
-        width: 122
-        height: 234
+        x: 1536
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +301,10 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_4
       rect:
         serializedVersion: 2
-        x: 1695
-        y: 15
-        width: 138
-        height: 214
+        x: 2048
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +323,10 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_5
       rect:
         serializedVersion: 2
-        x: 2247
-        y: 15
-        width: 110
-        height: 222
+        x: 2560
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +345,10 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_6
       rect:
         serializedVersion: 2
-        x: 2759
-        y: 15
-        width: 122
-        height: 222
+        x: 3072
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +367,10 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_7
       rect:
         serializedVersion: 2
-        x: 3255
-        y: 15
-        width: 150
-        height: 218
+        x: 3584
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,22 +386,44 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_8
+      name: indio_hurt-export-1-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 167
-        width: 6
-        height: 6
+        x: 1024
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 831d759174d94c690800000000000000
+      spriteID: 771369f19743b324a94cca7842869112
+      internalID: -5234513002894737655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: indio_hurt-export-1-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c0ceaeb00dcc34799a6c2f8be0b2b6
       internalID: -7582762943891648200
       vertices: []
       indices: 
@@ -433,19 +433,19 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_9
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 123
-        width: 10
-        height: 14
+        x: 4608
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d2f9a78190f228960800000000000000
+      spriteID: 81c7a319b0aede841a584a1f302362de
       internalID: 7602690837066719021
       vertices: []
       indices: 
@@ -455,196 +455,20 @@ TextureImporter:
       name: indio_hurt-export-1-Sheet_10
       rect:
         serializedVersion: 2
-        x: 1171
-        y: 135
-        width: 6
-        height: 6
+        x: 5120
+        y: 0
+        width: 512
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8bb60638d9c10e630800000000000000
+      spriteID: 3f2fd16c5ce827c4996b974a50beb8f1
       internalID: 3954191935670873016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_11
-      rect:
-        serializedVersion: 2
-        x: 1167
-        y: 123
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fd858a4480c42c70800000000000000
-      internalID: 8945486434283130352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_12
-      rect:
-        serializedVersion: 2
-        x: 1159
-        y: 83
-        width: 38
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5340a1c3b114fbe40800000000000000
-      internalID: 5674325640738374709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_13
-      rect:
-        serializedVersion: 2
-        x: 3627
-        y: 15
-        width: 314
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1144c28082de5cc0800000000000000
-      internalID: -3720304792769904353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_14
-      rect:
-        serializedVersion: 2
-        x: 1671
-        y: 67
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12b4494b051398410800000000000000
-      internalID: 1479768175264680737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1655
-        y: 43
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14731bacc3d028c20800000000000000
-      internalID: 3207140439391024961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_16
-      rect:
-        serializedVersion: 2
-        x: 4115
-        y: 11
-        width: 354
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c7238a61ce009090800000000000000
-      internalID: -8029901911723137086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_17
-      rect:
-        serializedVersion: 2
-        x: 4619
-        y: 11
-        width: 366
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e45a78f335c5342d0800000000000000
-      internalID: -3295688989687175858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indio_hurt-export-1-Sheet_18
-      rect:
-        serializedVersion: 2
-        x: 5131
-        y: 11
-        width: 370
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7aaf50134e8080450800000000000000
-      internalID: 6055099475167672999
       vertices: []
       indices: 
       edges: []
@@ -653,7 +477,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f3c2c85f934842b4fa18aa015d82f19a
     internalID: 0
     vertices: []
     indices: 
@@ -666,14 +490,6 @@ TextureImporter:
       indio_hurt-export-1-Sheet_0: -6777154471068997490
       indio_hurt-export-1-Sheet_1: 214417538145879260
       indio_hurt-export-1-Sheet_10: 3954191935670873016
-      indio_hurt-export-1-Sheet_11: 8945486434283130352
-      indio_hurt-export-1-Sheet_12: 5674325640738374709
-      indio_hurt-export-1-Sheet_13: -3720304792769904353
-      indio_hurt-export-1-Sheet_14: 1479768175264680737
-      indio_hurt-export-1-Sheet_15: 3207140439391024961
-      indio_hurt-export-1-Sheet_16: -8029901911723137086
-      indio_hurt-export-1-Sheet_17: -3295688989687175858
-      indio_hurt-export-1-Sheet_18: 6055099475167672999
       indio_hurt-export-1-Sheet_2: -5234513002894737655
       indio_hurt-export-1-Sheet_3: 6624239818535560926
       indio_hurt-export-1-Sheet_4: -3921425284423414335
