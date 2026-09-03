@@ -15,7 +15,7 @@ public class PlayerBehavior : PlayerAnimation
     //variaveis para o pulo
     [SerializeField] private int jumpForce;
     [SerializeField] private float jumpHolding;
-    private bool canJump =true;
+    [SerializeField] private bool canJump = true;
     private bool isJumping = false;
     private float coyoteTimer;
     float jumpTimer = 0;
@@ -179,7 +179,7 @@ public class PlayerBehavior : PlayerAnimation
     //checagem se encostou no chao
     private void IsOnGround()
     {
-        if (Physics2D.OverlapCircle(groundCheck.position,0.1f,LayerMask.GetMask("Ground")))
+        if (Physics2D.OverlapCircle(groundCheck.position,0.15f,LayerMask.GetMask("Ground")))
         {
             jumpTimer = 0;
             coyoteTimer = 0;
@@ -193,6 +193,7 @@ public class PlayerBehavior : PlayerAnimation
             if (!isJumping)
             {
                 OnCoyote();
+                
                 if (coyoteTimer > 0.15f)
                 {
                     canJump = false;
