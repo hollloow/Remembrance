@@ -8,6 +8,7 @@ public class PlayerAnimation : MonoBehaviour
     protected static readonly int Dying = Animator.StringToHash("Dying");
     protected static readonly int Falling = Animator.StringToHash("Falling");
     protected static readonly int Running = Animator.StringToHash("Running");
+    protected static readonly int Hurted = Animator.StringToHash("Hurted");
     
     protected Animator animator;
     void Start()
@@ -51,6 +52,11 @@ public class PlayerAnimation : MonoBehaviour
     {
         animator.SetBool("Falling",false);
         animator.SetTrigger(Landing);
+    }
+
+    public void OnHurt()
+    {
+       animator.SetTrigger(Hurted); 
     }
     
 }

@@ -55,7 +55,7 @@ public class PlayerAtack : MonoBehaviour
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
         
         //Tocar audio
-        GameObject.FindWithTag("GameController").GetComponent<GameManager>().AudioManager(attackAudio,transform,10f);
+       // GameObject.FindWithTag("GameController").GetComponent<GameManager>().AudioManager(attackAudio,transform,10f);
     }
 
     void OnAttackCancel()

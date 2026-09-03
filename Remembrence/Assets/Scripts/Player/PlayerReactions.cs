@@ -19,6 +19,10 @@ public class PlayerReactions
             PlayerStats.Dead = true;
             GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().OnDeath();
         }
+        else
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerBehavior>().OnHurt();   
+        }
         //ativar a invencibilidade
         PlayerStats.invincibility = true;
 
