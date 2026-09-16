@@ -11,18 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Screens/TitleScreen.unity
     guid: a11c33a395051544fa07dc84215bca0b
-  - enabled: 1
-    path: Assets/Scenes/Screens/Screen2.unity
-    guid: 55a391a579f363e49837c2abe02a09ae
-  - enabled: 1
-    path: Assets/Scenes/Screens/Screen3.unity
-    guid: 26bad158e78919343ae6e4b768cd78f9
-  - enabled: 1
-    path: Assets/Scenes/Screens/Screen4.unity
-    guid: c58f33751c3eb9549a9539b8e9420726
-  - enabled: 1
-    path: Assets/Scenes/Screens/Screen5.unity
-    guid: 42638e7b8d8f63a4280e14f6fda41fce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

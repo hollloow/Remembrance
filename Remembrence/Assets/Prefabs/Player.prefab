@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitBox: {fileID: 1656513752228947749}
-  attackAudio: {fileID: 0}
+  attackAudio: {fileID: 8300000, guid: d60c8acdf94c86e44897d12229d228c7, type: 3}
   coolDown: 0
 --- !u!114 &1357731275941766992
 MonoBehaviour:

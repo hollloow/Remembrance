@@ -97,7 +97,7 @@ public class PlayerBehavior : PlayerAnimation
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
             //se estiver se movendo cmc a animação
             //se n para a animação
-            if (move != 0)
+            if (move != 0 && !isJumping && !animator.GetBool("Falling"))
             {
                 OnRunning(move);
             }
@@ -116,7 +116,7 @@ public class PlayerBehavior : PlayerAnimation
                 PlayerStats.InInvincibility += Time.deltaTime;
                 
                 //animação invencibilidade
-                if (_spriteRenderer.enabled == true)
+                if (_spriteRenderer.enabled)
                 {
                     _spriteRenderer.enabled = false;
                 }
@@ -234,7 +234,7 @@ public class PlayerBehavior : PlayerAnimation
                 //ao apertar espaço a gravidade é 0
                 //adiciona força no player pra cima, por linearVelocity
                 //enquanto o player segurar espaço, por até 0.5 segundos
-                rb.gravityScale = 0;
+                rb.gravityScale = 1;
                 rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, jumpForce);
                 OnJump();
                 PickOfTheJump();
