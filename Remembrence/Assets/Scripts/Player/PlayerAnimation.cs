@@ -16,17 +16,9 @@ public class PlayerAnimation : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    protected void OnRunning(float direction)
+    protected void OnRunning()
     {
-        //definindo a direção q o player tá
-        if (direction > 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (direction < 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
+       
         animator.SetBool("Running",true);
     }
     

@@ -9,7 +9,7 @@ using UnityEngine.U2D.Animation;
 public class PlayerBehavior : PlayerAnimation
 {
     // variaveis para a movimentação
-    [SerializeField] private int playerSpeed;
+    public float playerSpeed;
     private float move;
 
     //variaveis para o pulo
@@ -97,14 +97,28 @@ public class PlayerBehavior : PlayerAnimation
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
             //se estiver se movendo cmc a animação
             //se n para a animação
-            if (move != 0 && !isJumping && !animator.GetBool("Falling"))
+            if (move != 0)
             {
-                OnRunning(move);
+                if (move > 0)
+                {
+                    GetComponent<SpriteRenderer>().flipX = false;
+                }
+                else if (move < 0)
+                {
+                    GetComponent<SpriteRenderer>().flipX = true;
+                }
+
+                if (!isJumping && !animator.GetBool("Falling"))
+                {
+                    OnRunning();
+                }
+                
             }
             else
             {
                 animator.SetBool(Running, false);
             }
+            
             IsOnGround();
             Jumping();
         
