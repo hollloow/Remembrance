@@ -127,8 +127,10 @@ public class PlayerBehavior : PlayerAnimation
     //update q faz o player andar e pular
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
-        print($"Linear velocity: {rb.linearVelocity}, Player Speed: {playerSpeed}, moveValue: {move}, InputValue: {inputC.Player.Move.ReadValue<Vector2>()}");
+        if (!healing)
+        {
+            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);   
+        }
         
         //se o player tomou dano, por um segundo n toma mais nenhum dano.
         if (PlayerStats.invincibility)
@@ -236,7 +238,7 @@ public class PlayerBehavior : PlayerAnimation
        
         
         //primeiro checa se já apertou o botão de pulo
-        if (inputC.Player.Jump.IsInProgress() && canJump)
+        if (inputC.Player.Jump.IsInProgress() && canJump && !healing)
         {
             //checa se já está pulando por mais de 0.5 seg
             //se sim, a gravidade volta ao normal e cmc a animação de queda
