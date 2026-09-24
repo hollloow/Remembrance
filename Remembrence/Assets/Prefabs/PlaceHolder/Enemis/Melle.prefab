@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.929, y: -0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6035992338006784703}
@@ -289,7 +289,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   knockbackForce: 100
   attackPrefab: {fileID: 5677722956176801737}
-  howCloseToAttack: 2
+  howCloseToAttack: 3
 --- !u!95 &4300827540480325133
 Animator:
   serializedVersion: 7
@@ -346,15 +346,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.000000059604645, y: -0.09321809}
+  m_Offset: {x: 0.3278957, y: -0.09321809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.65625, y: 2.34375}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9904065, y: 2.1573138}
+  m_Size: {x: 1.2780343, y: 2.1573138}
   m_EdgeRadius: 0
