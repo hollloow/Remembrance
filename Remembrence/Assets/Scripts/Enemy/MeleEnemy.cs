@@ -10,7 +10,6 @@ public class MeleEnemy : EnemyBase
     [SerializeField] private float howCloseToAttack;
     private bool attacking = false;
     private float colldown;
-    private Animator animator;
     
     
     private void FixedUpdate()
@@ -37,7 +36,7 @@ public class MeleEnemy : EnemyBase
         float distanceFromPlayer =
             Mathf.Abs(Vector3.Distance(playerPosition, transform.position));
     
-        if (distanceFromPlayer <= howCloseToAttack && colldown <= 0)
+        if (distanceFromPlayer <= howCloseToAttack && colldown <= 0 && !dead)
         {
             //se o inimigo tiver perto attack
            StartCoroutine(Attack(direction));   
@@ -53,7 +52,10 @@ public class MeleEnemy : EnemyBase
 
     private void FollowPlayer(float direction)
     {
-        rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;
+        if (!dead)
+        {
+            rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;   
+        }
     }
 
     IEnumerator Attack(float playerPosition)

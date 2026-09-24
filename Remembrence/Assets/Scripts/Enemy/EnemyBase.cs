@@ -16,6 +16,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float knockbackForce;
     
+    protected bool dead = false;
+    
     protected Animator  animator;
     
     protected static readonly int Hurt = Animator.StringToHash("Hurt");
@@ -68,6 +70,7 @@ public class EnemyBase : MonoBehaviour
     }
     private  void HandleDeath()
     {
+        dead = true;
         //animação de morte
         animator.SetTrigger(Dead);
     }
