@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2378938049141930505}
   - component: {fileID: 5921909075701074142}
   - component: {fileID: 9047917186788427447}
-  - component: {fileID: 8601969430440490581}
   m_Layer: 2
-  m_Name: Ranged
+  m_Name: Jumper
   m_TagString: Damageble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,24 +162,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8601969430440490581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6057607166122899893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9e0dd27c240d840a99816d5f147e27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHP: 10
-  enemyDamage: 10
-  enemySpeed: 40
-  detectRange: 10
-  rb: {fileID: 0}
-  knockbackForce: 50
-  range: 5
-  collDown: 1.5
-  distanceShoot: 5
