@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -43,12 +44,26 @@ public class PlayerAnimation : MonoBehaviour
     protected void OnLanding()
     {
         animator.SetBool("Falling",false);
-        animator.SetTrigger(Landing);
     }
 
     public void OnHurt()
     {
        animator.SetTrigger(Hurted); 
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            animator.SetBool("Landing",true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            animator.SetBool("Landing",false);
+        }
+    }
 }

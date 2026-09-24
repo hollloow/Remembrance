@@ -18,7 +18,7 @@ public class BackGroundManager : MonoBehaviour
     private void FixedUpdate()
     {
         float dist =cam.transform.position.x * paralaxEffect;
-        float movement = cam.transform.position.x - (1-paralaxEffect);
+        float movement = cam.transform.position.x * (1-paralaxEffect);
 
         transform.position = new Vector3(startPos + dist,transform.position.y,transform.position.z);
 
