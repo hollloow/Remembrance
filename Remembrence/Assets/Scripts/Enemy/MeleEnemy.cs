@@ -10,6 +10,8 @@ public class MeleEnemy : EnemyBase
     [SerializeField] private float howCloseToAttack;
     private bool attacking = false;
     private float colldown;
+    private Animator animator;
+    
     
     private void FixedUpdate()
     {

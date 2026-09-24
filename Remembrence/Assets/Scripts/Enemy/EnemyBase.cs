@@ -16,9 +16,15 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float knockbackForce;
     
+    protected Animator  animator;
+    
+    protected static readonly int Hurt = Animator.StringToHash("Hurt");
+    protected static readonly int Dead = Animator.StringToHash("Dead");
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     //código de tomar dano e morrer
@@ -40,6 +46,7 @@ public class EnemyBase : MonoBehaviour
         {
             rb.AddRelativeForce(transform.right * knockbackForce, ForceMode2D.Impulse);
         }
+        animator.SetTrigger(Hurt);
         
         //ativa uma corrotina
         StartCoroutine(Attacked());
@@ -62,7 +69,11 @@ public class EnemyBase : MonoBehaviour
     private  void HandleDeath()
     {
         //animação de morte
-        Destroy(gameObject);
+        animator.SetTrigger(Dead);
     }
 
+    protected void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }
