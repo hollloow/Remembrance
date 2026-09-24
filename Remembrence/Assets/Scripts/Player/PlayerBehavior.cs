@@ -74,8 +74,7 @@ public class PlayerBehavior : PlayerAnimation
     #endregion
 
 
-    //update q faz o player andar e pular
-    private void FixedUpdate()
+    private void Update()
     {
         OnHeal();
         
@@ -83,7 +82,7 @@ public class PlayerBehavior : PlayerAnimation
         if (!PlayerStats.Dead && !healing)
         {
             //determinando ond o ataque vai ser direcionado pela última tecla q o jogador clicou 
-            if (inputC.Player.Move.ReadValue<Vector2>().x != 0 || inputC.Player.Move.ReadValue<Vector2>().y != 0)
+            if (inputC.Player.Move.ReadValue<Vector2>().x != 0 )
             {
                 lastInput = inputC.Player.Move.ReadValue<Vector2>();
             }
@@ -93,8 +92,8 @@ public class PlayerBehavior : PlayerAnimation
             }
 
             //movimentação por linearVelocity
-            move = inputC.Player.Move.ReadValue<Vector2>().x;
-            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
+            move = inputC.Player.Move2.ReadValue<float>();
+           
             //se estiver se movendo cmc a animação
             //se n para a animação
             if (move != 0)
@@ -121,31 +120,38 @@ public class PlayerBehavior : PlayerAnimation
             
             IsOnGround();
             Jumping();
-        
+            
+        }
+    }
 
-            //se o player tomou dano, por um segundo n toma mais nenhum dano.
-            if (PlayerStats.invincibility)
+    //update q faz o player andar e pular
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
+        print($"Linear velocity: {rb.linearVelocity}, Player Speed: {playerSpeed}, moveValue: {move}, InputValue: {inputC.Player.Move.ReadValue<Vector2>()}");
+        
+        //se o player tomou dano, por um segundo n toma mais nenhum dano.
+        if (PlayerStats.invincibility)
+        {
+            //contador da invencibilidade
+            PlayerStats.InInvincibility += Time.deltaTime;
+                
+            //animação invencibilidade
+            if (_spriteRenderer.enabled)
             {
-                //contador da invencibilidade
-                PlayerStats.InInvincibility += Time.deltaTime;
+                _spriteRenderer.enabled = false;
+            }
+            else
+            {
+                _spriteRenderer.enabled = true;
+            }
                 
-                //animação invencibilidade
-                if (_spriteRenderer.enabled)
-                {
-                    _spriteRenderer.enabled = false;
-                }
-                else
-                {
-                    _spriteRenderer.enabled = true;
-                }
-                
-                //quando acabar a invencibilidade: reseta as variaveis
-                if (PlayerStats.InInvincibility >= PlayerStats.invincibilityTime)
-                {
-                    PlayerStats.InInvincibility = 0;
-                    PlayerStats.invincibility = false;
-                    _spriteRenderer.enabled = true;
-                }
+            //quando acabar a invencibilidade: reseta as variaveis
+            if (PlayerStats.InInvincibility >= PlayerStats.invincibilityTime)
+            {
+                PlayerStats.InInvincibility = 0;
+                PlayerStats.invincibility = false;
+                _spriteRenderer.enabled = true;
             }
         }
     }
