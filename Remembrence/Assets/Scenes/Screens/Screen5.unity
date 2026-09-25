@@ -9919,13 +9919,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2ef1658b4fa184ca24c72f3647ef10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 0
-  enemyDamage: 0
-  shake: 0
-  enemySpeed: 0
-  detectRange: 0
-  rb: {fileID: 0}
+  enemyHP: 30
+  enemyDamage: 5
+  shake: 1
+  enemySpeed: 60
+  detectRange: 7
+  rb: {fileID: 1836880654}
   knockbackForce: 0
+  attackPrefab: {fileID: 0}
+  howCloseToAttack: 4
+--- !u!50 &1836880654 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5921909075701074142, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+  m_PrefabInstance: {fileID: 1836880650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842428902
 GameObject:
   m_ObjectHideFlags: 0

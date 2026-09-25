@@ -46,6 +46,10 @@ public class MeleEnemy : EnemyBase
         {
             FollowPlayer(direction);
         }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
 
        
     }
@@ -55,6 +59,16 @@ public class MeleEnemy : EnemyBase
         if (!dead)
         {
             rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;   
+            animator.SetBool("Walking", true);
+        }
+
+        if (direction > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (direction < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 

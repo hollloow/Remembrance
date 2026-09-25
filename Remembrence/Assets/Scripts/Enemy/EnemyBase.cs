@@ -22,6 +22,7 @@ public class EnemyBase : MonoBehaviour
     
     protected static readonly int Hurt = Animator.StringToHash("Hurt");
     protected static readonly int Dead = Animator.StringToHash("Dead");
+    protected static readonly int Walking = Animator.StringToHash("Walking");
     
     private void Awake()
     {

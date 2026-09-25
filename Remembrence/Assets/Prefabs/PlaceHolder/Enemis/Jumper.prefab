@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2378938049141930505}
   - component: {fileID: 5921909075701074142}
   - component: {fileID: 9047917186788427447}
+  - component: {fileID: 2012830437140904984}
   m_Layer: 2
   m_Name: Jumper
   m_TagString: Damageble
@@ -162,3 +163,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2012830437140904984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057607166122899893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2ef1658b4fa184ca24c72f3647ef10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 30
+  enemyDamage: 5
+  shake: 1
+  enemySpeed: 60
+  detectRange: 7
+  rb: {fileID: 0}
+  knockbackForce: 0
+  attackPrefab: {fileID: 0}
+  howCloseToAttack: 4
