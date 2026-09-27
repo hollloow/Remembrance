@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: d26f5ad80b2e3734583835683caca8e6
+guid: c84a9db076e1ec04dac6fa2e5013a361
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1026357627293059127
-    second: attack indio-Sheet_0
+      213: 1365219985886486401
+    second: jump indio-Sheet_0
   - first:
-      213: 322696481035542950
-    second: attack indio-Sheet_1
+      213: -9021476876720616603
+    second: jump indio-Sheet_1
   - first:
-      213: 7812628570376987869
-    second: attack indio-Sheet_2
+      213: 8667907671391197133
+    second: jump indio-Sheet_2
   - first:
-      213: 2480403450991608316
-    second: attack indio-Sheet_3
+      213: 2282168562967912366
+    second: jump indio-Sheet_3
+  - first:
+      213: 272717940755284273
+    second: jump indio-Sheet_4
+  - first:
+      213: -3829009706863824239
+    second: jump indio-Sheet_5
+  - first:
+      213: -8386555702269100915
+    second: jump indio-Sheet_6
+  - first:
+      213: -1996348018004996574
+    second: jump indio-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,12 +147,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack indio-Sheet_0
+      name: jump indio-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,19 +162,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c73fa40d25a1c1f0800000000000000
-      internalID: -1026357627293059127
+      spriteID: 18f170b085c32f210800000000000000
+      internalID: 1365219985886486401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_1
+      name: jump indio-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bcaa514964dc280800000000000000
+      internalID: -9021476876720616603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump indio-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -172,19 +206,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a164626db27a7400800000000000000
-      internalID: 322696481035542950
+      spriteID: dc7d7234a189a4870800000000000000
+      internalID: 8667907671391197133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_2
+      name: jump indio-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf14417734ebaf10800000000000000
+      internalID: 2282168562967912366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump indio-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd4636baa480c6c60800000000000000
-      internalID: 7812628570376987869
+      spriteID: 131489ea583e8c300800000000000000
+      internalID: 272717940755284273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_3
+      name: jump indio-Sheet_5
       rect:
         serializedVersion: 2
-        x: 384
+        x: 320
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -216,8 +272,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf102040cc92c6220800000000000000
-      internalID: 2480403450991608316
+      spriteID: 192fbd465ff9cdac0800000000000000
+      internalID: -3829009706863824239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump indio-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c393dc508fc9b80800000000000000
+      internalID: -8386555702269100915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump indio-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ec1c20e0c8b44e0800000000000000
+      internalID: -1996348018004996574
       vertices: []
       indices: 
       edges: []
@@ -226,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 832c9b728e7da854d8995aef6c8304ff
+    spriteID: a4f535f5734677444a764418e338c678
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +336,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack indio-Sheet_0: -1026357627293059127
-      attack indio-Sheet_1: 322696481035542950
-      attack indio-Sheet_2: 7812628570376987869
-      attack indio-Sheet_3: 2480403450991608316
+      jump indio-Sheet_0: 1365219985886486401
+      jump indio-Sheet_1: -9021476876720616603
+      jump indio-Sheet_2: 8667907671391197133
+      jump indio-Sheet_3: 2282168562967912366
+      jump indio-Sheet_4: 272717940755284273
+      jump indio-Sheet_5: -3829009706863824239
+      jump indio-Sheet_6: -8386555702269100915
+      jump indio-Sheet_7: -1996348018004996574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

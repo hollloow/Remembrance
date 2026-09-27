@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: d26f5ad80b2e3734583835683caca8e6
+guid: 15a5b7c69fbee604bb50a4ca516b1cbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1026357627293059127
-    second: attack indio-Sheet_0
+      213: -4854523194481122479
+    second: walk_cycle_indio-Sheet_0
   - first:
-      213: 322696481035542950
-    second: attack indio-Sheet_1
+      213: 6343225988643969658
+    second: walk_cycle_indio-Sheet_1
   - first:
-      213: 7812628570376987869
-    second: attack indio-Sheet_2
+      213: 4589869650843489812
+    second: walk_cycle_indio-Sheet_2
   - first:
-      213: 2480403450991608316
-    second: attack indio-Sheet_3
+      213: -5376268989660801805
+    second: walk_cycle_indio-Sheet_3
+  - first:
+      213: -798214862697193522
+    second: walk_cycle_indio-Sheet_4
+  - first:
+      213: -3716399698624844390
+    second: walk_cycle_indio-Sheet_5
+  - first:
+      213: -6393537119369462500
+    second: walk_cycle_indio-Sheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,89 +144,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack indio-Sheet_0
+      name: walk_cycle_indio-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 63
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c73fa40d25a1c1f0800000000000000
-      internalID: -1026357627293059127
+      spriteID: 153ee0fffd441acb0800000000000000
+      internalID: -4854523194481122479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_1
+      name: walk_cycle_indio-Sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 63
         y: 0
-        width: 128
+        width: 63
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a164626db27a7400800000000000000
-      internalID: 322696481035542950
+      spriteID: a7a5627cd6aa70850800000000000000
+      internalID: 6343225988643969658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_2
+      name: walk_cycle_indio-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4165fd7112e72bf30800000000000000
+      internalID: 4589869650843489812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_cycle_indio-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4d15ea6d7a365b0800000000000000
+      internalID: -5376268989660801805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_cycle_indio-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
+        width: 63
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd4636baa480c6c60800000000000000
-      internalID: 7812628570376987869
+      spriteID: ecf1f7ebfcb2ce4f0800000000000000
+      internalID: -798214862697193522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_3
+      name: walk_cycle_indio-Sheet_5
       rect:
         serializedVersion: 2
-        x: 384
+        x: 322
         y: 0
-        width: 128
+        width: 63
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf102040cc92c6220800000000000000
-      internalID: 2480403450991608316
+      spriteID: a9de8181a22bc6cc0800000000000000
+      internalID: -3716399698624844390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_cycle_indio-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d75b54dd79547a0800000000000000
+      internalID: -6393537119369462500
       vertices: []
       indices: 
       edges: []
@@ -226,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 832c9b728e7da854d8995aef6c8304ff
+    spriteID: f87f328e277cbb941a4c11950d1fdebf
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack indio-Sheet_0: -1026357627293059127
-      attack indio-Sheet_1: 322696481035542950
-      attack indio-Sheet_2: 7812628570376987869
-      attack indio-Sheet_3: 2480403450991608316
+      walk_cycle_indio-Sheet_0: -4854523194481122479
+      walk_cycle_indio-Sheet_1: 6343225988643969658
+      walk_cycle_indio-Sheet_2: 4589869650843489812
+      walk_cycle_indio-Sheet_3: -5376268989660801805
+      walk_cycle_indio-Sheet_4: -798214862697193522
+      walk_cycle_indio-Sheet_5: -3716399698624844390
+      walk_cycle_indio-Sheet_6: -6393537119369462500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

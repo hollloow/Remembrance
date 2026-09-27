@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: d26f5ad80b2e3734583835683caca8e6
+guid: 980775b6137180d43ab58ed7cbcca9ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1026357627293059127
-    second: attack indio-Sheet_0
+      213: 9204618287732675759
+    second: tocha-Sheet_0
   - first:
-      213: 322696481035542950
-    second: attack indio-Sheet_1
+      213: -4325874111080663535
+    second: tocha-Sheet_1
   - first:
-      213: 7812628570376987869
-    second: attack indio-Sheet_2
-  - first:
-      213: 2480403450991608316
-    second: attack indio-Sheet_3
+      213: 7963703792441430601
+    second: tocha-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,12 +132,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack indio-Sheet_0
+      name: tocha-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -148,21 +145,43 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9c73fa40d25a1c1f0800000000000000
-      internalID: -1026357627293059127
+      spriteID: 56b91c5bad5513d45b83240ac7359bd8
+      internalID: 1114347774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_1
+      name: tocha-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e090d42f4175f1546adf7673cd4fdbe9
+      internalID: -1084009936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tocha-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -170,54 +189,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6a164626db27a7400800000000000000
-      internalID: 322696481035542950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack indio-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd4636baa480c6c60800000000000000
-      internalID: 7812628570376987869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack indio-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf102040cc92c6220800000000000000
-      internalID: 2480403450991608316
+      spriteID: fd5b3436dccf76a4696a85c4f1f194ce
+      internalID: 1571784143
       vertices: []
       indices: 
       edges: []
@@ -226,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 832c9b728e7da854d8995aef6c8304ff
+    spriteID: 81ac649701d441c45ba1db5897271c9a
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack indio-Sheet_0: -1026357627293059127
-      attack indio-Sheet_1: 322696481035542950
-      attack indio-Sheet_2: 7812628570376987869
-      attack indio-Sheet_3: 2480403450991608316
+      tocha-Sheet_0: 1114347774
+      tocha-Sheet_1: -1084009936
+      tocha-Sheet_2: 1571784143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

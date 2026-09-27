@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: d26f5ad80b2e3734583835683caca8e6
+guid: 27f567665d3f9dc4abbcbc2523ec16de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1026357627293059127
-    second: attack indio-Sheet_0
+      213: -1434086710536417467
+    second: Barris_0
   - first:
-      213: 322696481035542950
-    second: attack indio-Sheet_1
+      213: -772350748787670035
+    second: Barris_1
   - first:
-      213: 7812628570376987869
-    second: attack indio-Sheet_2
+      213: -5257766739061846504
+    second: Barris_2
   - first:
-      213: 2480403450991608316
-    second: attack indio-Sheet_3
+      213: -1351381266537645078
+    second: Barris_3
+  - first:
+      213: -6923821541908701272
+    second: Barris_4
+  - first:
+      213: 5990928829446725799
+    second: Barris_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack indio-Sheet_0
+      name: Barris_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 64
+        x: 1
+        y: 15
+        width: 25
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c73fa40d25a1c1f0800000000000000
-      internalID: -1026357627293059127
+      spriteID: 54f4e512cb9191ce0800000000000000
+      internalID: -1434086710536417467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_1
+      name: Barris_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 64
+        x: 30
+        y: 15
+        width: 31
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a164626db27a7400800000000000000
-      internalID: 322696481035542950
+      spriteID: de30188061f0845f0800000000000000
+      internalID: -772350748787670035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_2
+      name: Barris_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 64
+        x: 68
+        y: 15
+        width: 31
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd4636baa480c6c60800000000000000
-      internalID: 7812628570376987869
+      spriteID: 81eca56f109a807b0800000000000000
+      internalID: -5257766739061846504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack indio-Sheet_3
+      name: Barris_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 64
+        x: 101
+        y: 15
+        width: 25
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +222,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf102040cc92c6220800000000000000
-      internalID: 2480403450991608316
+      spriteID: aebf7e3e5edee3de0800000000000000
+      internalID: -1351381266537645078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barris_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 15
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8af955addf4a9ef90800000000000000
+      internalID: -6923821541908701272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barris_5
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 15
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0a1d1770e042350800000000000000
+      internalID: 5990928829446725799
       vertices: []
       indices: 
       edges: []
@@ -226,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 832c9b728e7da854d8995aef6c8304ff
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +286,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack indio-Sheet_0: -1026357627293059127
-      attack indio-Sheet_1: 322696481035542950
-      attack indio-Sheet_2: 7812628570376987869
-      attack indio-Sheet_3: 2480403450991608316
+      Barris_0: -1434086710536417467
+      Barris_1: -772350748787670035
+      Barris_2: -5257766739061846504
+      Barris_3: -1351381266537645078
+      Barris_4: -6923821541908701272
+      Barris_5: 5990928829446725799
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
