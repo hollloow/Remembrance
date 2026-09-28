@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.Animation;
+using Object = System.Object;
 
 public class PlayerBehavior : PlayerAnimation
 {
@@ -42,16 +43,20 @@ public class PlayerBehavior : PlayerAnimation
     
     private void OnEnable()
     {
-        ParticleSystem meuSistemaDeParticulas = GameObject.Find("Poeira").GetComponent<ParticleSystem>();
-        meuSistemaDeParticulas.Simulate(20.0f, true, false);
-        meuSistemaDeParticulas.Play();
+        if (GameObject.Find("Poeira"))
+        {
+            ParticleSystem meuSistemaDeParticulas = GameObject.Find("Poeira").GetComponent<ParticleSystem>();
+            meuSistemaDeParticulas.Simulate(20.0f, true, false);
+            meuSistemaDeParticulas.Play();   
+        }
         inputC = new InputControls();
         inputC.Enable();
         inputC.Player.Jump.canceled += OnJumpButonReleased;
         inputC.Player.Attack.started += OnAttack;
         inputC.Player.Magic.started += OnSpecial;
         inputC.Player.Heal.started += OnHealStart;
-        
+        inputC.Player.Menu.started += OnMenu;
+
         //Pegar infos do player
     }
 
@@ -179,13 +184,9 @@ public class PlayerBehavior : PlayerAnimation
 
     #region Na_morte
     public void OnDeath()
-    {
-        //  ESPAÇO PARA ANIMAÇÃO DE MORTE E MAIS COISAS LEGAIS :D
-        
+    { 
         //cmc a animação de morte
         animator.SetTrigger(Dying);
-        
-       
     }
 
     void OnFinishDeathAnimation()
@@ -204,7 +205,7 @@ public class PlayerBehavior : PlayerAnimation
     //checagem se encostou no chao
     private void IsOnGround()
     {
-        if (Physics2D.OverlapCircle(groundCheck.position,0.15f,LayerMask.GetMask("Ground")))
+        if (Physics2D.OverlapCircle(groundCheck.position,0.2f,LayerMask.GetMask("Ground")))
         {
             jumpTimer = 0;
             coyoteTimer = 0;
@@ -381,8 +382,12 @@ public class PlayerBehavior : PlayerAnimation
     }
 
     #endregion
-    
 
+
+    private void OnMenu(InputAction.CallbackContext obj)
+    {
+        GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().OpenPauseMenu();
+    }
 
     private void OnCollisionStay2D(Collision2D other)
     {

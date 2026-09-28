@@ -6,6 +6,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     [SerializeField] GameObject MainMenu;
     [SerializeField] GameObject OptionsMenu;
     [SerializeField] GameObject OptionsKeyBinding;
+    [SerializeField] private GameObject BackGround;
     
     public void CloseGame()
     {
@@ -41,5 +42,22 @@ public class UIManagerNOPlayer : MonoBehaviour
     {
         OptionsMenu.SetActive(true);
         OptionsKeyBinding.SetActive(false);
+    }
+
+    public void CloseMainMenu()
+    {
+        MainMenu.SetActive(false);
+        BackGround.SetActive(false);
+    }
+
+    public void OpenPauseMenu()
+    {
+        MainMenu.SetActive(true);
+        BackGround.SetActive(true);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
 }

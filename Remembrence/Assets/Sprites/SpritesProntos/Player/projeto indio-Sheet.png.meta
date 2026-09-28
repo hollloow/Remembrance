@@ -138,9 +138,9 @@ TextureImporter:
       name: projeto indio-Sheet_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,9 +160,9 @@ TextureImporter:
       name: projeto indio-Sheet_1
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,7 +184,7 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -204,9 +204,9 @@ TextureImporter:
       name: projeto indio-Sheet_3
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 0
-        width: 63
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
