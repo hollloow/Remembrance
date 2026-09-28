@@ -42,6 +42,9 @@ public class PlayerBehavior : PlayerAnimation
     
     private void OnEnable()
     {
+        ParticleSystem meuSistemaDeParticulas = GameObject.Find("Poeira").GetComponent<ParticleSystem>();
+        meuSistemaDeParticulas.Simulate(20.0f, true, false);
+        meuSistemaDeParticulas.Play();
         inputC = new InputControls();
         inputC.Enable();
         inputC.Player.Jump.canceled += OnJumpButonReleased;
