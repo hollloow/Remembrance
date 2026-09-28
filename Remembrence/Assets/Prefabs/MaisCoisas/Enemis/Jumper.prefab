@@ -175,12 +175,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2ef1658b4fa184ca24c72f3647ef10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 30
+  enemyHP: 20
   enemyDamage: 5
   shake: 1
-  enemySpeed: 60
-  detectRange: 7
+  enemySpeed: 75
+  detectRange: 9
   rb: {fileID: 0}
   knockbackForce: 0
   attackPrefab: {fileID: 0}
-  howCloseToAttack: 4
+  howCloseToAttack: 5
