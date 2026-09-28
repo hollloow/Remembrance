@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.Mathematics.Geometry;
 using UnityEngine;
@@ -7,13 +8,12 @@ public class JumperEnemy : EnemyBase
 {
     [SerializeField] private GameObject attackPrefab;
     [SerializeField] private float howCloseToAttack;
-    private bool attacking = false;
-    private float colldown;
+    private bool colldown;
     
     
     private void FixedUpdate()
     {
-        if (!attacking && canWalk)
+        if (!colldown && canWalk)
         {
             CheckPlayerInRange();
         }
@@ -25,8 +25,6 @@ public class JumperEnemy : EnemyBase
     //siga o player
     private void CheckPlayerInRange()
     {
-        colldown -= Time.deltaTime;
-
         Vector3 playerPosition = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x,
             GameObject.FindGameObjectWithTag("Player").transform.position.y, 1);
         
@@ -35,13 +33,14 @@ public class JumperEnemy : EnemyBase
         float distanceFromPlayer =
             Mathf.Abs(Vector3.Distance(playerPosition, transform.position));
     
-        if (distanceFromPlayer <= howCloseToAttack && colldown <= 0 && !dead)
+        if (distanceFromPlayer <= howCloseToAttack && !colldown && !dead)
         {
             //se o inimigo tiver perto attack
            StartCoroutine(Attack(direction));   
+           colldown = true;
         }
         
-        if (distanceFromPlayer <= detectRange && !attacking)
+        if (distanceFromPlayer <= detectRange && !colldown && !dead)
         {
             FollowPlayer(direction);
         }
@@ -59,11 +58,11 @@ public class JumperEnemy : EnemyBase
 
      IEnumerator Attack(float playerPosition)
     {
-        attacking = true;
-
         yield return new WaitForSeconds(0.35f);
 
+        colldown = true;
         //coloca o attack na posição certa
+        print(colldown);
         if (playerPosition > 0)
         {
             rb.AddForce(new Vector2(500, 800), ForceMode2D.Impulse);
@@ -72,5 +71,7 @@ public class JumperEnemy : EnemyBase
         {
             rb.AddForce(new Vector2(-500, 800), ForceMode2D.Impulse);
         }
+        yield return new WaitForSeconds(3.5f);
+        colldown = false;
     }
 }
