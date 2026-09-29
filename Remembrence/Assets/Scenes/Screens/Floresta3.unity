@@ -9117,6 +9117,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2899083744634000722, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2126927595}
     - target: {fileID: 4515644451010256830, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9157,10 +9161,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5883934310140331703, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2126927595}
     - target: {fileID: 6879750998149670033, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
       propertyPath: m_Name
       value: BackgroundFloresta
       objectReference: {fileID: 0}
+    - target: {fileID: 7703638125128516244, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2126927595}
+    - target: {fileID: 7998641654040627308, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2126927595}
+    - target: {fileID: 8316371054412767774, guid: 8d70c8d1b386b6a48b19abe518ce5f6e, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2126927595}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -213,9 +213,11 @@ public class PlayerBehavior : PlayerAnimation
             isJumping = false;
             rb.sharedMaterial = null;
             animator.SetBool("Falling",false);
+            print("ss");
         }
         else
         {
+            print("nn");
             if (!isJumping)
             {
                 OnCoyote();
