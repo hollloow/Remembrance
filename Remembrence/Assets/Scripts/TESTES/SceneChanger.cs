@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,8 +12,15 @@ public class SceneChanger : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
-          PlayerStats.SpawnPosition = coordenadas; 
-            SceneManager.LoadScene(nextScene);
+          PlayerStats.SpawnPosition = coordenadas;
+          StartCoroutine(Fade());
       }
+   }
+
+   IEnumerator Fade()
+   {
+       gameObject.GetComponent<FadeScript>().enabled = true;
+       yield return new WaitForSeconds(5.0f);
+       SceneManager.LoadScene(nextScene);
    }
 }
