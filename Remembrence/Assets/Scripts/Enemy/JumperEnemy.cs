@@ -40,7 +40,7 @@ public class JumperEnemy : EnemyBase
            colldown = true;
         }
         
-        if (distanceFromPlayer <= detectRange && !colldown && !dead)
+        if (distanceFromPlayer <= detectRange  && !dead)
         {
             FollowPlayer(direction);
         }

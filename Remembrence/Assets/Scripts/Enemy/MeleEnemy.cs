@@ -75,29 +75,27 @@ public class MeleEnemy : EnemyBase
     IEnumerator Attack(float playerPosition)
     {
         attacking = true;
-
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.25f);
 
         //coloca o attack na posição certa
         if (playerPosition > 0)
         {
             attackPrefab.transform.localPosition = new Vector3(1, 0, 0);
-            attackPrefab.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
         else
         {
             attackPrefab.transform.localPosition = new Vector3(-1, 0, 0);
-            attackPrefab.transform.rotation = Quaternion.Euler(0, 0, 90);
         }
         //seta q ta atacando
         //revela o attack e ativa a hitbox
+        animator.SetTrigger("Attack");
         attackPrefab.GetComponent<BoxCollider2D>().enabled = true;
-        attackPrefab.GetComponent<SpriteRenderer>().enabled = true;
+
 
         //cooldown para o attack e para poder atacar e andar dnovo
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.2f);
         attackPrefab.GetComponent<BoxCollider2D>().enabled = false;
-        attackPrefab.GetComponent<SpriteRenderer>().enabled = false;
+
         
         yield return new WaitForSeconds(0.15f);
         attacking = false;

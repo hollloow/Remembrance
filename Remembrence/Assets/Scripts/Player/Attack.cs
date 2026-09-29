@@ -12,11 +12,13 @@ public class Attack : MonoBehaviour
         
         if (other.CompareTag("Damageble") && !hit)
         {
-            //OBS: fazer um knockback pra game feel
-            other.GetComponent<EnemyBase>().Damaged(PlayerStats.PlayerBasicAttackDamage);
+            if (!other.gameObject.GetComponent<EnemyBase>().dead)
+            {
+                other.GetComponent<EnemyBase>().Damaged(PlayerStats.PlayerBasicAttackDamage);
             
-            pr.OnManaIncrease(increase);
-            hit = true;
+                pr.OnManaIncrease(increase);
+                hit = true;   
+            }
         }
     }
 }

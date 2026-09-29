@@ -16,13 +16,14 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float knockbackForce;
     
-    protected bool dead = false;
+    public bool dead = false;
     
     protected Animator  animator;
     
     protected static readonly int Hurt = Animator.StringToHash("Hurt");
     protected static readonly int Dead = Animator.StringToHash("Dead");
     protected static readonly int Walking = Animator.StringToHash("Walking");
+    protected static readonly int Attack = Animator.StringToHash("Attack");
     
     private void Awake()
     {
