@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &112081685 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6120903829556704851, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
-  m_PrefabInstance: {fileID: 6139400348633526419}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &251903133
 GameObject:
   m_ObjectHideFlags: 0
@@ -12692,6 +12687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4794046889424723155, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -12923,21 +12922,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2897065101699362209, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
   m_PrefabInstance: {fileID: 6139400348633526419}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1315376617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112081685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afb3b43643826245a036968d87f71ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
-  fadeDuration: 5
-  IN: 1
 --- !u!1 &1317620283
 GameObject:
   m_ObjectHideFlags: 0
@@ -16904,6 +16888,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6325242331464177809, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325242331464177809, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
+      propertyPath: playerSpeed
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7181108053365572762, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -16924,10 +16916,7 @@ PrefabInstance:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6120903829556704851, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1315376617}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
