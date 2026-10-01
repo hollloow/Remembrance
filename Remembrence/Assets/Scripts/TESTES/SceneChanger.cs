@@ -17,7 +17,7 @@ public class SceneChanger : MonoBehaviour
       }
    }
 
-   IEnumerator Fade()
+   private IEnumerator Fade()
    {
        gameObject.GetComponent<FadeScript>().enabled = true;
        yield return new WaitForSeconds(gameObject.GetComponent<FadeScript>().fadeDuration);

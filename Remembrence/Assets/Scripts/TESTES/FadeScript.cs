@@ -25,7 +25,7 @@ public class FadeScript : MonoBehaviour
     private void Start()
     {
 #if UNITY_EDITOR
-        canvasGroup.gameObject.SetActive(false);
+    //    canvasGroup.gameObject.SetActive(false);
 #endif
     }
 

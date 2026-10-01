@@ -10,7 +10,8 @@ using Object = System.Object;
 public class PlayerBehavior : PlayerAnimation
 {
     // variaveis para a movimentação
-    public float playerSpeed;
+    public float playerSpeed = 300;
+    private float playerSpeed2;
     private float move;
 
     //variaveis para o pulo
@@ -57,6 +58,7 @@ public class PlayerBehavior : PlayerAnimation
         inputC.Player.Heal.started += OnHealStart;
         inputC.Player.Menu.started += OnMenu;
 
+        playerSpeed2 = playerSpeed;
         //Pegar infos do player
     }
 
@@ -85,7 +87,11 @@ public class PlayerBehavior : PlayerAnimation
     private void Update()
     {
         OnHeal();
-        
+
+        if (playerSpeed == 0)
+        {
+            playerSpeed = playerSpeed2;
+        }
         //verifica se o player ta morto ou curando
         if (!PlayerStats.Dead && !healing)
         {
@@ -166,20 +172,6 @@ public class PlayerBehavior : PlayerAnimation
         }
     }
     
-    //cancelar movimentação
-    //se eu quiser cancelar a movimentação quando o player tiver atacando
-    
-    // void CancelMove()
-    // {
-    //     if (playerSpeed != 0 && canJump)
-    //     {
-    //         playerSpeed = 0;
-    //     }
-    //     else
-    //     {
-    //         playerSpeed = 200;
-    //     }
-    // }
 
 
     #region Na_morte
@@ -213,11 +205,9 @@ public class PlayerBehavior : PlayerAnimation
             isJumping = false;
             rb.sharedMaterial = null;
             animator.SetBool("Falling",false);
-            print("ss");
         }
         else
         {
-            print("nn");
             if (!isJumping)
             {
                 OnCoyote();
