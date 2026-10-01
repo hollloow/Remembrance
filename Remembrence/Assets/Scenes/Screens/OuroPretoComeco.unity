@@ -2895,6 +2895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneChanger
       objectReference: {fileID: 0}
+    - target: {fileID: 2541636323580092016, guid: dd54233fc01605d43a171826ac25549c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2648128158107485901, guid: dd54233fc01605d43a171826ac25549c, type: 3}
       propertyPath: nextScene
       value: Screen4
