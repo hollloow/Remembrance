@@ -1971,6 +1971,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2126927595}
+    - target: {fileID: 5154303775040909696, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 756816097
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178386712068256994, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7694285107939273184, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2126,9 +2134,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2126927595}
+    - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -137558239
+      objectReference: {fileID: 0}
     - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Name
       value: FadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4794046889424723155, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Pivot.x

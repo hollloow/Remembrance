@@ -20,7 +20,7 @@ public class SceneChanger : MonoBehaviour
    IEnumerator Fade()
    {
        gameObject.GetComponent<FadeScript>().enabled = true;
-       yield return new WaitForSeconds(5.0f);
+       yield return new WaitForSeconds(gameObject.GetComponent<FadeScript>().fadeDuration);
        SceneManager.LoadScene(nextScene);
    }
 }

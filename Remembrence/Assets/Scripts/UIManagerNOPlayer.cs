@@ -18,7 +18,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     }
     public void OpenGame()
     {
-        SceneManager.LoadScene("Screen1");
+        SceneManager.LoadScene("Floresta1");
     }
 
     public void OpenOptions()

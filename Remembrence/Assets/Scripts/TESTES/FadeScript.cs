@@ -5,7 +5,7 @@ using UnityEngine;
 public class FadeScript : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private float fadeDuration = 5.0f;
+    [SerializeField] public float fadeDuration ;
     [SerializeField] private bool IN;
 
 
@@ -20,6 +20,13 @@ public class FadeScript : MonoBehaviour
         {
             FadeOut();
         }
+    }
+
+    private void Start()
+    {
+#if UNITY_EDITOR
+        canvasGroup.gameObject.SetActive(false);
+#endif
     }
 
     public void FadeIn()

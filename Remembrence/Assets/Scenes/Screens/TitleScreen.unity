@@ -347,6 +347,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 250812209931233525, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: hpFiller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 250812209931233525, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: mpFiller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 371260724530159826, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenGame
@@ -509,11 +517,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8541657685137629089, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: BackGround
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9209198823026656154, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 250812209931233525, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6178386712068256994, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
     - {fileID: 3501661292541678290, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
