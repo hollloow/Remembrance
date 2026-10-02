@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 448884314498173405}
   - component: {fileID: 508096764057868301}
   - component: {fileID: 4300827540480325133}
-  - component: {fileID: 4627435462881598940}
+  - component: {fileID: 975975326805465257}
   m_Layer: 0
   m_Name: Melle
   m_TagString: Damageble
@@ -225,13 +225,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b8892a54c615248a1aa5aabd421cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 25
+  enemyHP: 15
   enemyDamage: 5
   shake: 0
   enemySpeed: 70
   detectRange: 10
   rb: {fileID: 0}
   knockbackForce: 100
+  dead: 0
   attackPrefab: {fileID: 5677722956176801737}
   howCloseToAttack: 3
 --- !u!95 &4300827540480325133
@@ -256,8 +257,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &4627435462881598940
-BoxCollider2D:
+--- !u!70 &975975326805465257
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -290,15 +291,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.33616596, y: -0.2699759}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.1622518, y: 2.146768}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.42373866, y: 0.1441766}
+  m_Size: {x: 1.4511625, y: 3.2883532}
+  m_Direction: 0

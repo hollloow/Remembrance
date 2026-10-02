@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  shake: 0
+  impulseAmount: 0
 --- !u!114 &1316882384349458858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,9 +209,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ce6dbc531821e46b88bea02c782431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHP: 25
+  enemyHP: 20
   enemyDamage: 0
+  shake: 0
   enemySpeed: 0
   detectRange: 0
   rb: {fileID: 0}
   knockbackForce: 0
+  dead: 0

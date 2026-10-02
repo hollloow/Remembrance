@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Dialogo : MonoBehaviour
 {
+    [SerializeField] GameObject dialogue;
     [SerializeField] TextMeshProUGUI texto;
     public string[] lines;
     public float txtSpeed;
     
     private int index;
 
-    private void Start()
+    private void OnEnable()
     {
         texto.text = "";
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(true);
         StartDialogue();
     }
 
@@ -49,15 +52,15 @@ public class Dialogo : MonoBehaviour
     }
     void OnNextLine()
     {
-        if (index <= lines.Length -1)
+        if (index < lines.Length - 1)
         {
-            texto.text += "";
             index++;
+            texto.text = "";
             StartCoroutine(TypeLine());
         }
         else
         {
-            gameObject.SetActive(false);
+           dialogue.gameObject.SetActive(false);
         }
     }
 }
