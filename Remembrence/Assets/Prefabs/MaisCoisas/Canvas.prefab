@@ -1263,6 +1263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8364719784315623850}
+  - component: {fileID: 6418502280236431140}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1287,6 +1288,22 @@ Transform:
   - {fileID: 8927006699864528830}
   m_Father: {fileID: 3864470266665659777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6418502280236431140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732232108435510652}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ec5f64565aad14a86309b7e1ef1698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 3732232108435510652}
+  texto: {fileID: 1501918048337223490}
+  lines: []
+  txtSpeed: 0.2
 --- !u!1 &4264802258212730511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,14 +1528,13 @@ GameObject:
   - component: {fileID: 5842917273242531634}
   - component: {fileID: 4633312870502489178}
   - component: {fileID: 238473321275713924}
-  - component: {fileID: 7465599390253042710}
   m_Layer: 5
   m_Name: DialgueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5842917273242531634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1576,24 +1592,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7465599390253042710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4904949314256231863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ec5f64565aad14a86309b7e1ef1698, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texto: {fileID: 1501918048337223490}
-  lines:
-  - "vhsdnsdf\xE7abksklasflkhjfdklhjasdflkhjasflkhjasflkhjaflkadflkhasfljsljkhdfjhflkjhdkldflaflkhasflkjasflkhaflhasdflhj"
-  - asdasd
-  - avv
-  txtSpeed: 0.1
 --- !u!1 &5936120893449253279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,7 +1819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8927006699864528830
 RectTransform:
   m_ObjectHideFlags: 0
