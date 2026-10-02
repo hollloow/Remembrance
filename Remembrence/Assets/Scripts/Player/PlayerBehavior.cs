@@ -11,6 +11,7 @@ public class PlayerBehavior : PlayerAnimation
 {
     // variaveis para a movimentação
     public float playerSpeed;
+    private float playerSpeed2;
     private float move;
 
     //variaveis para o pulo
@@ -50,6 +51,7 @@ public class PlayerBehavior : PlayerAnimation
             meuSistemaDeParticulas.Play();   
         }
         inputC = new InputControls();
+        playerSpeed2 = playerSpeed;
         inputC.Enable();
         inputC.Player.Jump.canceled += OnJumpButonReleased;
         inputC.Player.Attack.started += OnAttack;
@@ -84,7 +86,15 @@ public class PlayerBehavior : PlayerAnimation
 
     private void Update()
     {
-        OnHeal();
+        if (playerSpeed == 0)
+        {
+            playerSpeed = playerSpeed2;
+        }
+
+        if (canJump)
+        {
+            OnHeal();
+        }
         
         //verifica se o player ta morto ou curando
         if (!PlayerStats.Dead && !healing)
