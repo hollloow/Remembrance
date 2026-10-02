@@ -49,7 +49,6 @@ public class MeleEnemy : EnemyBase
         else
         {
             animator.SetBool("Walking", false);
-            rb.linearVelocityX = 0; 
         }
 
        
