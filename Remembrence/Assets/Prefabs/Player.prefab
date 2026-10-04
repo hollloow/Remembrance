@@ -383,8 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca22fb37de9d764eba214bcc70d4509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 300
-  jumpForce: 10
+  playerSpeed: 400
+  jumpForce: 12
   jumpHolding: 0.25
   canJump: 1
   air: {fileID: 6200000, guid: c16d3bd5b8021d748bd6ac94092dc0b9, type: 2}

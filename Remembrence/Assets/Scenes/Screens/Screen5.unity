@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 460682779}
   - component: {fileID: 460682778}
   m_Layer: 0
-  m_Name: pixellab-Create-a-large-pile-of-human-cavera_0
+  m_Name: PilhaDeOssosHumanos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
