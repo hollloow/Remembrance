@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Hurt : MonoBehaviour
@@ -13,7 +14,7 @@ public class Hurt : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && !PlayerStats.invincibility)
+        if (other.gameObject.CompareTag("Player") && !PlayerStats.invincibility && !PlayerStats.Dead)
         {
             _playerReactions.OnHurt(damage,shake);
         }

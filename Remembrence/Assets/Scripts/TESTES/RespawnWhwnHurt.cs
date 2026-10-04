@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class RespawnWhwnHurt : MonoBehaviour
@@ -7,7 +8,6 @@ public class RespawnWhwnHurt : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print("ss");
             if (GetComponent<Hurt>())
             {
                 other.transform.position = PlayerStats.RespawnPosition;

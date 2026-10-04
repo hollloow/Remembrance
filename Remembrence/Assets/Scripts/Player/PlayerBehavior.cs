@@ -91,61 +91,63 @@ public class PlayerBehavior : PlayerAnimation
             playerSpeed = playerSpeed2;
         }
 
-        if (canJump)
+        if (!PlayerStats.Dead)
         {
-            OnHeal();
-        }
-        
-        //verifica se o player ta morto ou curando
-        if (!PlayerStats.Dead && !healing)
-        {
-            //determinando ond o ataque vai ser direcionado pela última tecla q o jogador clicou 
-            if (inputC.Player.Move.ReadValue<Vector2>().x != 0 )
-            {
-                lastInput = inputC.Player.Move.ReadValue<Vector2>();
-            }
-            else
-            {
-                lastInput = new Vector2(lastInput.x, 0);
-            }
-
-            //movimentação por linearVelocity
-            move = inputC.Player.Move2.ReadValue<float>();
-           
-            //se estiver se movendo cmc a animação
-            //se n para a animação
-            if (move != 0)
-            {
-                if (move > 0)
-                {
-                    GetComponent<SpriteRenderer>().flipX = false;
-                }
-                else if (move < 0)
-                {
-                    GetComponent<SpriteRenderer>().flipX = true;
-                }
-
-                if (!isJumping && !animator.GetBool("Falling"))
-                {
-                    OnRunning();
-                }
-                
-            }
-            else
-            {
-                animator.SetBool(Running, false);
-            }
-            
             IsOnGround();
             Jumping();
-            
+            if (canJump)
+            {
+                OnHeal();
+            }
+        
+            //verifica se o player ta morto ou curando
+            if (!PlayerStats.Dead && !healing)
+            {
+                //determinando ond o ataque vai ser direcionado pela última tecla q o jogador clicou 
+                if (inputC.Player.Move.ReadValue<Vector2>().x != 0 )
+                {
+                    lastInput = inputC.Player.Move.ReadValue<Vector2>();
+                }
+                else
+                {
+                    lastInput = new Vector2(lastInput.x, 0);
+                }
+
+                //movimentação por linearVelocity
+                move = inputC.Player.Move2.ReadValue<float>();
+           
+                //se estiver se movendo cmc a animação
+                //se n para a animação
+                if (move != 0)
+                {
+                    if (move > 0)
+                    {
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    else if (move < 0)
+                    {
+                        GetComponent<SpriteRenderer>().flipX = true;
+                    }
+
+                    if (!isJumping && !animator.GetBool("Falling") && !healing)
+                    {
+                        OnRunning();
+                    }
+                
+                }
+                else
+                {
+                    animator.SetBool(Running, false);
+                }
+            }   
         }
+      
     }
 
     //update q faz o player andar e pular
     private void FixedUpdate()
     {
-        if (!healing)
+        if (!healing && !PlayerStats.Dead)
         {
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);   
         }
@@ -341,7 +343,7 @@ public class PlayerBehavior : PlayerAnimation
         //se ele soltar no meio do timer ele n se curarar, mas a animação ira acabar
         if (healing)
         {
-            
+            animator.SetBool(Running, false);
             if (healingTime >= PlayerStats.HealingTime)
             {
                 healing = false;

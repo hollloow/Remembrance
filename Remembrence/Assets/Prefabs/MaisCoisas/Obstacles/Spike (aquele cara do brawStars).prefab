@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1388919895519089780}
   - component: {fileID: 4653536458054452293}
   - component: {fileID: 7725439581149855672}
+  - component: {fileID: 5725098009113828719}
   m_Layer: 0
   m_Name: Spike (aquele cara do brawStars)
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 756816097
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5746536329790398482, guid: 572f9350ce078914d801b93458ca858d, type: 3}
+  m_Sprite: {fileID: 1968907404451365955, guid: 3b58d7d6c8bab234a85210530f9e547c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,17 +124,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.011066914, y: -0.08300054}
+  m_Offset: {x: 0.04067993, y: -0.08300054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.03125, y: 1.78125}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.23439884, y: 0.33399892}
+  m_Size: {x: 1.7867737, y: 0.33399892}
   m_EdgeRadius: 0
 --- !u!114 &7725439581149855672
 MonoBehaviour:
@@ -150,3 +151,15 @@ MonoBehaviour:
   damage: 5
   shake: 0
   impulseAmount: 0
+--- !u!114 &5725098009113828719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018539415277078027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e42df663d780b946bcef4672a09a64d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
