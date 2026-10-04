@@ -343,7 +343,6 @@ public class PlayerBehavior : PlayerAnimation
         //se ele soltar no meio do timer ele n se curarar, mas a animação ira acabar
         if (healing)
         {
-            animator.SetBool(Running, false);
             if (healingTime >= PlayerStats.HealingTime)
             {
                 healing = false;
@@ -353,6 +352,7 @@ public class PlayerBehavior : PlayerAnimation
             }
             else if(inputC.Player.Heal.IsInProgress())
             {
+                animator.SetBool(Running, false);
                 healingTime += Time.deltaTime;
                 _spriteRenderer.color = new Color(76, 255, 231);
                 float manaCost = PlayerStats.HealingCost / PlayerStats.HealingTime * Time.deltaTime;

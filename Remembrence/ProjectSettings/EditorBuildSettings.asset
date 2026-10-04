@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Screens/Screen5.unity
+    guid: 370a52ebeb1537548b43129e6660276b
   - enabled: 0
     path: Assets/Scenes/Screens/TitleScreen.unity
     guid: a11c33a395051544fa07dc84215bca0b
@@ -23,9 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Screens/Screen4.unity
     guid: c58f33751c3eb9549a9539b8e9420726
-  - enabled: 1
-    path: Assets/Scenes/Screens/Screen5.unity
-    guid: 370a52ebeb1537548b43129e6660276b
   - enabled: 0
     path: Assets/Scenes/Screens/New Scene.unity
     guid: bb47cd41756520b45901acdcd76d7575
