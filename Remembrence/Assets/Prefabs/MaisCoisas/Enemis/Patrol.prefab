@@ -198,6 +198,7 @@ MonoBehaviour:
   tempoEspera: 0
   canMoveX: 0
   canMoveY: 0
+  anim: {fileID: 7238250937268520235}
 --- !u!114 &1588115531506313111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +219,9 @@ MonoBehaviour:
   rb: {fileID: 0}
   knockbackForce: 0
   dead: 0
+  started: {fileID: 0}
+  damages: {fileID: 0}
+  muerto: {fileID: 0}
 --- !u!95 &7238250937268520235
 Animator:
   serializedVersion: 7

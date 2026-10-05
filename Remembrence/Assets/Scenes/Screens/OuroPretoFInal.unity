@@ -2963,13 +2963,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386658081}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5afb3b43643826245a036968d87f71ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 0}
-  fadeDuration: 1
+  fadeDuration: 2
   IN: 0
 --- !u!1 &1919390467
 GameObject:

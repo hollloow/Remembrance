@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3319693399365875661}
   - component: {fileID: 7351024240883977271}
   - component: {fileID: 2648128158107485901}
+  - component: {fileID: 6492503865767079809}
   m_Layer: 0
   m_Name: SceneChanger
   m_TagString: Untagged
@@ -93,3 +94,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: 
   coordenadas: {x: 0, y: 0, z: 0}
+--- !u!114 &6492503865767079809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541636323580092016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afb3b43643826245a036968d87f71ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}
+  fadeDuration: 2
+  IN: 0
