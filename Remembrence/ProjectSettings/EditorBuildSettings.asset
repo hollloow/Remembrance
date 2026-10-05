@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Screens/Floresta3.unity
     guid: 44b19421d562dbd4984c6ff92d7a8b6a
   - enabled: 1
-    path: Assets/Scenes/Screens/OuroPretoComeco.unity
+    path: Assets/Scenes/Screens/OuroPretoFInal.unity
     guid: f39218201683e26478d424ff15bc7208
   - enabled: 1
     path: Assets/Scenes/Screens/Screen4.unity
