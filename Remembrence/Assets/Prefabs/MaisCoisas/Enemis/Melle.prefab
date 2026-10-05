@@ -233,6 +233,9 @@ MonoBehaviour:
   rb: {fileID: 0}
   knockbackForce: 100
   dead: 0
+  started: {fileID: 8300000, guid: aba334272be780b41a905dabc65fab6d, type: 3}
+  damages: {fileID: 8300000, guid: 8bd0f1665b3214f41a32014e50323453, type: 3}
+  muerto: {fileID: 8300000, guid: d4de2735d27123d43a84aeba77e131dd, type: 3}
   attackPrefab: {fileID: 5677722956176801737}
   howCloseToAttack: 3
 --- !u!95 &4300827540480325133

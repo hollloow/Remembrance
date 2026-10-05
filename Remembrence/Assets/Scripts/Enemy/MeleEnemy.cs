@@ -74,6 +74,7 @@ public class MeleEnemy : EnemyBase
 
     IEnumerator Attack(float playerPosition)
     {
+        GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(started, transform, 1f);
         attacking = true;
         yield return new WaitForSeconds(0.25f);
 

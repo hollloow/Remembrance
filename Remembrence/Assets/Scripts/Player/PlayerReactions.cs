@@ -6,12 +6,14 @@ public class PlayerReactions
 {
     //aqui vai ser um script pra todas as funções que envolva os status do player
     
-    
     //função de tomar dano e curar
     //quando são chamadas elas mudão os status de acordo com a função e o valor dado
     //e dão update na UI
     public void OnHurt(int dano,float shake)
     {
+        AudioClip clip = GameObject.Find("Player").GetComponent<PlayerBehavior>().dano;
+        Transform tr = GameObject.Find("Player").transform;
+        GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(clip,tr,1);
         PlayerStats.PlayerHp -= dano;
         GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtHPMudar();
         if (PlayerStats.PlayerHp <= 0)

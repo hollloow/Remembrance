@@ -25,6 +25,10 @@ public class EnemyBase : MonoBehaviour
     protected static readonly int Walking = Animator.StringToHash("Walking");
     protected static readonly int Attack = Animator.StringToHash("Attack");
     
+    [SerializeField] protected AudioClip started;
+    [SerializeField] protected AudioClip damages;
+    [SerializeField] protected AudioClip muerto;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,6 +55,7 @@ public class EnemyBase : MonoBehaviour
             rb.AddRelativeForce(transform.right * knockbackForce, ForceMode2D.Impulse);
         }
         animator.SetTrigger(Hurt);
+        GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(damages, transform, 1f);
         
         //ativa uma corrotina
         StartCoroutine(Attacked());
@@ -73,6 +78,7 @@ public class EnemyBase : MonoBehaviour
     private  void HandleDeath()
     {
         dead = true;
+        GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(muerto, transform, 0.7f);
         //animação de morte
         animator.SetTrigger(Dead);
     }
