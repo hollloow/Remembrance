@@ -9,7 +9,9 @@ public class JumperEnemy : EnemyBase
     [SerializeField] private GameObject attackPrefab;
     [SerializeField] private float howCloseToAttack;
     private bool colldown;
-    
+
+    [SerializeField] private float forceX;
+    [SerializeField] private float forceY;
     
     private void FixedUpdate()
     {
@@ -84,11 +86,11 @@ public class JumperEnemy : EnemyBase
         print(colldown);
         if (playerPosition > 0)
         {
-            rb.AddForce(new Vector2(15, 15), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(forceX, forceY), ForceMode2D.Impulse);
         }
         else
         {
-            rb.AddForce(new Vector2(-15, 15), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(-forceX, forceY), ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(3.5f);
         colldown = false;

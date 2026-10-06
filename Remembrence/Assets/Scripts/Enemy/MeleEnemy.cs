@@ -14,6 +14,7 @@ public class MeleEnemy : EnemyBase
     
     private void FixedUpdate()
     {
+        if (dead){animator.SetBool("Dead", true);}
         if (!attacking && canWalk)
         {
             CheckPlayerInRange();
