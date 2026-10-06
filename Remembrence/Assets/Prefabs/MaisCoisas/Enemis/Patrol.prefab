@@ -227,3 +227,5 @@ MonoBehaviour:
   muerto: {fileID: 0}
   attackPrefab: {fileID: 0}
   howCloseToAttack: 5
+  forceX: 10
+  forceY: 10
