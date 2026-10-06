@@ -228,7 +228,7 @@ MonoBehaviour:
   enemyHP: 15
   enemyDamage: 5
   shake: 0
-  enemySpeed: 70
+  enemySpeed: 90
   detectRange: 10
   rb: {fileID: 0}
   knockbackForce: 100
