@@ -81,6 +81,16 @@ public class EnemyBase : MonoBehaviour
         GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(muerto, transform, 0.7f);
         //animação de morte
         animator.SetTrigger(Dead);
+        if (GetComponent<CapsuleCollider2D>())
+        {
+            GetComponent<CapsuleCollider2D>().enabled = false;
+        }
+        else
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY
+            | RigidbodyConstraints2D.FreezePositionX;
     }
 
     protected void Destroy()
