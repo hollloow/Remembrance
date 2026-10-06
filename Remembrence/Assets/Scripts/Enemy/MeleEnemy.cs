@@ -61,6 +61,8 @@ public class MeleEnemy : EnemyBase
             rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;   
             animator.SetBool("Walking", true);
         }
+        else
+        { rb.linearVelocityX = 0;}
 
         if (direction > 0)
         {

@@ -40,9 +40,26 @@ public class JumperEnemy : EnemyBase
            colldown = true;
         }
         
-        if (distanceFromPlayer <= detectRange  && !dead)
+        if (distanceFromPlayer <= detectRange  && !dead && !colldown)
         {
-            FollowPlayer(direction);
+            if (!dead)
+            {
+                FollowPlayer(direction);
+                if (distanceFromPlayer < transform.position.x)
+                {
+                    GetComponent<SpriteRenderer>().flipX = false;
+                }
+                else
+                {
+                    GetComponent<SpriteRenderer>().flipX = true;
+                    rb.freezeRotation = true;
+                }
+            }
+            
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
         }
 
        
@@ -50,26 +67,28 @@ public class JumperEnemy : EnemyBase
 
     private void FollowPlayer(float direction)
     {
-        if (!dead)
-        {
+       
             rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;   
-        }
+            animator.SetBool("Walking", true);
+        
     }
 
      IEnumerator Attack(float playerPosition)
     {
         yield return new WaitForSeconds(0.35f);
 
+        animator.SetTrigger("Attack");
+        
         colldown = true;
         //coloca o attack na posição certa
         print(colldown);
         if (playerPosition > 0)
         {
-            rb.AddForce(new Vector2(500, 800), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(15, 15), ForceMode2D.Impulse);
         }
         else
         {
-            rb.AddForce(new Vector2(-500, 800), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(-15, 15), ForceMode2D.Impulse);
         }
         yield return new WaitForSeconds(3.5f);
         colldown = false;
