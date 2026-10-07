@@ -389,6 +389,8 @@ MonoBehaviour:
   canJump: 1
   air: {fileID: 6200000, guid: c16d3bd5b8021d748bd6ac94092dc0b9, type: 2}
   groundCheck: {fileID: 7181108053365572762}
+  dano: {fileID: 8300000, guid: 51969e31902c2584c8b1262f36bb7cc3, type: 3}
+  hit: {fileID: 0}
 --- !u!114 &3877652884650732346
 MonoBehaviour:
   m_ObjectHideFlags: 0

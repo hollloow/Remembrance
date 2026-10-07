@@ -14,12 +14,17 @@ public class MeleEnemy : EnemyBase
     
     private void FixedUpdate()
     {
+        if (dead){animator.SetBool("Dead", true);}
         if (!attacking && canWalk)
         {
             CheckPlayerInRange();
         }
     }
 
+    private void OnAudio(AudioClip clip)
+    {
+        gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
+    }
     
     //checara a localização do player
     //se a distância do inimigo pro player for menor ou igual ao alcance de detectação do inimigo e n tiver atacando
@@ -61,6 +66,8 @@ public class MeleEnemy : EnemyBase
             rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;   
             animator.SetBool("Walking", true);
         }
+        else
+        { rb.linearVelocityX = 0;}
 
         if (direction > 0)
         {
@@ -74,6 +81,8 @@ public class MeleEnemy : EnemyBase
 
     IEnumerator Attack(float playerPosition)
     {
+       // GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(started, transform, 1f);
+       OnAudio(started);
         attacking = true;
         yield return new WaitForSeconds(0.25f);
 

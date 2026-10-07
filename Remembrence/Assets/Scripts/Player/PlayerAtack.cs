@@ -41,20 +41,22 @@ public class PlayerAtack : MonoBehaviour
                 trans.transform.localPosition = new(0, 0, 0);
                 trans.transform.localScale = new Vector3(-1, 1, 1);
             }
-        //ative o collider e o sprite
-        hitBox.GetComponent<BoxCollider2D>().enabled = true;
-        
         //Tocar audio
         GameObject.FindWithTag("GameController").GetComponent<GameManager>().AudioManager(attackAudio,transform,10f);
     }
 
     void OnAttackCancel()
+    { StartCoroutine(AttackCan()); }
+
+    IEnumerator AttackCan()
     {
+        hitBox.GetComponent<BoxCollider2D>().enabled = true;
+        yield return new WaitForSeconds(0.1f);
         //quando a animação de attack terminar
         hitBox.GetComponent<BoxCollider2D>().enabled = false;
         hitBox.GetComponent<Attack>().hit = false;
         cooldowncounting = true;
-        GetComponent<PlayerBehavior>().playerSpeed = speed;
+        GetComponent<PlayerBehavior>().playerSpeed = speed; 
     }
 
     private void FixedUpdate()

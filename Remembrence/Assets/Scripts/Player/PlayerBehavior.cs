@@ -39,6 +39,8 @@ public class PlayerBehavior : PlayerAnimation
     
     private SpriteRenderer _spriteRenderer;
 
+    [SerializeField] public AudioClip dano;
+    [SerializeField] private AudioClip hit;
 
     #region Setando_Variaveis
     

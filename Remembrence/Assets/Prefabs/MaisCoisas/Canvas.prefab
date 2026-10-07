@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -8.23381, y: 4.3981857}
+  m_AnchoredPosition: {x: -8.182235, y: 4.3480997}
   m_SizeDelta: {x: 887.3942, y: 386.57812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4440551199527927143
@@ -211,7 +211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.660492, y: 4.1645203}
+  m_AnchoredPosition: {x: -7.608916, y: 4.1144342}
   m_SizeDelta: {x: 385.37427, y: 46.781494}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7692371132074698881
@@ -598,7 +598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.2759094, y: 4.609207}
+  m_AnchoredPosition: {x: -7.2243333, y: 4.559121}
   m_SizeDelta: {x: 527.93, y: 55.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2960480524096522937
@@ -850,7 +850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.271576, y: 4.6200867}
+  m_AnchoredPosition: {x: -7.22, y: 4.57}
   m_SizeDelta: {x: 528.16, y: 61.94507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5632585510017281229
@@ -1476,7 +1476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.6561584, y: 4.158203}
+  m_AnchoredPosition: {x: -7.6045823, y: 4.108117}
   m_SizeDelta: {x: 406.93, y: 51.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3278460444312705216
@@ -1791,7 +1791,7 @@ Transform:
   m_GameObject: {fileID: 6178386712068256994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5553854, y: 40.191174, z: -8096.3286}
+  m_LocalPosition: {x: 151, y: -35, z: -8096.3286}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children:

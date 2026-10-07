@@ -25,10 +25,21 @@ public class EnemyBase : MonoBehaviour
     protected static readonly int Walking = Animator.StringToHash("Walking");
     protected static readonly int Attack = Animator.StringToHash("Attack");
     
+    [SerializeField] protected AudioClip started;
+    [SerializeField] protected AudioClip damages;
+    [SerializeField] protected AudioClip muerto;
+    AudioSource audioSource;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+    }
+    protected void OnAudio(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 
     //código de tomar dano e morrer
@@ -51,7 +62,8 @@ public class EnemyBase : MonoBehaviour
             rb.AddRelativeForce(transform.right * knockbackForce, ForceMode2D.Impulse);
         }
         animator.SetTrigger(Hurt);
-        
+        //GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(damages, transform, 1f);
+        OnAudio(damages);
         //ativa uma corrotina
         StartCoroutine(Attacked());
         if (enemyHP <= 0)
@@ -73,8 +85,19 @@ public class EnemyBase : MonoBehaviour
     private  void HandleDeath()
     {
         dead = true;
-        //animação de morte
-        animator.SetTrigger(Dead);
+       // GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(muerto, transform, 0.7f);
+       OnAudio(muerto); 
+       //animação de morte
+        if (GetComponent<CapsuleCollider2D>())
+        {
+            GetComponent<CapsuleCollider2D>().enabled = false;
+        }
+        else
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY
+            | RigidbodyConstraints2D.FreezePositionX;
     }
 
     protected void Destroy()
