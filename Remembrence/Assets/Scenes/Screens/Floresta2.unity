@@ -716,6 +716,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 928739815131301673, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6057607166122899893, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_Name
       value: Jumper
