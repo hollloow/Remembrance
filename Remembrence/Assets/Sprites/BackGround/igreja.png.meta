@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 60e07cb51667ea943aa2b5aed054708d
+guid: a60536dc3b0986342848692a1b37907e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6220028154666186528
-    second: mapinguari idle-Sheet_0
-  - first:
-      213: 7216306264619118644
-    second: mapinguari idle-Sheet_1
-  - first:
-      213: 8990545611386848280
-    second: mapinguari idle-Sheet_2
-  - first:
-      213: 8352587894826913789
-    second: mapinguari idle-Sheet_3
+      213: -8802372185327748655
+    second: igreja_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_0
+      name: igreja_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 4
-        width: 48
-        height: 86
+        x: 0
+        y: 14
+        width: 640
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0277ecbc6aaf15650800000000000000
-      internalID: 6220028154666186528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapinguari idle-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 4
-        width: 49
-        height: 87
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4307c056058752460800000000000000
-      internalID: 7216306264619118644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapinguari idle-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 4
-        width: 49
-        height: 86
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 81409af7995d4cc70800000000000000
-      internalID: 8990545611386848280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapinguari idle-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 4
-        width: 48
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dffc26abf6a5ae370800000000000000
-      internalID: 8352587894826913789
+      spriteID: 1d9b2c86221b7d580800000000000000
+      internalID: -8802372185327748655
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mapinguari idle-Sheet_0: 6220028154666186528
-      mapinguari idle-Sheet_1: 7216306264619118644
-      mapinguari idle-Sheet_2: 8990545611386848280
-      mapinguari idle-Sheet_3: 8352587894826913789
+      igreja_0: -8802372185327748655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

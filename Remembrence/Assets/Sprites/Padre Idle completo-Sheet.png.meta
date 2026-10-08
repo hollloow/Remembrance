@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: fa4636e9579320f42b825f26287bd8c4
+guid: 5f6a5fb538cbb944ab4950c474fd6fcb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8629298911165633110
-    second: mapinguari death-Sheet_0
+      213: -4888549234905392731
+    second: Padre Idle completo-Sheet_0
   - first:
-      213: 4298081516223409868
-    second: mapinguari death-Sheet_1
+      213: 3011046274554799199
+    second: Padre Idle completo-Sheet_1
   - first:
-      213: 2925144302912146788
-    second: mapinguari death-Sheet_2
+      213: -502452320133725636
+    second: Padre Idle completo-Sheet_2
   - first:
-      213: 8051558447399805418
-    second: mapinguari death-Sheet_3
+      213: -615699159101139916
+    second: Padre Idle completo-Sheet_3
+  - first:
+      213: 3899502948968195629
+    second: Padre Idle completo-Sheet_4
+  - first:
+      213: -3567419642422975181
+    second: Padre Idle completo-Sheet_5
+  - first:
+      213: -1449655878612809535
+    second: Padre Idle completo-Sheet_6
+  - first:
+      213: 577209805649150956
+    second: Padre Idle completo-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapinguari death-Sheet_0
+      name: Padre Idle completo-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,42 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aadae4b3c529e3880800000000000000
-      internalID: -8629298911165633110
+      spriteID: 5a9d47a1f52682cb0800000000000000
+      internalID: -4888549234905392731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari death-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cce2b26ed5ad5ab30800000000000000
-      internalID: 4298081516223409868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mapinguari death-Sheet_2
+      name: Padre Idle completo-Sheet_1
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 96
-        height: 96
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46d06d3de33389820800000000000000
-      internalID: 2925144302912146788
+      spriteID: f542a1d22a269c920800000000000000
+      internalID: 3011046274554799199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari death-Sheet_3
+      name: Padre Idle completo-Sheet_2
       rect:
         serializedVersion: 2
-        x: 288
+        x: 384
         y: 0
-        width: 96
-        height: 96
+        width: 192
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +193,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae1af89bfb1ecbf60800000000000000
-      internalID: 8051558447399805418
+      spriteID: c32cbd5e64ee609f0800000000000000
+      internalID: -502452320133725636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Padre Idle completo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434154d70e89477f0800000000000000
+      internalID: -615699159101139916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Padre Idle completo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2666d98541dd1630800000000000000
+      internalID: 3899502948968195629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Padre Idle completo-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335a0a87cbafd7ec0800000000000000
+      internalID: -3567419642422975181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Padre Idle completo-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c80ab4b8a9c1ebe0800000000000000
+      internalID: -1449655878612809535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Padre Idle completo-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce307929249a20800800000000000000
+      internalID: 577209805649150956
       vertices: []
       indices: 
       edges: []
@@ -213,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9cb9627f03e8bbc418a834cbb6b5a156
+    spriteID: a2636a3b5cabd7d42bf3ffdfaf43b4d4
     internalID: 0
     vertices: []
     indices: 
@@ -223,12 +323,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":192.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mapinguari death-Sheet_0: -8629298911165633110
-      mapinguari death-Sheet_1: 4298081516223409868
-      mapinguari death-Sheet_2: 2925144302912146788
-      mapinguari death-Sheet_3: 8051558447399805418
+      Padre Idle completo-Sheet_0: -4888549234905392731
+      Padre Idle completo-Sheet_1: 3011046274554799199
+      Padre Idle completo-Sheet_2: -502452320133725636
+      Padre Idle completo-Sheet_3: -615699159101139916
+      Padre Idle completo-Sheet_4: 3899502948968195629
+      Padre Idle completo-Sheet_5: -3567419642422975181
+      Padre Idle completo-Sheet_6: -1449655878612809535
+      Padre Idle completo-Sheet_7: 577209805649150956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

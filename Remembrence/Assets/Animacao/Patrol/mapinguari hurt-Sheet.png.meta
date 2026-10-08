@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 60e07cb51667ea943aa2b5aed054708d
+guid: 251f78d3e3d7fb049af05e2af126afbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6220028154666186528
-    second: mapinguari idle-Sheet_0
+      213: -2814003698809995853
+    second: mapinguari hurt-Sheet_0
   - first:
-      213: 7216306264619118644
-    second: mapinguari idle-Sheet_1
+      213: 8554422158305052548
+    second: mapinguari hurt-Sheet_1
   - first:
-      213: 8990545611386848280
-    second: mapinguari idle-Sheet_2
+      213: 7786828362792547338
+    second: mapinguari hurt-Sheet_2
   - first:
-      213: 8352587894826913789
-    second: mapinguari idle-Sheet_3
+      213: -1571901115713584977
+    second: mapinguari hurt-Sheet_3
+  - first:
+      213: -7689987320776407955
+    second: mapinguari hurt-Sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +125,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_0
+      name: mapinguari hurt-Sheet_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 4
-        width: 48
-        height: 86
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0277ecbc6aaf15650800000000000000
-      internalID: 6220028154666186528
+      spriteID: 3bd7bcf8b86a2f8d0800000000000000
+      internalID: -2814003698809995853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_1
+      name: mapinguari hurt-Sheet_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 4
-        width: 49
-        height: 87
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4307c056058752460800000000000000
-      internalID: 7216306264619118644
+      spriteID: 487c08431a967b670800000000000000
+      internalID: 8554422158305052548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_2
+      name: mapinguari hurt-Sheet_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 4
-        width: 49
-        height: 86
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81409af7995d4cc70800000000000000
-      internalID: 8990545611386848280
+      spriteID: a04bf2bb32f501c60800000000000000
+      internalID: 7786828362792547338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_3
+      name: mapinguari hurt-Sheet_3
       rect:
         serializedVersion: 2
-        x: 319
-        y: 4
-        width: 48
-        height: 84
+        x: 288
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dffc26abf6a5ae370800000000000000
-      internalID: 8352587894826913789
+      spriteID: fa00ad7734c7f2ae0800000000000000
+      internalID: -1571901115713584977
       vertices: []
       indices: 
       edges: []
@@ -213,7 +216,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d5b315aa052a0544a9842b72486e25d4
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +224,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mapinguari idle-Sheet_0: 6220028154666186528
-      mapinguari idle-Sheet_1: 7216306264619118644
-      mapinguari idle-Sheet_2: 8990545611386848280
-      mapinguari idle-Sheet_3: 8352587894826913789
+      mapinguari hurt-Sheet_0: -2814003698809995853
+      mapinguari hurt-Sheet_1: 8554422158305052548
+      mapinguari hurt-Sheet_2: 7786828362792547338
+      mapinguari hurt-Sheet_3: -1571901115713584977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

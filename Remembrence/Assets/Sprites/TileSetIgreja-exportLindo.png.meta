@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 60e07cb51667ea943aa2b5aed054708d
+guid: dae98225c82386745a31c54f8acc2540
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6220028154666186528
-    second: mapinguari idle-Sheet_0
-  - first:
-      213: 7216306264619118644
-    second: mapinguari idle-Sheet_1
-  - first:
-      213: 8990545611386848280
-    second: mapinguari idle-Sheet_2
-  - first:
-      213: 8352587894826913789
-    second: mapinguari idle-Sheet_3
+      213: -8483900093544079630
+    second: TileSetIgreja-exportLindo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,89 +113,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_0
+      name: TileSetIgreja-exportLindo_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 4
-        width: 48
-        height: 86
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0277ecbc6aaf15650800000000000000
-      internalID: 6220028154666186528
+      spriteID: 2fed66680d1234a80800000000000000
+      internalID: -8483900093544079630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_1
+      name: TileSetIgreja-exportLindo_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 4
-        width: 49
-        height: 87
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4307c056058752460800000000000000
-      internalID: 7216306264619118644
+      spriteID: 7c6f74796e55d694cbedb369810eee55
+      internalID: 471643833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_2
+      name: TileSetIgreja-exportLindo_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 4
-        width: 49
-        height: 86
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81409af7995d4cc70800000000000000
-      internalID: 8990545611386848280
+      spriteID: 6fd235b37d32b214aa85e791f17da464
+      internalID: 1939229740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mapinguari idle-Sheet_3
+      name: TileSetIgreja-exportLindo_3
       rect:
         serializedVersion: 2
-        x: 319
-        y: 4
-        width: 48
-        height: 84
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 31, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dffc26abf6a5ae370800000000000000
-      internalID: 8352587894826913789
+      spriteID: 6401c520d914ef847b868df9c2d11372
+      internalID: 345977580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSetIgreja-exportLindo_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 31, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a0e8d5670621c49a27a3612b363606
+      internalID: 1766201743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSetIgreja-exportLindo_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 31, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41ed06133fd8f7418a841f1de0ec683
+      internalID: -1898634921
       vertices: []
       indices: 
       edges: []
@@ -213,7 +248,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ed6b0bc0f2e89ae4c9918ad85c97a484
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +256,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mapinguari idle-Sheet_0: 6220028154666186528
-      mapinguari idle-Sheet_1: 7216306264619118644
-      mapinguari idle-Sheet_2: 8990545611386848280
-      mapinguari idle-Sheet_3: 8352587894826913789
+      TileSetIgreja-exportLindo_0: -8483900093544079630
+      TileSetIgreja-exportLindo_1: 471643833
+      TileSetIgreja-exportLindo_2: 1939229740
+      TileSetIgreja-exportLindo_3: 345977580
+      TileSetIgreja-exportLindo_4: 1766201743
+      TileSetIgreja-exportLindo_5: -1898634921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
