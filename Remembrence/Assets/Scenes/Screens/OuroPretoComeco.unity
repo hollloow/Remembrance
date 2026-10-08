@@ -949,6 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817331123}
   - component: {fileID: 817331122}
+  - component: {fileID: 817331124}
   m_Layer: 0
   m_Name: Chao-0002_0
   m_TagString: Untagged
@@ -1030,6 +1031,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817331124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817331121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!1 &857097189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,6 +2108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992126213}
   - component: {fileID: 992126212}
+  - component: {fileID: 992126214}
   m_Layer: 0
   m_Name: CasasL1_0
   m_TagString: Untagged
@@ -2174,6 +2190,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &992126214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992126211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!1 &1178472876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178472878}
   - component: {fileID: 1178472877}
+  - component: {fileID: 1178472879}
   m_Layer: 0
   m_Name: Fumaca_0
   m_TagString: Untagged
@@ -2265,6 +2296,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1178472879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178472876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!4 &1315376616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2897065101699362209, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
@@ -4594,6 +4639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595627066}
   - component: {fileID: 1595627065}
+  - component: {fileID: 1595627067}
   m_Layer: 0
   m_Name: CasasL2_0
   m_TagString: Untagged
@@ -4675,6 +4721,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595627067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595627064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!1 &1665508168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4685,6 +4745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665508170}
   - component: {fileID: 1665508169}
+  - component: {fileID: 1665508171}
   m_Layer: 0
   m_Name: CasasAoFundo_0
   m_TagString: Untagged
@@ -4766,6 +4827,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1665508171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665508168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!1 &1746583253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,6 +4851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746583255}
   - component: {fileID: 1746583254}
+  - component: {fileID: 1746583256}
   m_Layer: 0
   m_Name: MorroFrente_0
   m_TagString: Untagged
@@ -4857,6 +4933,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1746583256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746583253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!1 &1832230776
 GameObject:
   m_ObjectHideFlags: 0
@@ -4867,6 +4957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832230778}
   - component: {fileID: 1832230777}
+  - component: {fileID: 1832230779}
   m_Layer: 0
   m_Name: MorroECeu_0
   m_TagString: Untagged
@@ -4948,6 +5039,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832230779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832230776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0
 --- !u!1 &2126927591
 GameObject:
   m_ObjectHideFlags: 0

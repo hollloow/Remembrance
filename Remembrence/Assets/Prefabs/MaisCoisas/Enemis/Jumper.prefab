@@ -270,7 +270,7 @@ MonoBehaviour:
   muerto: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   attackPrefab: {fileID: 0}
   howCloseToAttack: 8
-  forceX: 500
+  forceX: 750
   forceY: 1000
 --- !u!82 &5164900727200517123
 AudioSource:
