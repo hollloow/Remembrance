@@ -56,11 +56,6 @@ public class MeleEnemy : EnemyBase
             rb.linearVelocityX = 0;
         }
 
-        if (dead)
-        {
-            StopAllCoroutines();
-            attackPrefab.GetComponent<BoxCollider2D>().enabled = false;
-        }
        
     }
 
