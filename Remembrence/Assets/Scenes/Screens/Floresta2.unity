@@ -740,6 +740,10 @@ PrefabInstance:
       value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 8824438753102391587, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: forceY
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824438753102391587, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: enemySpeed
       value: 100
       objectReference: {fileID: 0}

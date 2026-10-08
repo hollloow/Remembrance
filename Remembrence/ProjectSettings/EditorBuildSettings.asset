@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Screens/TitleScreen.unity
     guid: a11c33a395051544fa07dc84215bca0b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Screens/Floresta1.unity
     guid: 96e9fbfd73694874ba9f75d3ff5ca0ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Screens/Floresta2.unity
     guid: ce1579ce09afe08408e03f2dd6e48423
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Screens/Floresta3.unity
     guid: 44b19421d562dbd4984c6ff92d7a8b6a
   - enabled: 1
