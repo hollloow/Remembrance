@@ -73,7 +73,7 @@ public class Dialogo : MonoBehaviour
             {
                 PlayerStats.TravarPlayer = false;
             } 
-           dialogue.gameObject.SetActive(false);
+            dialogue.gameObject.SetActive(false);
         }
     }
 }
