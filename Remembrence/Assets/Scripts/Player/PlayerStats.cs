@@ -38,5 +38,6 @@ public class PlayerStats
     //desbloqueio de hablidades
     public static bool DoubleJump = false;
 
+    public static bool TravarPlayer = false;
 
 }

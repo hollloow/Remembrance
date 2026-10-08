@@ -93,8 +93,9 @@ public class PlayerBehavior : PlayerAnimation
             playerSpeed = playerSpeed2;
         }
 
-        if (!PlayerStats.Dead)
+        if (!PlayerStats.Dead && !PlayerStats.TravarPlayer)
         {
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
             IsOnGround();
             Jumping();
             if (canJump)
@@ -103,7 +104,7 @@ public class PlayerBehavior : PlayerAnimation
             }
         
             //verifica se o player ta morto ou curando
-            if (!PlayerStats.Dead && !healing)
+            if (!healing)
             {
                 //determinando ond o ataque vai ser direcionado pela última tecla q o jogador clicou 
                 if (inputC.Player.Move.ReadValue<Vector2>().x != 0 )
@@ -141,7 +142,12 @@ public class PlayerBehavior : PlayerAnimation
                 {
                     animator.SetBool(Running, false);
                 }
-            }   
+            }
+        }
+        else
+        {
+            animator.SetBool("Running", false);
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
       
     }

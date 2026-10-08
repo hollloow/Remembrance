@@ -9,6 +9,7 @@ public class Dialogo : MonoBehaviour
     [SerializeField] TextMeshProUGUI texto;
     public string[] lines;
     public float txtSpeed;
+    public bool travar;
     
     private int index;
 
@@ -17,6 +18,10 @@ public class Dialogo : MonoBehaviour
         texto.text = "";
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(true);
+        if (travar)
+        {
+            PlayerStats.TravarPlayer = true;
+        } 
         StartDialogue();
     }
 
@@ -60,6 +65,14 @@ public class Dialogo : MonoBehaviour
         }
         else
         {
+            if (GameObject.Find("PlaceHolder_HitboxChaoDestrutivel"))
+            {
+                Destroy(GameObject.Find("PlaceHolder_HitboxChaoDestrutivel"));
+            }
+            if (travar)
+            {
+                PlayerStats.TravarPlayer = false;
+            } 
            dialogue.gameObject.SetActive(false);
         }
     }
