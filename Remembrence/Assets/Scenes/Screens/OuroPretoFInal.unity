@@ -3624,7 +3624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2648128158107485901, guid: dd54233fc01605d43a171826ac25549c, type: 3}
       propertyPath: nextScene
-      value: Igleja
+      value: Screen4
       objectReference: {fileID: 0}
     - target: {fileID: 3319693399365875661, guid: dd54233fc01605d43a171826ac25549c, type: 3}
       propertyPath: m_LocalPosition.x
