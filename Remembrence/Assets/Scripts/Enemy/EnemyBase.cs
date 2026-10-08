@@ -18,7 +18,7 @@ public class EnemyBase : MonoBehaviour
     
     public bool dead = false;
     
-    protected Animator  animator;
+    [SerializeField] protected Animator  animator;
     
     protected static readonly int Hurt = Animator.StringToHash("Hurt");
     protected static readonly int Dead = Animator.StringToHash("Dead");
@@ -88,6 +88,7 @@ public class EnemyBase : MonoBehaviour
        // GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(muerto, transform, 0.7f);
        OnAudio(muerto); 
        //animação de morte
+       animator.SetBool("Dead", true);
         if (GetComponent<CapsuleCollider2D>())
         {
             GetComponent<CapsuleCollider2D>().enabled = false;

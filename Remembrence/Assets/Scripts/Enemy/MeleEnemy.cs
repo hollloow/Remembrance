@@ -14,8 +14,7 @@ public class MeleEnemy : EnemyBase
     
     private void FixedUpdate()
     {
-        if (dead){animator.SetBool("Dead", true);}
-        if (!attacking && canWalk)
+        if (!attacking && canWalk && !PlayerStats.Dead)
         {
             CheckPlayerInRange();
         }
@@ -54,6 +53,7 @@ public class MeleEnemy : EnemyBase
         else
         {
             animator.SetBool("Walking", false);
+            rb.linearVelocityX = 0;
         }
 
        
@@ -84,6 +84,8 @@ public class MeleEnemy : EnemyBase
        // GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(started, transform, 1f);
        OnAudio(started);
         attacking = true;
+        rb.linearVelocityX = 0;
+        
         yield return new WaitForSeconds(0.25f);
 
         //coloca o attack na posição certa

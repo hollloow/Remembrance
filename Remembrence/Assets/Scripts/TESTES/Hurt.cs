@@ -18,5 +18,10 @@ public class Hurt : MonoBehaviour
         {
             _playerReactions.OnHurt(damage,shake);
         }
+
+        if (!GetComponent<EnemyBase>() && other.gameObject.CompareTag("Damageble"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

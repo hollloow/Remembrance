@@ -45,6 +45,12 @@ public class PlayerAtack : MonoBehaviour
         GameObject.FindWithTag("GameController").GetComponent<GameManager>().AudioManager(attackAudio,transform,10f);
     }
 
+    void OnAttackReset()
+    {
+        hitBox.GetComponent<Attack>().hit = false;
+        cooldowncounting = true;
+        GetComponent<PlayerBehavior>().playerSpeed = speed; 
+    }
     void OnAttackCancel()
     { StartCoroutine(AttackCan()); }
 

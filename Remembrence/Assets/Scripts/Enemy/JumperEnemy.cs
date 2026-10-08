@@ -15,7 +15,7 @@ public class JumperEnemy : EnemyBase
     
     private void FixedUpdate()
     {
-        if (!colldown && canWalk)
+        if (!colldown && canWalk && !PlayerStats.Dead)
         {
             CheckPlayerInRange();
         }
@@ -44,24 +44,22 @@ public class JumperEnemy : EnemyBase
         
         if (distanceFromPlayer <= detectRange  && !dead && !colldown)
         {
-            if (!dead)
-            {
                 FollowPlayer(direction);
-                if (distanceFromPlayer < transform.position.x)
+                if (direction > 0)
                 {
-                    GetComponent<SpriteRenderer>().flipX = false;
+                    GetComponent<SpriteRenderer>().flipX = true;
                 }
                 else
                 {
-                    GetComponent<SpriteRenderer>().flipX = true;
+                    GetComponent<SpriteRenderer>().flipX = false;
                     rb.freezeRotation = true;
                 }
-            }
             
         }
         else
         {
             animator.SetBool("Walking", false);
+            rb.linearVelocityX = 0;
         }
 
        
@@ -76,9 +74,11 @@ public class JumperEnemy : EnemyBase
     }
 
      IEnumerator Attack(float playerPosition)
-    {
-        yield return new WaitForSeconds(0.35f);
+     {
+         rb.linearVelocityX = 0;
+        yield return new WaitForSeconds(0.5f);
 
+        GetComponent<CircleCollider2D>().enabled = true;
         animator.SetTrigger("Attack");
         
         colldown = true;
@@ -92,7 +92,17 @@ public class JumperEnemy : EnemyBase
         {
             rb.AddForce(new Vector2(-forceX, forceY), ForceMode2D.Impulse);
         }
-        yield return new WaitForSeconds(3.5f);
+
+        yield return new WaitForSeconds(2.0f);
         colldown = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            GetComponent<CircleCollider2D>().enabled = false;
+            rb.linearVelocityX = 0;
+        }
     }
 }
