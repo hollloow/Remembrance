@@ -334,10 +334,7 @@ PrefabInstance:
     - {fileID: 1588115531506313111, guid: 12c29714ec1714a4f91ac20cb1b54e22, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1737120868113247601, guid: 12c29714ec1714a4f91ac20cb1b54e22, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1797645518}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c29714ec1714a4f91ac20cb1b54e22, type: 3}
 --- !u!1 &619394800
 GameObject:
@@ -449,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4794046889424723155, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Pivot.x
@@ -12597,38 +12594,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1797645517 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1737120868113247601, guid: 12c29714ec1714a4f91ac20cb1b54e22, type: 3}
-  m_PrefabInstance: {fileID: 564244680}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1797645518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797645517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed2ef1658b4fa184ca24c72f3647ef10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHP: 20
-  enemyDamage: 5
-  shake: 1
-  enemySpeed: 75
-  detectRange: 9
-  rb: {fileID: 0}
-  knockbackForce: 0
-  dead: 0
-  started: {fileID: 0}
-  damages: {fileID: 0}
-  muerto: {fileID: 0}
-  attackPrefab: {fileID: 0}
-  howCloseToAttack: 5
-  forceX: 0
-  forceY: 0
 --- !u!1 &1934763360
 GameObject:
   m_ObjectHideFlags: 0

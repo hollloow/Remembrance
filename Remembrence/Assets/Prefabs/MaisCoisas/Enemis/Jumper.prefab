@@ -135,7 +135,7 @@ BoxCollider2D:
   m_Offset: {x: 0.30474758, y: -0.1328386}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.6, y: 0.4966683}
     oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
@@ -260,7 +260,7 @@ MonoBehaviour:
   enemyDamage: 5
   shake: 1
   enemySpeed: 75
-  detectRange: 10
+  detectRange: 13
   rb: {fileID: 0}
   knockbackForce: 0
   dead: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   damages: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   muerto: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   attackPrefab: {fileID: 0}
-  howCloseToAttack: 4
+  howCloseToAttack: 8
   forceX: 500
   forceY: 1000
 --- !u!82 &5164900727200517123
