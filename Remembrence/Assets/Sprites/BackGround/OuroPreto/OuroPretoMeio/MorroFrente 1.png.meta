@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d2d4dd2963545cc4a8b29feaa9a3c3e3
+guid: f37a4cf2a7c01dc4fb1bfbd004157e2c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8974600030074850738
-    second: MorroFrente_0
+      213: -8051501262352280367
+    second: MorroFrente 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,29 +96,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MorroFrente_0
+      name: MorroFrente 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 33
-        width: 469
+        width: 640
         height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e42bd2672d0d37380800000000000000
-      internalID: -8974600030074850738
+      spriteID: 1d412e4b242534090800000000000000
+      internalID: -8051501262352280367
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MorroFrente_0: -8974600030074850738
+      MorroFrente 1_0: -8051501262352280367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1031,7 +1031,7 @@ Transform:
   m_GameObject: {fileID: 665456912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.656664, y: -5.5999994, z: -10}
+  m_LocalPosition: {x: -17.556664, y: -6.3599997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3525,6 +3525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344052966}
   - component: {fileID: 1344052965}
+  - component: {fileID: 1344052967}
   m_Layer: 0
   m_Name: MorroComCeu-0001_0
   m_TagString: Untagged
@@ -3606,6 +3607,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1344052967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344052964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0.6
 --- !u!1001 &1386658080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3665,6 +3680,14 @@ PrefabInstance:
     - target: {fileID: 3319693399365875661, guid: dd54233fc01605d43a171826ac25549c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351024240883977271, guid: dd54233fc01605d43a171826ac25549c, type: 3}
+      propertyPath: m_Size.y
+      value: 2.694964
+      objectReference: {fileID: 0}
+    - target: {fileID: 7351024240883977271, guid: dd54233fc01605d43a171826ac25549c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.84748197
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3795,6 +3818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088670494}
   - component: {fileID: 2088670493}
+  - component: {fileID: 2088670495}
   m_Layer: 0
   m_Name: MorroDaFrente-0008_0
   m_TagString: Untagged
@@ -3876,6 +3900,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088670495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088670492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
+  cam: {fileID: 0}
+  paralaxEffect: 0.6
 --- !u!1 &2126927591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,11 +4187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2897065101699362209, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.49
+      value: -18.39
       objectReference: {fileID: 0}
     - target: {fileID: 2897065101699362209, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.1
+      value: -7.86
       objectReference: {fileID: 0}
     - target: {fileID: 2897065101699362209, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: m_LocalPosition.z
