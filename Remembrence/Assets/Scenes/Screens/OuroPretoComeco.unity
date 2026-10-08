@@ -1006,12 +1006,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7444835046119586085, guid: 90d5af53a0e8b04429f009559d35b8d9, type: 3}
+  m_Sprite: {fileID: -6357978219605455805, guid: c1df107f2fbd619408ea4322d0866dca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 5.625}
+  m_Size: {x: 20, y: 1.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1025,7 +1025,7 @@ Transform:
   m_GameObject: {fileID: 817331121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.54, y: 0.93, z: 0}
+  m_LocalPosition: {x: 0.96, y: -3.669, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1043,8 +1043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.2
 --- !u!1 &857097189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,8 +2202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.2
 --- !u!1 &1178472876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2308,8 +2308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.6
 --- !u!4 &1315376616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2897065101699362209, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
@@ -4733,8 +4733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.2
 --- !u!1001 &1657552796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4871,7 +4871,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7294924465402662237, guid: 708b4ff10499c34489fe471c1e68c694, type: 3}
+  m_Sprite: {fileID: -5767574029089389822, guid: b581a203567e75340a1ff8787a364ca4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4890,7 +4890,7 @@ Transform:
   m_GameObject: {fileID: 1665508168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.93, z: 0}
+  m_LocalPosition: {x: 1.06, y: 0.69, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4908,8 +4908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.4
 --- !u!1 &1746583253
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,8 +5014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.6
 --- !u!1 &1832230776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,8 +5120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 0}
-  paralaxEffect: 0
+  cam: {fileID: 2126927595}
+  paralaxEffect: 0.6
 --- !u!1 &2126927591
 GameObject:
   m_ObjectHideFlags: 0

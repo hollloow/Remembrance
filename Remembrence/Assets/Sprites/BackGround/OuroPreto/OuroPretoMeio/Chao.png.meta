@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 708b4ff10499c34489fe471c1e68c694
+guid: c1df107f2fbd619408ea4322d0866dca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7294924465402662237
-    second: CasasAoFundo_0
+      213: -6357978219605455805
+    second: Chao_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CasasAoFundo_0
+      name: Chao_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 640
-        height: 180
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a23e5059d833ca90800000000000000
-      internalID: -7294924465402662237
+      spriteID: 34c0fbace7ce3c7a0800000000000000
+      internalID: -6357978219605455805
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CasasAoFundo_0: -7294924465402662237
+      Chao_0: -6357978219605455805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

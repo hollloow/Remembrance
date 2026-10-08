@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 90d5af53a0e8b04429f009559d35b8d9
+guid: b581a203567e75340a1ff8787a364ca4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7444835046119586085
-    second: Chao-0002_0
-  - first:
-      213: 7486784595872928497
-    second: Chao-0002_1
+      213: -5767574029089389822
+    second: CasasAoFundo 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chao-0002_0
+      name: CasasAoFundo 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,15 +108,15 @@ TextureImporter:
         width: 640
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd6c9a058f1aea890800000000000000
-      internalID: -7444835046119586085
+      spriteID: 203cb5c7af575ffa0800000000000000
+      internalID: -5767574029089389822
       vertices: []
       indices: 
       edges: []
@@ -141,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9400eb8bbf7aa824381db8d23f0dd98c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -149,11 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":640.0,"y":180.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Chao-0002_0: -7444835046119586085
+      CasasAoFundo 1_0: -5767574029089389822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
