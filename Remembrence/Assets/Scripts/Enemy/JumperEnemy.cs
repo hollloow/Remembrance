@@ -102,7 +102,7 @@ public class JumperEnemy : EnemyBase
         if (other.gameObject.CompareTag("Ground"))
         {
             GetComponent<CircleCollider2D>().enabled = false;
-            rb.linearVelocityX = 0;
+            rb.linearVelocity = Vector2.zero;
         }
     }
 }
