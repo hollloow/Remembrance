@@ -25,6 +25,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     {
         MainMenu.SetActive(false);
         OptionsMenu.SetActive(true);
+        GameObject.Find("Canvas").GetComponent<SlidersAudio>().SettingSliders();
     }
     public void CloseOptions()
     {
