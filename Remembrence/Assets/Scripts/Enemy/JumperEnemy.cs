@@ -70,7 +70,7 @@ public class JumperEnemy : EnemyBase
        
             rb.linearVelocityX = enemySpeed * Time.deltaTime * direction;   
             animator.SetBool("Walking", true);
-        
+            StartCoroutine(OnAudio(started));
     }
 
      IEnumerator Attack(float playerPosition)

@@ -6,7 +6,7 @@ public class PlayerAnimation : MonoBehaviour
     //os parametros q estão sendo usados pelo animator
     protected static readonly int Attacking = Animator.StringToHash("Attacking");
     protected static readonly int Landing = Animator.StringToHash("Landing");
-    protected static readonly int Dying = Animator.StringToHash("Dying");
+    protected static readonly int Dead = Animator.StringToHash("Dead");
     protected static readonly int Falling = Animator.StringToHash("Falling");
     protected static readonly int Running = Animator.StringToHash("Running");
     protected static readonly int Hurted = Animator.StringToHash("Hurted");

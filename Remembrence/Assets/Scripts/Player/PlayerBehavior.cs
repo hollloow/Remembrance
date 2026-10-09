@@ -217,7 +217,7 @@ public class PlayerBehavior : PlayerAnimation
     public void OnDeath()
     { 
         //cmc a animação de morte
-        animator.SetTrigger(Dying);
+        animator.SetBool("Dead",true);
     }
 
     public void OnFinishDeathAnimation()
