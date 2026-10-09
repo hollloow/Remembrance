@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794046889424723155, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Pivot.x
@@ -864,6 +864,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 238473321275713924, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_Color.a
+      value: 0.21960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 238473321275713924, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.64982533
+      objectReference: {fileID: 0}
+    - target: {fileID: 238473321275713924, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5971431
+      objectReference: {fileID: 0}
+    - target: {fileID: 238473321275713924, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6698113
+      objectReference: {fileID: 0}
     - target: {fileID: 2929314038390118049, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 275
@@ -1758,7 +1774,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.53125, y: 2.84375}
+  m_Size: {x: 0.81, y: 0.91}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3937,9 +3953,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ComecarOdialogo
   quantidadeDeDialogos:
-  - para
-  - pa
-  - pa
+  - "Voc\xEA, meu jovem\u2026 Seu povo desconhece aquilo que devasta estas terras."
+  - "O sil\xEAncio \xE9 amedrontador\u2026 mas nada se compara ao desespero que sussurra
+    aos meus ouvidos."
+  - "Ajude-nos, her\xF3i\u2026 Silencie a dor daquele que canta."
   travar: 1
 --- !u!61 &1506099345
 BoxCollider2D:
