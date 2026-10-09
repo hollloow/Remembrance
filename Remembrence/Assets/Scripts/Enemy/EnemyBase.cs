@@ -28,6 +28,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected AudioClip started;
     [SerializeField] protected AudioClip damages;
     [SerializeField] protected AudioClip muerto;
+
+    protected bool playing;
     AudioSource audioSource;
     
     private void Awake()
@@ -36,10 +38,27 @@ public class EnemyBase : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
-    protected void OnAudio(AudioClip clip)
+    protected IEnumerator OnAudio(AudioClip clip)
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+        float leght = clip.length;
+        if (playing && clip == audioSource.clip)
+        { }
+        else if (!playing)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+            playing = true;
+        }
+        else if (playing && clip != audioSource.clip)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+
+        yield return new WaitForSeconds(leght);
+        playing = false;
+
     }
 
     //código de tomar dano e morrer
@@ -63,7 +82,7 @@ public class EnemyBase : MonoBehaviour
         }
         animator.SetTrigger(Hurt);
         //GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(damages, transform, 1f);
-        OnAudio(damages);
+         StartCoroutine(OnAudio(damages));
         //ativa uma corrotina
         StartCoroutine(Attacked());
         if (enemyHP <= 0)
@@ -86,7 +105,7 @@ public class EnemyBase : MonoBehaviour
     {
         dead = true;
        // GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(muerto, transform, 0.7f);
-       OnAudio(muerto); 
+        StartCoroutine(OnAudio(muerto)); 
        //animação de morte
        animator.SetBool("Dead", true);
         if (GetComponent<CapsuleCollider2D>())

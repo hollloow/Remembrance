@@ -265,7 +265,7 @@ MonoBehaviour:
   knockbackForce: 0
   dead: 0
   animator: {fileID: 0}
-  started: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
+  started: {fileID: 8300000, guid: b2ff2c1468e71f545b2c53ef53b19ad0, type: 3}
   damages: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   muerto: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   attackPrefab: {fileID: 0}
