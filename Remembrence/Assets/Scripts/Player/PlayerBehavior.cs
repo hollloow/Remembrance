@@ -4,6 +4,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.U2D.Animation;
 using Object = System.Object;
 
@@ -72,6 +73,13 @@ public class PlayerBehavior : PlayerAnimation
     ////setando variaveis iniciais
     private void Awake()
     {
+        if (PlayerStats.Dead)
+        {
+            transform.position = PlayerStats.RespawnPosMorte;
+            PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
+            PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
+            PlayerStats.Dead = false;
+        }
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
         {
             transform.position = PlayerStats.SpawnPosition;
@@ -147,7 +155,8 @@ public class PlayerBehavior : PlayerAnimation
         else
         {
             animator.SetBool("Running", false);
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX
+                             | RigidbodyConstraints2D.FreezeRotation;
         }
       
     }
@@ -211,11 +220,18 @@ public class PlayerBehavior : PlayerAnimation
 
     void OnFinishDeathAnimation()
     {
-        //quando acabar a animação de morte
-        Destroy(gameObject);
-        
-        //coisas que acontecem após a morte do player (sla)
+        StartCoroutine(TrocarSceneNaMorte());
     }
+
+    IEnumerator TrocarSceneNaMorte()
+    {
+        GetComponent<FadeScript>().FadeOut();
+        yield return new WaitForSeconds(GetComponent<FadeScript>().fadeDuration);
+        //quando acabar a animação de morte
+        SceneManager.LoadScene(PlayerStats.SceneRespawn);
+    }
+    
+    
     #endregion
     
     

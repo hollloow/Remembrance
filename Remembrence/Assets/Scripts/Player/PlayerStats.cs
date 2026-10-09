@@ -40,4 +40,7 @@ public class PlayerStats
 
     public static bool TravarPlayer = false;
 
+    public static string SceneRespawn;
+    public static Vector3 RespawnPosMorte;
+
 }
