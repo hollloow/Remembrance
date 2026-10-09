@@ -3908,7 +3908,7 @@ MonoBehaviour:
   - para
   - pa
   - pa
-  travar: 0
+  travar: 1
 --- !u!61 &1506099345
 BoxCollider2D:
   m_ObjectHideFlags: 0

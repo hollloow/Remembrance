@@ -79,6 +79,8 @@ public class PlayerBehavior : PlayerAnimation
             PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
             PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
             PlayerStats.Dead = false;
+            GameObject.Find("Canvas").GetComponent<UIManager>().TxtHPMudar();
+            GameObject.Find("Canvas").GetComponent<UIManager>().TxtManaMudar();
         }
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
         {
@@ -218,7 +220,7 @@ public class PlayerBehavior : PlayerAnimation
         animator.SetTrigger(Dying);
     }
 
-    void OnFinishDeathAnimation()
+    public void OnFinishDeathAnimation()
     {
         StartCoroutine(TrocarSceneNaMorte());
     }

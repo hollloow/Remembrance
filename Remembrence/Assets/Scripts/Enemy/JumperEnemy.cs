@@ -83,7 +83,6 @@ public class JumperEnemy : EnemyBase
         
         colldown = true;
         //coloca o attack na posição certa
-        print(colldown);
         if (playerPosition > 0)
         {
             rb.AddForce(new Vector2(forceX, forceY), ForceMode2D.Impulse);
