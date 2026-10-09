@@ -12,6 +12,7 @@ public class SceneChanger : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
+          PlayerStats.TravarPlayer = true;
           PlayerStats.SpawnPosition = coordenadas;
           StartCoroutine(Fade());
       }

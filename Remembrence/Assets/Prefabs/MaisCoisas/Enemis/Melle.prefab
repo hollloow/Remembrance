@@ -238,6 +238,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   knockbackForce: 100
   dead: 0
+  animator: {fileID: 0}
   started: {fileID: 8300000, guid: aba334272be780b41a905dabc65fab6d, type: 3}
   damages: {fileID: 8300000, guid: 8bd0f1665b3214f41a32014e50323453, type: 3}
   muerto: {fileID: 8300000, guid: d4de2735d27123d43a84aeba77e131dd, type: 3}
@@ -299,7 +300,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.42373866, y: 0.067114234}
+  m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.4511625, y: 3.1342285}
   m_Direction: 0
 --- !u!82 &7030901130816328885

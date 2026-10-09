@@ -27,6 +27,7 @@ public class FadeScript : MonoBehaviour
 #if UNITY_EDITOR
        // canvasGroup.gameObject.SetActive(false);
 #endif
+        
     }
 
     public void FadeIn()

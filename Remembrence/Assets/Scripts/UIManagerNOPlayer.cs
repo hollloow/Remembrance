@@ -50,6 +50,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     {
         MainMenu.SetActive(false);
         BackGround.SetActive(false);
+        PlayerStats.TravarPlayer = false;
     }
 
     public void OpenPauseMenu()

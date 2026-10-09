@@ -90,6 +90,7 @@ public class PlayerBehavior : PlayerAnimation
         _spriteRenderer = GetComponent<SpriteRenderer>();
         Attack = GetComponent<PlayerAtack>();
         gravity = rb.gravityScale;
+        PlayerStats.TravarPlayer = false;
     }
     
 
@@ -427,6 +428,7 @@ public class PlayerBehavior : PlayerAnimation
     private void OnMenu(InputAction.CallbackContext obj)
     {
         GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().OpenPauseMenu();
+        PlayerStats.TravarPlayer = true;
     }
 
     private void OnCollisionStay2D(Collision2D other)
