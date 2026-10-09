@@ -7,6 +7,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     [SerializeField] GameObject OptionsMenu;
     [SerializeField] GameObject OptionsKeyBinding;
     [SerializeField] private GameObject BackGround;
+    [SerializeField] private GameObject tutorial;
     
     public void CloseGame()
     {
@@ -60,5 +61,11 @@ public class UIManagerNOPlayer : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("TitleScreen");
+    }
+
+    public void Comecar()
+    {
+        tutorial.SetActive(false);
+        BackGround.SetActive(false);
     }
 }
