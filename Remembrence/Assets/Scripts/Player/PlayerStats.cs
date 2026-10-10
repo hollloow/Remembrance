@@ -6,7 +6,7 @@ public class PlayerStats
     //aqui ta todos os status do player
     
     //para o HP
-    public static int PlayerHp = 30;
+    public static float PlayerHp = 30;
     public static int PlayerMaxHp = 30;
     
     //para a invencibilidade

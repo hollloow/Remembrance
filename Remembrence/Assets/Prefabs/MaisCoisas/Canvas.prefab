@@ -211,7 +211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.6089153, y: 4.1144342}
+  m_AnchoredPosition: {x: -7.6089153, y: 4.09}
   m_SizeDelta: {x: 406.93, y: 51.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7692371132074698881
@@ -851,8 +851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -7.626045, y: 4.108116}
-  m_SizeDelta: {x: 394.2198, y: 61.94507}
+  m_AnchoredPosition: {x: -7.2287235, y: 4.559122}
+  m_SizeDelta: {x: 524.5252, y: 61.94507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5632585510017281229
 CanvasRenderer:
@@ -2285,8 +2285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105.45159, y: -498.54056}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 105.45159, y: -458}
+  m_SizeDelta: {x: 160, y: 54.4089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &399386536627981984
 CanvasRenderer:
@@ -2798,6 +2798,38 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2103561656330190329, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 220.07092
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103561656330190329, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 55.586975
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103561656330190329, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.1527021
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103561656330190329, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.6261153
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192218719760759692, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 203.38452
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192218719760759692, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 62.26178
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192218719760759692, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192218719760759692, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.011259
+      objectReference: {fileID: 0}
     - target: {fileID: 2283934318596112447, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -2917,6 +2949,22 @@ PrefabInstance:
     - target: {fileID: 7461672234512893714, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615304164966885749, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 210.05908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615304164966885749, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 73.386536
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615304164966885749, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.0970807
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615304164966885749, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.7616735
       objectReference: {fileID: 0}
     - target: {fileID: 7704108951687121051, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -40,6 +40,15 @@ public class JumperEnemy : EnemyBase
             //se o inimigo tiver perto attack
            StartCoroutine(Attack(direction));   
            colldown = true;
+           if (direction > 0)
+           {
+               GetComponent<SpriteRenderer>().flipX = true;
+           }
+           else
+           {
+               GetComponent<SpriteRenderer>().flipX = false;
+               rb.freezeRotation = true;
+           }
         }
         
         if (distanceFromPlayer <= detectRange  && !dead && !colldown)
@@ -96,11 +105,16 @@ public class JumperEnemy : EnemyBase
         colldown = false;
     }
 
+     public void CancelAttack()
+     {
+         GetComponent<CircleCollider2D>().enabled = false;
+
+     }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            GetComponent<CircleCollider2D>().enabled = false;
             rb.linearVelocity = Vector2.zero;
         }
     }

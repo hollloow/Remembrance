@@ -334,7 +334,7 @@ public class PlayerBehavior : PlayerAnimation
     //se n tiver atacando, chama o script de attack e cmc a animação de attack
     private void OnAttack(InputAction.CallbackContext obj)
     {
-        if (!Attack.coolDown && !healing)
+        if (!Attack.coolDown && !healing && !PlayerStats.TravarPlayer)
         {
             Attack.Atack(lastInput);
             OnAttackTrigger();
@@ -373,7 +373,6 @@ public class PlayerBehavior : PlayerAnimation
             if (healingTime >= PlayerStats.HealingTime)
             {
                 healing = false;
-                pr.OnHeal();
                 _spriteRenderer.color = Color.white;
                 healingTime = 0;
             }
@@ -384,7 +383,8 @@ public class PlayerBehavior : PlayerAnimation
                 _spriteRenderer.color = new Color(76, 255, 231);
                 float manaCost = PlayerStats.HealingCost / PlayerStats.HealingTime * Time.deltaTime;
                 pr.OnManaCost(manaCost);
-            
+                pr.OnHeal(PlayerStats.HealingEffectiveness /PlayerStats.HealingTime * Time.deltaTime);
+
             }
             else
             {
@@ -400,6 +400,7 @@ public class PlayerBehavior : PlayerAnimation
         //só corrigindo a mana se tiver decimal quebrado
         if (!healing)
         {
+            PlayerStats.PlayerHp = Mathf.RoundToInt(PlayerStats.PlayerHp);
             PlayerStats.PlayerMana = Mathf.RoundToInt(PlayerStats.PlayerMana);
             GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
         }

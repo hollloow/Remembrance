@@ -132,7 +132,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.30474758, y: -0.1328386}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +151,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737120868113247601}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -178,8 +178,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.23559994, y: -0.16753763}
-  m_Radius: 0.8455567
+  m_Offset: {x: 0.09743273, y: -0.28688502}
+  m_Radius: 1.035009
 --- !u!50 &8820498846720750772
 Rigidbody2D:
   serializedVersion: 5
@@ -270,7 +270,7 @@ MonoBehaviour:
   muerto: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   attackPrefab: {fileID: 0}
   howCloseToAttack: 8
-  forceX: 750
+  forceX: 650
   forceY: 1000
 --- !u!82 &5164900727200517123
 AudioSource:

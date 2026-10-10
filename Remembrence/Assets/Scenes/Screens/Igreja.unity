@@ -1767,7 +1767,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 756816097
   m_SortingLayer: 3
-  m_SortingOrder: 4
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4888549234905392731, guid: 5f6a5fb538cbb944ab4950c474fd6fcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1818,12 +1818,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785764004}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3e0483fd30d86842835aa580591f65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFXObject: {fileID: 0}
+  soundFXObject: {fileID: 6848566452962845810, guid: 6e54aa0f384f41040afaef1490ab6f19, type: 3}
 --- !u!4 &785764006
 Transform:
   m_ObjectHideFlags: 0
@@ -3992,7 +3992,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 4.036908, y: 4.30094}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4002,7 +4002,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.829103, y: 9.601878}
   m_EdgeRadius: 0
 --- !u!4 &1506099346
 Transform:

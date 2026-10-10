@@ -41,9 +41,9 @@ public class PlayerReactions
             GenerateImpulseWithForce(impulseAmount);
     }
 
-    public void OnHeal()
+    public void OnHeal(float heal)
     {
-        PlayerStats.PlayerHp += PlayerStats.HealingEffectiveness;
+        PlayerStats.PlayerHp += heal;
         if (PlayerStats.PlayerHp > PlayerStats.PlayerMaxHp)
         {
             PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
