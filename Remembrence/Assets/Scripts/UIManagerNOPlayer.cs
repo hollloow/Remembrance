@@ -62,6 +62,9 @@ public class UIManagerNOPlayer : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("TitleScreen");
+        PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
+        PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
+        PlayerStats.RespawnPosMorte = new Vector3(0, 0, 0);
     }
 
     public void Comecar()

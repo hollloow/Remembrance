@@ -4,12 +4,12 @@ public class Tutorial : MonoBehaviour
 {
     private static bool Jafoi = false;
     private int quantos;
+    void Start()
+    {
+        PlayerStats.TravarPlayer = true;
+    }
     void Update()
     {
-        void Start()
-        {
-            PlayerStats.TravarPlayer = true;
-        }
         if (Jafoi)
         {
             GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().Comecar();

@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pause: Enter'
+  m_text: "Pause: Bot\xE3o verde"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
   m_sharedMaterial: {fileID: 7835144235592376612, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -35.30134, w: 0}
+  m_margin: {x: 0, y: 0, z: -249.02133, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12798,7 +12798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Movimento: Setas'
+  m_text: 'Movimento: Joystick'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
   m_sharedMaterial: {fileID: 7835144235592376612, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
@@ -12864,7 +12864,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -214.129, w: 0}
+  m_margin: {x: 0, y: 0, z: -272.04013, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13897,6 +13897,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1519426521521873214, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Camera
       value: 
@@ -14207,7 +14211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ataque: X'
+  m_text: "Ataque: Bot\xE3o roxo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
   m_sharedMaterial: {fileID: 7835144235592376612, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
@@ -14273,7 +14277,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -27.79232, w: 0}
+  m_margin: {x: 0, y: 0, z: -284.25632, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -18330,7 +18334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cura: A'
+  m_text: "Cura: Bot\xE3o Vermelho"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
   m_sharedMaterial: {fileID: 7835144235592376612, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
@@ -18396,7 +18400,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -35.30134, w: 0}
+  m_margin: {x: 0, y: 0, z: -335.88846, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -18695,7 +18699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pulo: Z'
+  m_text: "Pulo: Bot\xE3o azul"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
   m_sharedMaterial: {fileID: 7835144235592376612, guid: 8be6953ff1d28ff4eb09f56189520877, type: 2}
@@ -18761,7 +18765,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -199.9317, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -19316,7 +19320,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 472709508067901101, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.8
+      value: 10.18
       objectReference: {fileID: 0}
     - target: {fileID: 472709508067901101, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_LocalPosition.y
