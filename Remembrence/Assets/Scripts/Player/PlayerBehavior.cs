@@ -50,7 +50,7 @@ public class PlayerBehavior : PlayerAnimation
         if (GameObject.Find("Poeira"))
         {
             ParticleSystem meuSistemaDeParticulas = GameObject.Find("Poeira").GetComponent<ParticleSystem>();
-            meuSistemaDeParticulas.Simulate(80.0f, true, false);
+            meuSistemaDeParticulas.Simulate(40.0f, true, false);
             meuSistemaDeParticulas.Play();   
         }
         inputC = new InputControls();
@@ -183,7 +183,10 @@ public class PlayerBehavior : PlayerAnimation
 
         if (PlayerStats.TrocarScene)
         {
-            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, 0);   
+            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, 0);
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY
+                             | RigidbodyConstraints2D.FreezeRotation;;
+
         }
         
         //se o player tomou dano, por um segundo n toma mais nenhum dano.
