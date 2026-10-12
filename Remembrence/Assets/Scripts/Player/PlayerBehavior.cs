@@ -37,6 +37,7 @@ public class PlayerBehavior : PlayerAnimation
 
     //script do InputSystem
     private InputControls inputC;
+    private PlayerReactions pr;
     
     private SpriteRenderer _spriteRenderer;
 
@@ -53,6 +54,7 @@ public class PlayerBehavior : PlayerAnimation
             meuSistemaDeParticulas.Simulate(40.0f, true, false);
             meuSistemaDeParticulas.Play();   
         }
+        pr = new PlayerReactions();
         inputC = new InputControls();
         playerSpeed2 = playerSpeed;
         inputC.Enable();
@@ -60,6 +62,7 @@ public class PlayerBehavior : PlayerAnimation
         inputC.Player.Attack.started += OnAttack;
         inputC.Player.Magic.started += OnSpecial;
         inputC.Player.Heal.started += OnHealStart;
+        inputC.Player.Heal.canceled += OnHealFinished;
         inputC.Player.Menu.started += OnMenu;
 
         //Pegar infos do player
@@ -100,6 +103,7 @@ public class PlayerBehavior : PlayerAnimation
 
     private void Update()
     {
+        Debug.Log(healing);
         if (playerSpeed == 0)
         {
             playerSpeed = playerSpeed2;
@@ -379,13 +383,11 @@ public class PlayerBehavior : PlayerAnimation
     // ReSharper disable Unity.PerformanceAnalysis
     void OnHeal()
     {
-        PlayerReactions pr = new PlayerReactions();
-        
         //cmc um timer q aumenta enquanto o botão de cura estiver precionado
         //enquanto isso o player estara tocando uma animação, n pode se mexer e tera a mana drenada
         //se o timer terminar ele ira se curar e a animação acabarar
         //se ele soltar no meio do timer ele n se curarar, mas a animação ira acabar
-        if (healing)
+        if (healing && inputC.Player.Heal.IsInProgress())
         {
             if (healingTime >= PlayerStats.HealingTime || PlayerStats.PlayerHp >= PlayerStats.PlayerMaxHp)
             {
@@ -393,7 +395,7 @@ public class PlayerBehavior : PlayerAnimation
                 _spriteRenderer.color = Color.white;
                 healingTime = 0;
             }
-            else if(inputC.Player.Heal.IsInProgress())
+            else
             {
                 rb.linearVelocityX = 0;
                 animator.SetBool(Running, false);
@@ -404,14 +406,12 @@ public class PlayerBehavior : PlayerAnimation
                 pr.OnHeal(PlayerStats.HealingEffectiveness /PlayerStats.HealingTime * Time.deltaTime);
 
             }
-            else
-            {
-                healing = false;
-                _spriteRenderer.color = Color.white;
-                healingTime = 0;
-
-
-            }
+        }
+        else
+        {
+            healing = false;
+            _spriteRenderer.color = Color.white;
+            healingTime = 0;
         }
 
         
@@ -426,13 +426,14 @@ public class PlayerBehavior : PlayerAnimation
     
     void OnHealStart(InputAction.CallbackContext obj)
     {
-        
         if (PlayerStats.PlayerMana >= PlayerStats.HealingCost)
         {
             healing = true;
         }
     }
-
+    
+    void OnHealFinished(InputAction.CallbackContext obj)
+    {healing = false; }
     //cancelar a cura caso o player toma algum tipo de dano
     public void HealingCancelOnDamage()
     {
