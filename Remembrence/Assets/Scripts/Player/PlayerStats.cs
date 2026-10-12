@@ -39,6 +39,7 @@ public class PlayerStats
     public static bool DoubleJump = false;
 
     public static bool TravarPlayer = false;
+    public static bool TrocarScene = false;
 
     public static string SceneRespawn;
     public static Vector3 RespawnPosMorte;

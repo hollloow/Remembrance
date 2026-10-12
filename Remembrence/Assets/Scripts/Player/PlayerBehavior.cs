@@ -50,7 +50,7 @@ public class PlayerBehavior : PlayerAnimation
         if (GameObject.Find("Poeira"))
         {
             ParticleSystem meuSistemaDeParticulas = GameObject.Find("Poeira").GetComponent<ParticleSystem>();
-            meuSistemaDeParticulas.Simulate(20.0f, true, false);
+            meuSistemaDeParticulas.Simulate(80.0f, true, false);
             meuSistemaDeParticulas.Play();   
         }
         inputC = new InputControls();
@@ -91,6 +91,7 @@ public class PlayerBehavior : PlayerAnimation
         Attack = GetComponent<PlayerAtack>();
         gravity = rb.gravityScale;
         PlayerStats.TravarPlayer = false;
+        PlayerStats.TrocarScene = false;
     }
     
 
@@ -118,7 +119,7 @@ public class PlayerBehavior : PlayerAnimation
             if (!healing)
             {
                 //determinando ond o ataque vai ser direcionado pela última tecla q o jogador clicou 
-                if (inputC.Player.Move.ReadValue<Vector2>().x != 0 )
+                if (inputC.Player.Move2.ReadValue<float>() != 0 )
                 {
                     lastInput = inputC.Player.Move.ReadValue<Vector2>();
                 }
@@ -147,7 +148,7 @@ public class PlayerBehavior : PlayerAnimation
                     {
                         OnRunning();
                     }
-                
+                    
                 }
                 else
                 {
@@ -157,9 +158,17 @@ public class PlayerBehavior : PlayerAnimation
         }
         else
         {
-            animator.SetBool("Running", false);
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX
-                             | RigidbodyConstraints2D.FreezeRotation;
+            if (PlayerStats.TrocarScene)
+            {
+                animator.SetBool("Running", true);
+                GetComponent<BoxCollider2D>().isTrigger = true;
+            }
+            else
+            {
+                animator.SetBool("Running", false);
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX
+                                 | RigidbodyConstraints2D.FreezeRotation;   
+            }
         }
       
     }
@@ -170,6 +179,11 @@ public class PlayerBehavior : PlayerAnimation
         if (!healing && !PlayerStats.Dead)
         {
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);   
+        }
+
+        if (PlayerStats.TrocarScene)
+        {
+            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, 0);   
         }
         
         //se o player tomou dano, por um segundo n toma mais nenhum dano.
@@ -370,7 +384,7 @@ public class PlayerBehavior : PlayerAnimation
         //se ele soltar no meio do timer ele n se curarar, mas a animação ira acabar
         if (healing)
         {
-            if (healingTime >= PlayerStats.HealingTime)
+            if (healingTime >= PlayerStats.HealingTime || PlayerStats.PlayerHp >= PlayerStats.PlayerMaxHp)
             {
                 healing = false;
                 _spriteRenderer.color = Color.white;
@@ -378,6 +392,7 @@ public class PlayerBehavior : PlayerAnimation
             }
             else if(inputC.Player.Heal.IsInProgress())
             {
+                rb.linearVelocityX = 0;
                 animator.SetBool(Running, false);
                 healingTime += Time.deltaTime;
                 _spriteRenderer.color = new Color(76, 255, 231);

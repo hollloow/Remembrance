@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: 
   coordenadas: {x: 0, y: 0, z: 0}
+  andar: 1
 --- !u!114 &6492503865767079809
 MonoBehaviour:
   m_ObjectHideFlags: 0

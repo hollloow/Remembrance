@@ -1305,7 +1305,7 @@ MonoBehaviour:
   dialogue: {fileID: 3732232108435510652}
   texto: {fileID: 1501918048337223490}
   lines: []
-  txtSpeed: 0.2
+  txtSpeed: 0.1
   travar: 0
 --- !u!1 &4264802258212730511
 GameObject:
