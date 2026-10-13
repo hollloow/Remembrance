@@ -65,6 +65,7 @@ public class UIManagerNOPlayer : MonoBehaviour
         PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
         PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
         PlayerStats.RespawnPosMorte = new Vector3(0, 0, 0);
+        Tutorial.Jafoi = false;
     }
 
     public void Comecar()

@@ -103,8 +103,7 @@ public class PlayerBehavior : PlayerAnimation
 
     private void Update()
     {
-        Debug.Log(healing);
-        if (playerSpeed == 0)
+        if (playerSpeed < playerSpeed2)
         {
             playerSpeed = playerSpeed2;
         }
@@ -265,7 +264,7 @@ public class PlayerBehavior : PlayerAnimation
     //checagem se encostou no chao
     private void IsOnGround()
     {
-        if (Physics2D.OverlapCircle(groundCheck.position,0.15f,LayerMask.GetMask("Ground")))
+        if (Physics2D.OverlapCircle(groundCheck.position,0.2f,LayerMask.GetMask("Ground")))
         {
             jumpTimer = 0;
             coyoteTimer = 0;

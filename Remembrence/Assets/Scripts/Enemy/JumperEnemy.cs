@@ -71,7 +71,7 @@ public class JumperEnemy : EnemyBase
             rb.linearVelocityX = 0;
         }
 
-       
+        if (dead) { GetComponent<CircleCollider2D>().enabled = false; }
     }
 
     private void FollowPlayer(float direction)

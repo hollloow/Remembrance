@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    private static bool Jafoi = false;
+    public static bool Jafoi = false;
     private int quantos;
     void Start()
     {

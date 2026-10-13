@@ -51,7 +51,7 @@ public class MeleEnemy : EnemyBase
             rb.linearVelocityX = 0;
         }
 
-       
+       if(dead){attackPrefab.GetComponent<BoxCollider2D>().enabled = false;}
     }
 
     private void FollowPlayer(float direction)
