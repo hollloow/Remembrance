@@ -10,12 +10,9 @@ public class PlayerAnimation : MonoBehaviour
     protected static readonly int Falling = Animator.StringToHash("Falling");
     protected static readonly int Running = Animator.StringToHash("Running");
     protected static readonly int Hurted = Animator.StringToHash("Hurted");
+    protected static readonly int Wake = Animator.StringToHash("Wake");
     
     protected Animator animator;
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     protected void OnRunning()
     {

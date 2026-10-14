@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Dialogo : MonoBehaviour
 {
     [SerializeField] GameObject dialogue;
     [SerializeField] TextMeshProUGUI texto;
+    [SerializeField] bool cmcTutorial;
     public string[] lines;
     public float txtSpeed;
     public bool travar;
@@ -76,6 +78,8 @@ public class Dialogo : MonoBehaviour
             
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(false);
+            if (cmcTutorial)
+            { GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().ComecarTutorial();}
             dialogue.gameObject.GetComponent<Dialogo>().enabled =false;
         }
     }

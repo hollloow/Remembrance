@@ -73,4 +73,10 @@ public class UIManagerNOPlayer : MonoBehaviour
         tutorial.SetActive(false);
         BackGround.SetActive(false);
     }
+    public void ComecarTutorial()
+    {
+        print("asd");
+        tutorial.SetActive(true);
+        BackGround.SetActive(true);
+    }
 }

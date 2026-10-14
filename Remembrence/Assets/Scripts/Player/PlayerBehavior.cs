@@ -44,6 +44,7 @@ public class PlayerBehavior : PlayerAnimation
     [SerializeField] public AudioClip dano;
     [SerializeField] private AudioClip hit;
 
+
     #region Setando_Variaveis
     
     private void OnEnable()
@@ -89,14 +90,36 @@ public class PlayerBehavior : PlayerAnimation
         {
             transform.position = PlayerStats.SpawnPosition;
         }
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         Attack = GetComponent<PlayerAtack>();
         gravity = rb.gravityScale;
         PlayerStats.TravarPlayer = false;
         PlayerStats.TrocarScene = false;
+        if (GameObject.FindGameObjectWithTag("Finish").GetComponent<Tutorial>())
+        {
+            animator.enabled = false;
+            StartCoroutine(ComecoJogo());
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
-    
+
+    IEnumerator ComecoJogo()
+    {
+        GameObject.FindGameObjectWithTag("Finish").active = false;
+        PlayerStats.TravarPlayer = true;
+        yield return new WaitForSeconds(3f);
+        animator.enabled = true;
+        animator.SetBool("Wake",true);
+    }
+
+    public void OnFinishWaking()
+    {
+        animator.SetBool("Wake", false); 
+        GetComponent<BoxCollider2D>().enabled  = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;   
+    }
 
     #endregion
 
@@ -164,13 +187,15 @@ public class PlayerBehavior : PlayerAnimation
             if (PlayerStats.TrocarScene)
             {
                 animator.SetBool("Running", true);
-                GetComponent<BoxCollider2D>().isTrigger = true;
             }
             else
             {
                 animator.SetBool("Running", false);
-                rb.constraints = RigidbodyConstraints2D.FreezePositionX
-                                 | RigidbodyConstraints2D.FreezeRotation;   
+                if (rb.constraints != RigidbodyConstraints2D.FreezePositionY)
+                {
+                    rb.constraints = RigidbodyConstraints2D.FreezePositionX
+                                     | RigidbodyConstraints2D.FreezeRotation;
+                }
             }
         }
       
@@ -186,10 +211,7 @@ public class PlayerBehavior : PlayerAnimation
 
         if (PlayerStats.TrocarScene)
         {
-            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, 0);
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY
-                             | RigidbodyConstraints2D.FreezeRotation;;
-
+            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
         }
         
         //se o player tomou dano, por um segundo n toma mais nenhum dano.
