@@ -903,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087864711885302398, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_Size.y
-      value: 2.6073709
+      value: 2.5493097
       objectReference: {fileID: 0}
     - target: {fileID: 1087864711885302398, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_Offset.x
@@ -911,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087864711885302398, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_Offset.y
-      value: -0.06936264
+      value: -0.04033208
       objectReference: {fileID: 0}
     - target: {fileID: 1087864711885302398, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -932,6 +932,18 @@ PrefabInstance:
     - target: {fileID: 6057607166122899893, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_Name
       value: Jumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261963431844012603, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: m_Radius
+      value: 1.1134964
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261963431844012603, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.097432375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261963431844012603, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.10644424
       objectReference: {fileID: 0}
     - target: {fileID: 8820498846720750772, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
       propertyPath: m_GravityScale

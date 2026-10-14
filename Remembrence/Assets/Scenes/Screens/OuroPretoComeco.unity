@@ -2342,6 +2342,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumper
       objectReference: {fileID: 0}
+    - target: {fileID: 8820498846720750772, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824438753102391587, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: forceX
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824438753102391587, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: forceY
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824438753102391587, guid: 0bf3ccb8e1b035f45890de9b2514f247, type: 3}
+      propertyPath: enemySpeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
