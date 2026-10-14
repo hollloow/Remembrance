@@ -77,15 +77,7 @@ public class PlayerBehavior : PlayerAnimation
     ////setando variaveis iniciais
     private void Awake()
     {
-        if (PlayerStats.Dead)
-        {
-            transform.position = PlayerStats.RespawnPosMorte;
-            PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
-            PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
-            PlayerStats.Dead = false;
-            GameObject.Find("Canvas").GetComponent<UIManager>().TxtHPMudar();
-            GameObject.Find("Canvas").GetComponent<UIManager>().TxtManaMudar();
-        }
+
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
         {
             transform.position = PlayerStats.SpawnPosition;
@@ -97,11 +89,24 @@ public class PlayerBehavior : PlayerAnimation
         gravity = rb.gravityScale;
         PlayerStats.TravarPlayer = false;
         PlayerStats.TrocarScene = false;
-        if (GameObject.FindGameObjectWithTag("Finish").GetComponent<Tutorial>())
+        if (GameObject.FindGameObjectWithTag("Finish"))
         {
             animator.enabled = false;
             StartCoroutine(ComecoJogo());
             GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else if(!GameObject.FindGameObjectWithTag("Finish"))
+        { animator.SetBool("Wake",false); }
+        if (PlayerStats.Dead)
+        {
+            transform.position = PlayerStats.RespawnPosMorte;
+            PlayerStats.PlayerHp = PlayerStats.PlayerMaxHp;
+            PlayerStats.PlayerMana = PlayerStats.PlayerManaMax;
+            PlayerStats.Dead = false;
+            GameObject.Find("Canvas").GetComponent<UIManager>().TxtHPMudar();
+            GameObject.Find("Canvas").GetComponent<UIManager>().TxtManaMudar();
+            animator.SetBool("Wake",true);
+            PlayerStats.TravarPlayer = false;
         }
     }
 
