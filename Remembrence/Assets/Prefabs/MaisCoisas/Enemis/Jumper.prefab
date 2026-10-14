@@ -195,7 +195,7 @@ Rigidbody2D:
   m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: c16d3bd5b8021d748bd6ac94092dc0b9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -259,7 +259,7 @@ MonoBehaviour:
   enemyHP: 20
   enemyDamage: 5
   shake: 1
-  enemySpeed: 75
+  enemySpeed: 100
   detectRange: 13
   rb: {fileID: 0}
   knockbackForce: 0
@@ -270,8 +270,8 @@ MonoBehaviour:
   muerto: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
   attackPrefab: {fileID: 0}
   howCloseToAttack: 8
-  forceX: 650
-  forceY: 1000
+  forceX: 750
+  forceY: 1100
 --- !u!82 &5164900727200517123
 AudioSource:
   m_ObjectHideFlags: 0
