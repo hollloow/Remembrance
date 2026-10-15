@@ -79,7 +79,10 @@ public class Dialogo : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(false);
             if (cmcTutorial)
-            { GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().ComecarTutorial();}
+            {
+                GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().ComecarTutorial();
+               Destroy(GameObject.Find("DialogoCMC")); 
+            }
             dialogue.gameObject.GetComponent<Dialogo>().enabled =false;
         }
     }

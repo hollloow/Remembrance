@@ -25321,7 +25321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2938917062579634158, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: m_Name
-      value: Dialogo
+      value: DialogoCMC
       objectReference: {fileID: 0}
     - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: travar

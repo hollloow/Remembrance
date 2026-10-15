@@ -14,9 +14,9 @@ public class Tutorial : MonoBehaviour
         {
             GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().Comecar();
         }
-        if (Input.anyKey)
+        if (Input.anyKeyDown)
         {
-            if (quantos < 2)
+            if (quantos < 100)
             {
                 GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().Comecar();
                 Jafoi = true;
