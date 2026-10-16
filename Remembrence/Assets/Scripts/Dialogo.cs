@@ -10,6 +10,7 @@ public class Dialogo : MonoBehaviour
     [SerializeField] TextMeshProUGUI texto;
     [SerializeField] bool cmcTutorial;
     public string[] lines;
+    public string[] linesIngles;
     public float txtSpeed;
     public bool travar;
     
@@ -38,7 +39,10 @@ public class Dialogo : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                texto.text = lines[index];
+                if (!PlayerStats.Idioma)
+                { texto.text = linesIngles[index]; }
+                else
+                {texto.text = lines[index]; }
             }
         }
     }

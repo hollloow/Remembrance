@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4794046889424723155, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Pivot.x
@@ -864,6 +864,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77229816426811515, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610325882985434898, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -384
+      objectReference: {fileID: 0}
+    - target: {fileID: 2213505980073285210, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448271124981182921, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3864470266665659777, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -944,6 +960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4064856693208273179, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4904949314256231863, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -956,9 +976,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6909182108079154780, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7694285107939273184, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8181734558151108388, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653002335859903666, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209198823026656154, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4368,6 +4404,23 @@ PrefabInstance:
     - target: {fileID: 2938917062579634158, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: m_Name
       value: Dialogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: quantidadeDeDialogosIngles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[0]'
+      value: You, Young one... Your people don't know what destoyed this lands.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[1]'
+      value: The silence is terrifing... but nothing compares to the despair that
+        whispers in my years
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[2]'
+      value: Help us, Hero... Hush the pain of the one who sings
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

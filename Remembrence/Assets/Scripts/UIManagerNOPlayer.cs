@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -75,8 +76,21 @@ public class UIManagerNOPlayer : MonoBehaviour
     }
     public void ComecarTutorial()
     {
-        print("asd");
         tutorial.SetActive(true);
         BackGround.SetActive(true);
+    }
+
+    public void MudarIdioma()
+    {
+        if (PlayerStats.Idioma)
+        {
+            PlayerStats.Idioma = false;
+            GameObject.Find("Idioma").GetComponentInChildren<TextMeshProUGUI>().text = "English";
+        }
+        else
+        {
+            PlayerStats.Idioma = true;
+            GameObject.Find("Idioma").GetComponentInChildren<TextMeshProUGUI>().text = "Portugues";
+        }
     }
 }

@@ -44,4 +44,6 @@ public class PlayerStats
     public static string SceneRespawn;
     public static Vector3 RespawnPosMorte;
 
+    public static bool Idioma = false;
+
 }

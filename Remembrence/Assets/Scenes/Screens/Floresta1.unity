@@ -24739,7 +24739,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -25032,10 +25032,10 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 1293734857, guid: c098a4308542a6b4a97f4aacb5932db6, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1293734857, guid: c098a4308542a6b4a97f4aacb5932db6, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 1883553530, guid: c098a4308542a6b4a97f4aacb5932db6, type: 3}
   - m_RefCount: 1
@@ -29385,6 +29385,10 @@ PrefabInstance:
     - target: {fileID: 6418502280236431140, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: cmcTutorial
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6434827991458921036, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: m_Name
+      value: Idioma
       objectReference: {fileID: 0}
     - target: {fileID: 6492651928100167533, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_RaycastTarget
