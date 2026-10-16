@@ -25327,6 +25327,42 @@ PrefabInstance:
       propertyPath: 'quantidadeDeDialogos.Array.data[7]'
       value: Talvez... eu deveria seguir em frente.
       objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: quantidadeDeDialogosIngles.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[0]'
+      value: Aaaaah... Ghh...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[1]'
+      value: My body... I can barely move...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[2]'
+      value: It feels like... something is missing?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[3]'
+      value: ...My head... hurts so much...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[4]'
+      value: Where... am I?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[5]'
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[6]'
+      value: "There\u2019s no point... in staying here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[7]'
+      value: Maybe... I should keep going.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

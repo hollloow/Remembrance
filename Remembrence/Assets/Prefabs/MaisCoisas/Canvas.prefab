@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 2638918179229695235}
   - component: {fileID: 4787012236009769418}
   - component: {fileID: 5232627011179236606}
+  - component: {fileID: 7892718537381780474}
   m_Layer: 5
   m_Name: Text Music
   m_TagString: Untagged
@@ -427,6 +428,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7892718537381780474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102997682760662613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Musica
+  textoIngles: Music
 --- !u!1 &1164557426786412949
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +688,7 @@ RectTransform:
   m_Father: {fileID: 7207610220199551743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1000,7 +1015,7 @@ RectTransform:
   m_Father: {fileID: 515799969720280351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1128,6 +1143,7 @@ GameObject:
   - component: {fileID: 5071029810661902862}
   - component: {fileID: 4272161663301327228}
   - component: {fileID: 7326532354921570266}
+  - component: {fileID: 7788721583280395145}
   m_Layer: 5
   m_Name: Text Sound Effects
   m_TagString: Untagged
@@ -1256,6 +1272,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7788721583280395145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569361730987666058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Efeitos Sonoros
+  textoIngles: Sound Effect
 --- !u!1 &3732232108435510652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1350,7 @@ GameObject:
   - component: {fileID: 3127486741648824699}
   - component: {fileID: 6064347509313674793}
   - component: {fileID: 8996653543062299994}
+  - component: {fileID: 3658421658066724487}
   m_Layer: 5
   m_Name: Text Master
   m_TagString: Untagged
@@ -1448,6 +1479,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3658421658066724487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264802258212730511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Mestre
+  textoIngles: Master
 --- !u!1 &4813681551129117989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1654,7 @@ GameObject:
   - component: {fileID: 4508914484228303602}
   - component: {fileID: 6018841296934712931}
   - component: {fileID: 2200963999875989761}
+  - component: {fileID: 4628280162612108782}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1737,6 +1783,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4628280162612108782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936120893449253279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Voltar
+  textoIngles: Back
 --- !u!1 &6014932936311737676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1881,7 @@ GameObject:
   - component: {fileID: 7081336721803953252}
   - component: {fileID: 53038930795675642}
   - component: {fileID: 2913372988419129025}
+  - component: {fileID: 1084425040912044593}
   m_Layer: 5
   m_Name: Idioma
   m_TagString: Untagged
@@ -1942,6 +2003,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1084425040912044593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434827991458921036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Portugues
+  textoIngles: English
 --- !u!1 &6634566411426506693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2223,7 @@ RectTransform:
   m_Father: {fileID: 4075277644080478210}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2361,7 +2436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3083958377539958943
 Transform:
   m_ObjectHideFlags: 0
@@ -2551,7 +2626,7 @@ RectTransform:
   m_Father: {fileID: 3776384736028085583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2662,7 +2737,7 @@ RectTransform:
   m_Father: {fileID: 8254460094532213573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2985,7 +3060,7 @@ RectTransform:
   m_Father: {fileID: 6622918858461814995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3274,13 +3349,63 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7279823907293031543, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
       insertIndex: 1
       addedObject: {fileID: 3083958377539958943}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5309628169125532152, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6368153316307004265}
+    - targetCorrespondingSourceObject: {fileID: 1725672102880964065, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4425967595717916291}
+    - targetCorrespondingSourceObject: {fileID: 4679508724429353296, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8457312210857078519}
+    - targetCorrespondingSourceObject: {fileID: 8319710219470216679, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7410634575106653550}
   m_SourcePrefab: {fileID: 100100000, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+--- !u!1 &3179499870648112341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1725672102880964065, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+  m_PrefabInstance: {fileID: 4318120721972001076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4425967595717916291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179499870648112341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Voltar
+  textoIngles: Resume
 --- !u!1 &3501661292541678290 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 825686569985403878, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
   m_PrefabInstance: {fileID: 4318120721972001076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5231080185021949139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8319710219470216679, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+  m_PrefabInstance: {fileID: 4318120721972001076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7410634575106653550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231080185021949139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Sair
+  textoIngles: Exit
 --- !u!4 &6839325907035624771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7279823907293031543, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
@@ -3291,3 +3416,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7227031181576518665, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
   m_PrefabInstance: {fileID: 4318120721972001076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8233316083965520076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5309628169125532152, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+  m_PrefabInstance: {fileID: 4318120721972001076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6368153316307004265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233316083965520076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: Pausado
+  textoIngles: Paused
+--- !u!1 &8871527832121444452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4679508724429353296, guid: 6f7b38c3ca08faf4d94fb9b0dd3672af, type: 3}
+  m_PrefabInstance: {fileID: 4318120721972001076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8457312210857078519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8871527832121444452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeac82876f9f64b4182de986e0d1c1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Idioma
+  textoPortugues: "Opi\xE7\xF5es"
+  textoIngles: Opitions

@@ -84,13 +84,23 @@ public class UIManagerNOPlayer : MonoBehaviour
     {
         if (PlayerStats.Idioma)
         {
+            //ingles
             PlayerStats.Idioma = false;
             GameObject.Find("Idioma").GetComponentInChildren<TextMeshProUGUI>().text = "English";
+            GameObject.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = "Return";
+            GameObject.Find("Text Sound Effects").GetComponent<TextMeshProUGUI>().text = "Sound Effects";
+            GameObject.Find("Text Music").GetComponent<TextMeshProUGUI>().text = "Music";
+            GameObject.Find("Text Master").GetComponent<TextMeshProUGUI>().text = "Master";
         }
         else
         {
+            //portugues
             PlayerStats.Idioma = true;
             GameObject.Find("Idioma").GetComponentInChildren<TextMeshProUGUI>().text = "Portugues";
+            GameObject.Find("Button").GetComponentInChildren<TextMeshProUGUI>().text = "Voltar";
+            GameObject.Find("Text Sound Effects").GetComponent<TextMeshProUGUI>().text = "Effeitos Sonoros";
+            GameObject.Find("Text Music").GetComponent<TextMeshProUGUI>().text = "Musica";
+            GameObject.Find("Text Master").GetComponent<TextMeshProUGUI>().text = "Mestre";
         }
     }
 }

@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3570164579294948234, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4794046889424723155, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Pivot.x
@@ -4411,16 +4411,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: 'quantidadeDeDialogosIngles.Array.data[0]'
-      value: You, Young one... Your people don't know what destoyed this lands.
+      value: You, young one... Your people don't know what destroyed these lands.
       objectReference: {fileID: 0}
     - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: 'quantidadeDeDialogosIngles.Array.data[1]'
-      value: The silence is terrifing... but nothing compares to the despair that
-        whispers in my years
+      value: The silence is terrifying... but nothing compares to the despair that
+        whispers in my ears.
       objectReference: {fileID: 0}
     - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: 'quantidadeDeDialogosIngles.Array.data[2]'
-      value: Help us, Hero... Hush the pain of the one who sings
+      value: Help us, hero... Hush the pain of the one who sings.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

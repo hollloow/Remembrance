@@ -32,17 +32,29 @@ public class Dialogo : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            if (texto.text == lines[index])
+            if (PlayerStats.Idioma)
             {
-                OnNextLine();
+                if (texto.text == lines[index])
+                {
+                    OnNextLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    texto.text = lines[index];
+                }
             }
             else
             {
-                StopAllCoroutines();
-                if (!PlayerStats.Idioma)
-                { texto.text = linesIngles[index]; }
+                if (texto.text == linesIngles[index])
+                {
+                    OnNextLine();
+                }
                 else
-                {texto.text = lines[index]; }
+                {
+                    StopAllCoroutines();
+                    texto.text = linesIngles[index]; 
+                }
             }
         }
     }
@@ -50,12 +62,21 @@ public class Dialogo : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        StartCoroutine(TypeLine());
+        StartCoroutine(PlayerStats.Idioma ? TypeLine() : TypeLineIngles());
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+            foreach (char c in lines[index].ToCharArray())
+            {
+                texto.text += c;
+                yield return new WaitForSeconds(txtSpeed);
+            }      
+    }
+
+    IEnumerator TypeLineIngles()
+    {
+        foreach (char c in linesIngles[index].ToCharArray())
         {
             texto.text += c;
             yield return new WaitForSeconds(txtSpeed);
@@ -63,11 +84,11 @@ public class Dialogo : MonoBehaviour
     }
     void OnNextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < lines.Length - 1 || index < linesIngles.Length -1)
         {
             index++;
             texto.text = "";
-            StartCoroutine(TypeLine());
+            StartCoroutine(PlayerStats.Idioma ? TypeLine() : TypeLineIngles());
         }
         else
         {
