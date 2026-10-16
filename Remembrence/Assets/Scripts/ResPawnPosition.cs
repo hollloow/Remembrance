@@ -12,7 +12,7 @@ public class ResPawnPosition : MonoBehaviour
           print("papa");
         PlayerStats.RespawnPosMorte = other.transform.position;
         PlayerStats.SceneRespawn = SceneManager.GetActiveScene().name;
-        GetComponent<Light2D>().intensity = 3;
+        GetComponent<Light2D>().enabled = true;
       }
    }
 }

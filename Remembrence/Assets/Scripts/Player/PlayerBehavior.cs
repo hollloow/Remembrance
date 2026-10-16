@@ -77,7 +77,7 @@ public class PlayerBehavior : PlayerAnimation
     ////setando variaveis iniciais
     private void Awake()
     {
-
+        Cursor.visible = false;
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
         {
             transform.position = PlayerStats.SpawnPosition;
@@ -473,8 +473,19 @@ public class PlayerBehavior : PlayerAnimation
 
     private void OnMenu(InputAction.CallbackContext obj)
     {
-        GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().OpenPauseMenu();
-        PlayerStats.TravarPlayer = true;
+        if (!PlayerStats.TravarPlayer)
+        {
+            Cursor.visible = true;
+            GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().OpenPauseMenu();
+            PlayerStats.TravarPlayer = true;  
+        }
+        else
+        {
+            Cursor.visible = false;
+            GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().CloseMainMenu();
+            PlayerStats.TravarPlayer = false;  
+        }
+        
     }
 
     private void OnCollisionStay2D(Collision2D other)
