@@ -34,6 +34,9 @@ public class PlayerBehavior : PlayerAnimation
     //para a cura
     private float healingTime;
     private bool healing;
+    [SerializeField] private GameObject efeitoCura1;
+    [SerializeField] private GameObject efeitoCura2;
+
 
     //script do InputSystem
     private InputControls inputC;
@@ -78,6 +81,7 @@ public class PlayerBehavior : PlayerAnimation
     private void Awake()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
         {
             transform.position = PlayerStats.SpawnPosition;
@@ -418,19 +422,21 @@ public class PlayerBehavior : PlayerAnimation
             if (healingTime >= PlayerStats.HealingTime || PlayerStats.PlayerHp >= PlayerStats.PlayerMaxHp)
             {
                 healing = false;
-                _spriteRenderer.color = Color.white;
                 healingTime = 0;
+                efeitoCura1.SetActive(false);
+                efeitoCura2.SetActive(false);
+                efeitoCura2.SetActive(true);
+
             }
             else
             {
                 rb.linearVelocityX = 0;
                 animator.SetBool(Running, false);
                 healingTime += Time.deltaTime;
-                _spriteRenderer.color = new Color(76, 255, 231);
                 float manaCost = PlayerStats.HealingCost / PlayerStats.HealingTime * Time.deltaTime;
                 pr.OnManaCost(manaCost);
                 pr.OnHeal(PlayerStats.HealingEffectiveness /PlayerStats.HealingTime * Time.deltaTime);
-
+                efeitoCura1.SetActive(true);
             }
         }
         else
@@ -438,6 +444,7 @@ public class PlayerBehavior : PlayerAnimation
             healing = false;
             _spriteRenderer.color = Color.white;
             healingTime = 0;
+            efeitoCura1.SetActive(false);
         }
 
         
@@ -466,6 +473,7 @@ public class PlayerBehavior : PlayerAnimation
         healing = false;
         healingTime = 0;
         _spriteRenderer.color = Color.white;
+        efeitoCura1.SetActive(false);
     }
 
     #endregion
@@ -476,15 +484,13 @@ public class PlayerBehavior : PlayerAnimation
         if (!PlayerStats.TravarPlayer)
         {
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().OpenPauseMenu();
-            PlayerStats.TravarPlayer = true;  
+            PlayerStats.TravarPlayer = true;
+            Time.timeScale = 0;
         }
         else
-        {
-            Cursor.visible = false;
-            GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().CloseMainMenu();
-            PlayerStats.TravarPlayer = false;  
-        }
+        { GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().CloseMainMenu(); }
         
     }
 

@@ -52,6 +52,9 @@ public class UIManagerNOPlayer : MonoBehaviour
         MainMenu.SetActive(false);
         BackGround.SetActive(false);
         PlayerStats.TravarPlayer = false;
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OpenPauseMenu()
