@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2020936276161481733
 Transform:
   m_ObjectHideFlags: 0
@@ -5012,8 +5012,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1261190989
-  m_SortingLayer: 4
+  m_SortingLayerID: 756816097
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_RenderMode: 0
@@ -5090,6 +5090,7 @@ GameObject:
   - component: {fileID: 1107845400317122707}
   - component: {fileID: 1497135304220595772}
   - component: {fileID: 8444731793449934759}
+  - component: {fileID: 4833582658317036333}
   - component: {fileID: 4608699607786466681}
   - component: {fileID: 6325242331464177809}
   - component: {fileID: 3877652884650732346}
@@ -5170,7 +5171,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1250281813103803059, guid: 61702fa73f853fa4c9bdb085359222fe, type: 3}
+  m_Sprite: {fileID: -4745754412075380131, guid: 08025a37bef93dd4fba39f1d46dfe987, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5253,6 +5254,103 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &4833582658317036333
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120903829556704851}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6147898620863432324, guid: 7d464d5d7faae7c4bb57b03bf5257eca, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &4608699607786466681
 Animator:
   serializedVersion: 7
@@ -5295,8 +5393,10 @@ MonoBehaviour:
   groundCheck: {fileID: 7181108053365572762}
   efeitoCura1: {fileID: 7606447346654834485}
   efeitoCura2: {fileID: 1802470956587891132}
+  audioSource: {fileID: 4833582658317036333}
   dano: {fileID: 8300000, guid: 51969e31902c2584c8b1262f36bb7cc3, type: 3}
-  hit: {fileID: 0}
+  hit: {fileID: 8300000, guid: bfe7f861a8dd3594884657ef05322f41, type: 3}
+  walk: {fileID: 8300000, guid: f2a0f74b076144e479b21cac53189e28, type: 3}
 --- !u!114 &3877652884650732346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5397,7 +5497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3438739183409375561
 Transform:
   m_ObjectHideFlags: 0
@@ -10181,8 +10281,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1261190989
-  m_SortingLayer: 4
+  m_SortingLayerID: 756816097
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_RenderMode: 0

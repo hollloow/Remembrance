@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
             if (!other.gameObject.GetComponent<EnemyBase>().dead)
             {
                 other.GetComponent<EnemyBase>().Damaged(PlayerStats.PlayerBasicAttackDamage);
-            
+                GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(GameObject.Find("Player").GetComponent<PlayerBehavior>().hit,transform,0.2f);
                 pr.OnManaIncrease(increase);
                 hit = true;   
             }

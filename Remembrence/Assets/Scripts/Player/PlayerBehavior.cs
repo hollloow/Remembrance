@@ -1,12 +1,9 @@
 using System;
 using System.Collections;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.U2D.Animation;
-using Object = System.Object;
+using Random = UnityEngine.Random;
 
 public class PlayerBehavior : PlayerAnimation
 {
@@ -44,8 +41,10 @@ public class PlayerBehavior : PlayerAnimation
     
     private SpriteRenderer _spriteRenderer;
 
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] public AudioClip dano;
-    [SerializeField] private AudioClip hit;
+    [SerializeField] public AudioClip hit;
+    [SerializeField] private AudioClip walk;
 
 
     #region Setando_Variaveis
@@ -80,6 +79,7 @@ public class PlayerBehavior : PlayerAnimation
     ////setando variaveis iniciais
     private void Awake()
     {
+       
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         if (gameObject.CompareTag("Player") && PlayerStats.SpawnPosition != Vector3.zero)
@@ -215,9 +215,18 @@ public class PlayerBehavior : PlayerAnimation
     {
         if (!healing && !PlayerStats.Dead)
         {
-            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);   
+            rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = walk;
+                float rand = Random.Range(0.7f,1);
+                audioSource.pitch = rand;
+                audioSource.Play();
+            }
         }
 
+        if (move == 0)
+        { audioSource.Stop(); }
         if (PlayerStats.TrocarScene)
         {
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);

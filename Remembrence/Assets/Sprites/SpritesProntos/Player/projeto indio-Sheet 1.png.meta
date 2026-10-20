@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 61702fa73f853fa4c9bdb085359222fe
+guid: 08025a37bef93dd4fba39f1d46dfe987
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1250281813103803059
-    second: projeto indio-Sheet_0
+      213: -4745754412075380131
+    second: projeto indio-Sheet 1_0
   - first:
-      213: -2003995006079867183
-    second: projeto indio-Sheet_1
+      213: 6852446713264318450
+    second: projeto indio-Sheet 1_1
   - first:
-      213: 4595435797646681978
-    second: projeto indio-Sheet_2
+      213: -4433473360114664215
+    second: projeto indio-Sheet 1_2
   - first:
-      213: -1690652915259596109
-    second: projeto indio-Sheet_3
+      213: -4960126409778897990
+    second: projeto indio-Sheet 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,19 +106,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: projeto indio-Sheet_0
+      name: projeto indio-Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,21 +130,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3bafe2b4fa4e95110800000000000000
-      internalID: 1250281813103803059
+      spriteID: d52110d9181b32eb0800000000000000
+      internalID: -4745754412075380131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projeto indio-Sheet_1
+      name: projeto indio-Sheet 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -165,21 +152,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d6e3fad8216034e0800000000000000
-      internalID: -2003995006079867183
+      spriteID: 2f7a96adaf7c81f50800000000000000
+      internalID: 6852446713264318450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projeto indio-Sheet_2
+      name: projeto indio-Sheet 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -187,21 +174,21 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7728d2a28446cf30800000000000000
-      internalID: 4595435797646681978
+      spriteID: 9ec3531f7732972c0800000000000000
+      internalID: -4433473360114664215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: projeto indio-Sheet_3
+      name: projeto indio-Sheet 1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -209,15 +196,15 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b2297b81289988e0800000000000000
-      internalID: -1690652915259596109
+      spriteID: abb58186f471a2bb0800000000000000
+      internalID: -4960126409778897990
       vertices: []
       indices: 
       edges: []
@@ -226,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2b89b20fe1a2da542acc8c4f6d00279d
+    spriteID: 53f918210c5159c46860b7bdc7dfe5d7
     internalID: 0
     vertices: []
     indices: 
@@ -234,12 +221,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      projeto indio-Sheet_0: 1250281813103803059
-      projeto indio-Sheet_1: -2003995006079867183
-      projeto indio-Sheet_2: 4595435797646681978
-      projeto indio-Sheet_3: -1690652915259596109
+      projeto indio-Sheet 1_0: -4745754412075380131
+      projeto indio-Sheet 1_1: 6852446713264318450
+      projeto indio-Sheet 1_2: -4433473360114664215
+      projeto indio-Sheet 1_3: -4960126409778897990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
