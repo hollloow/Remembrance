@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class EnemyBase : MonoBehaviour
     protected IEnumerator OnAudio(AudioClip clip)
     {
         float leght = clip.length;
+        audioSource.pitch = Random.Range(0.8f, 1.2f);
         if (playing && clip == audioSource.clip)
         { }
         else if (!playing)

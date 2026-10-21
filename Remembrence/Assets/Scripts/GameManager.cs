@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class GameManager : MonoBehaviour
     {
         //spawna o obj
         AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
+        
+        //randomizar o pitch
+        audioSource.pitch = Random.Range(0.8f, 1.2f);
         
         //pega o clip
         audioSource.clip = clip;

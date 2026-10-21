@@ -45,7 +45,8 @@ public class PlayerBehavior : PlayerAnimation
     [SerializeField] public AudioClip dano;
     [SerializeField] public AudioClip hit;
     [SerializeField] private AudioClip walk;
-
+    bool isOnGround = false;
+    
 
     #region Setando_Variaveis
     
@@ -216,13 +217,17 @@ public class PlayerBehavior : PlayerAnimation
         if (!healing && !PlayerStats.Dead)
         {
             rb.linearVelocity = new Vector2(move * playerSpeed * Time.deltaTime, rb.linearVelocity.y);
-            if (!audioSource.isPlaying)
+            if (!audioSource.isPlaying && isOnGround)
             {
                 audioSource.clip = walk;
                 float rand = Random.Range(0.7f,1);
                 audioSource.pitch = rand;
                 audioSource.Play();
             }
+            else if(!isOnGround)
+            { audioSource.Stop(); }
+            else if (rb.linearVelocityX == 0)
+            { audioSource.Stop();}
         }
 
         if (move == 0)
@@ -311,11 +316,13 @@ public class PlayerBehavior : PlayerAnimation
             canJump = true;
             isJumping = false;
             rb.sharedMaterial = null;
+            isOnGround = true;
             animator.SetBool("Falling",false);
             print("ss");
         }
         else
         {
+            isOnGround = false;
             print("nn");
             if (!isJumping)
             {

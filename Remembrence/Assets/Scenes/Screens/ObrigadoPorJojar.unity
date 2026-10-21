@@ -1041,6 +1041,14 @@ PrefabInstance:
       propertyPath: m_CullTransparentMesh
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6368153316307004265, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: textoIngles
+      value: Thanks For Playing
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368153316307004265, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
+      propertyPath: textoPortugues
+      value: Obrigado Por Jogar
+      objectReference: {fileID: 0}
     - target: {fileID: 6839325907035624771, guid: 7b8ebac3070e9ac4ab502b77ef4df1c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
