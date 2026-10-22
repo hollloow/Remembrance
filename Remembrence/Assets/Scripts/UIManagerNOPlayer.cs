@@ -9,6 +9,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     [SerializeField] GameObject OptionsKeyBinding;
     [SerializeField] private GameObject BackGround;
     [SerializeField] private GameObject tutorial;
+    [SerializeField] private GameObject audio;
     
     public void CloseGame()
     {
@@ -76,6 +77,7 @@ public class UIManagerNOPlayer : MonoBehaviour
     {
         tutorial.SetActive(false);
         BackGround.SetActive(false);
+        audio.SetActive(true);
     }
     public void ComecarTutorial()
     {

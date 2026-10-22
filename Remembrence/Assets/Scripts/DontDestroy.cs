@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class DontDestroy : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else
+        {
+            Destroy(gameObject);
+        }
+
+        if (SceneManager.GetActiveScene().name == "OuroPretoComeco")
         {
             Destroy(gameObject);
         }
