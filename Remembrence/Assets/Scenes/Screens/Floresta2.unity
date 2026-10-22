@@ -14275,6 +14275,10 @@ PrefabInstance:
       propertyPath: m_Pitch
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4833582658317036333, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5586259160288750195, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: orthographic size
       value: 4.923765

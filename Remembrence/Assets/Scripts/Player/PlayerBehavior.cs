@@ -32,8 +32,6 @@ public class PlayerBehavior : PlayerAnimation
     private float healingTime;
     private bool healing;
     [SerializeField] private GameObject efeitoCura1;
-    [SerializeField] private GameObject efeitoCura2;
-
 
     //script do InputSystem
     private InputControls inputC;
@@ -45,6 +43,8 @@ public class PlayerBehavior : PlayerAnimation
     [SerializeField] public AudioClip dano;
     [SerializeField] public AudioClip hit;
     [SerializeField] private AudioClip walk;
+    [SerializeField] private GameObject audio;
+
     bool isOnGround = false;
     
 
@@ -126,6 +126,7 @@ public class PlayerBehavior : PlayerAnimation
 
     public void OnFinishWaking()
     {
+        audio.SetActive(true);
         animator.SetBool("Wake", false); 
         GetComponent<BoxCollider2D>().enabled  = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;   
@@ -442,8 +443,7 @@ public class PlayerBehavior : PlayerAnimation
                 healing = false;
                 healingTime = 0;
                 efeitoCura1.SetActive(false);
-                efeitoCura2.SetActive(false);
-                efeitoCura2.SetActive(true);
+
 
             }
             else
