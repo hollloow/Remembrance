@@ -201,6 +201,8 @@ public class PlayerBehavior : PlayerAnimation
             else
             {
                 animator.SetBool("Running", false);
+                animator.SetBool("Falling", false);
+                audioSource.Stop();
                 if (rb.constraints != RigidbodyConstraints2D.FreezePositionY)
                 {
                     rb.constraints = RigidbodyConstraints2D.FreezePositionX

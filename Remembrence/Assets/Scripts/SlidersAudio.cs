@@ -27,15 +27,18 @@ public class SlidersAudio : MonoBehaviour
      public void SliderMasterVolume()
      {
          mixer.SetFloat("masterVolume", math.log10(sliderMaster.value) * 20);
+         if(sliderMaster.value == 0){  mixer.SetFloat("masterVolume",-80); }
      }
 
     public void SliderMusicVolume()
     {
         mixer.SetFloat("musicVolume", math.log10(sliderMusic.value)*20);
+        if(sliderMusic.value == 0){ mixer.SetFloat("musicVolume",-80); }
     }
 
     public void SliderSoundVolume()
     {
         mixer.SetFloat("soundVolume", math.log10(sliderAudio.value)*20);
+        if(sliderAudio.value == 0){ mixer.SetFloat("soundVolume",-80); }
     }
 }
