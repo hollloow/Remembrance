@@ -4624,7 +4624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
   cam: {fileID: 2126927595}
-  paralaxEffect: 0.2
+  paralaxEffect: 0.3
 --- !u!1 &1656219669
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,12 +4890,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5767574029089389822, guid: b581a203567e75340a1ff8787a364ca4, type: 3}
+  m_Sprite: {fileID: -7294924465402662237, guid: 708b4ff10499c34489fe471c1e68c694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 5.625}
+  m_Size: {x: 6.4, y: 1.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5363,7 +5363,7 @@ Transform:
   m_GameObject: {fileID: 2126927591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.320778, y: -2.4300022, z: -10}
+  m_LocalPosition: {x: -13.320778, y: -1.5771365, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

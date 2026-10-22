@@ -3685,7 +3685,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1344052966}
   - component: {fileID: 1344052965}
-  - component: {fileID: 1344052967}
   m_Layer: 0
   m_Name: MorroComCeu-0001_0
   m_TagString: Untagged
@@ -3767,20 +3766,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1344052967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344052964}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 2126927595}
-  paralaxEffect: 0.6
 --- !u!1001 &1386658080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4021,7 +4006,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2088670494}
   - component: {fileID: 2088670493}
-  - component: {fileID: 2088670495}
   m_Layer: 0
   m_Name: MorroDaFrente-0008_0
   m_TagString: Untagged
@@ -4103,20 +4087,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2088670495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088670492}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13706bfb7f72f05408753de75155458c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
-  cam: {fileID: 2126927595}
-  paralaxEffect: 0.6
 --- !u!1 &2126927591
 GameObject:
   m_ObjectHideFlags: 0
