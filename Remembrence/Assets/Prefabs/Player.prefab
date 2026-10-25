@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1401200599822029569}
   - component: {fileID: 3758011254786137802}
   - component: {fileID: 5514474784035334099}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Attack
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 756816097
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4745754412075380131, guid: 08025a37bef93dd4fba39f1d46dfe987, type: 3}
@@ -602,7 +602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3438739183409375561
 Transform:
   m_ObjectHideFlags: 0
@@ -4404,7 +4404,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 0}
     randomDistribution: 1
@@ -5387,7 +5387,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 756816097
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_MaskInteraction: 0
   m_RenderMode: 0
