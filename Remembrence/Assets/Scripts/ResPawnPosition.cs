@@ -10,6 +10,7 @@ public class ResPawnPosition : MonoBehaviour
       if (other.gameObject.CompareTag("Player"))
       {
           print("papa");
+          GetComponent<Animator>().enabled = true;
         PlayerStats.RespawnPosMorte = other.transform.position;
         PlayerStats.SceneRespawn = SceneManager.GetActiveScene().name;
         GetComponent<Light2D>().enabled = true;

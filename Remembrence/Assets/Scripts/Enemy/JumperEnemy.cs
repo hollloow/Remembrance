@@ -12,6 +12,8 @@ public class JumperEnemy : EnemyBase
 
     [SerializeField] private float forceX;
     [SerializeField] private float forceY;
+
+    [SerializeField] private AudioClip attackAudio;
     
     private void FixedUpdate()
     {
@@ -87,6 +89,7 @@ public class JumperEnemy : EnemyBase
          rb.linearVelocityX = 0;
         yield return new WaitForSeconds(0.5f);
 
+        StartCoroutine(OnAudio(attackAudio));
         GetComponent<CircleCollider2D>().enabled = true;
         animator.SetTrigger("Attack");
         

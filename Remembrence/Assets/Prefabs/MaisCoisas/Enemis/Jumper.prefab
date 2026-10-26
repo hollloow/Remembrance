@@ -85,7 +85,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 756816097
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6220028154666186528, guid: 60e07cb51667ea943aa2b5aed054708d, type: 3}
@@ -266,12 +266,13 @@ MonoBehaviour:
   dead: 0
   animator: {fileID: 0}
   started: {fileID: 8300000, guid: b2ff2c1468e71f545b2c53ef53b19ad0, type: 3}
-  damages: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
-  muerto: {fileID: 8300000, guid: 14e2dbc5e9411dc4fa08a7ccdc097845, type: 3}
+  damages: {fileID: 8300000, guid: a4565d0d62166d344b8ae64cbd2d5910, type: 3}
+  muerto: {fileID: 8300000, guid: 1ec4f028ca2e5f146af17943e0927acc, type: 3}
   attackPrefab: {fileID: 0}
   howCloseToAttack: 8
   forceX: 750
   forceY: 1100
+  attackAudio: {fileID: 8300000, guid: e0d6650ba0ae25f468351fc5d6e49413, type: 3}
 --- !u!82 &5164900727200517123
 AudioSource:
   m_ObjectHideFlags: 0

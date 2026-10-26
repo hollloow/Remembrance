@@ -17946,7 +17946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 472709508067901101, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.76
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 472709508067901101, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17980,25 +17980,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1088717852497848827, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
+    - target: {fileID: 5059996529242441040, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1088717852497848827, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
-      propertyPath: m_LightVolumeEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1088717852497848827, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
-      propertyPath: m_LightVolumeIntensity
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453612856990956373, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453612856990956373, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1261190989
       objectReference: {fileID: 0}
     - target: {fileID: 7419467332856237059, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_Name
