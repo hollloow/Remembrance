@@ -21,6 +21,7 @@ public class Tutorial : MonoBehaviour
                 GameObject.Find("Canvas").GetComponent<UIManagerNOPlayer>().Comecar();
                 Jafoi = true;
                 PlayerStats.TravarPlayer = false;
+                GameObject.Find("Dialogue").GetComponent<Dialogo>().cmcTutorial = false;
             }
             else
             {
