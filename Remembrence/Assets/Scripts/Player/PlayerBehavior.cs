@@ -112,6 +112,7 @@ public class PlayerBehavior : PlayerAnimation
             GameObject.Find("Canvas").GetComponent<UIManager>().TxtManaMudar();
             animator.SetBool("Wake",true);
             PlayerStats.TravarPlayer = false;
+            GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 

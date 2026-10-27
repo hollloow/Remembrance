@@ -9,7 +9,6 @@ public class Dialogo : MonoBehaviour
     [SerializeField] GameObject dialogue;
     [SerializeField] TextMeshProUGUI texto;
     public bool cmcTutorial;
-    private bool nukarOobjeto;
     public string[] lines;
     public string[] linesIngles;
     public float txtSpeed;

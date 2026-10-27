@@ -7,6 +7,8 @@ public class ComecarOdialogo : MonoBehaviour
     [SerializeField] string[] quantidadeDeDialogos;
     [SerializeField] string[] quantidadeDeDialogosIngles;
     [SerializeField] private bool travar;
+    [SerializeField] private bool nukarOobjeto;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -15,6 +17,7 @@ public class ComecarOdialogo : MonoBehaviour
             GameObject.Find("Dialogue").GetComponent<Dialogo>().linesIngles = quantidadeDeDialogosIngles;
             GameObject.Find("Dialogue").GetComponent<Dialogo>().travar = travar;
             GameObject.Find("Dialogue").GetComponent<Dialogo>().enabled = true;
+            if(nukarOobjeto){GetComponent<BoxCollider2D>().enabled = false;}
         }
     }
 }
