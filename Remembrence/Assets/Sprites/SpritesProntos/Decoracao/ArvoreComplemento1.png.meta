@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9696a5cd99ea4dd4fa9bff196071cbb0
+guid: f495479619c185b4692c8d6dbaa393fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7445293883439975234
-    second: Arvore2_0
+      213: 7435047022340012847
+    second: ArvoreComplemento1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Arvore2_0
+      name: ArvoreComplemento1_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 13
-        width: 97
-        height: 110
+        x: 33
+        y: 26
+        width: 56
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24b04d2175ff25760800000000000000
-      internalID: 7445293883439975234
+      spriteID: f2bf6eecfd79e2760800000000000000
+      internalID: 7435047022340012847
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Arvore2_0: 7445293883439975234
+      ArvoreComplemento1_0: 7435047022340012847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
