@@ -483,6 +483,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6492503865767079809, guid: dd54233fc01605d43a171826ac25549c, type: 3}
+      propertyPath: IN
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7351024240883977271, guid: dd54233fc01605d43a171826ac25549c, type: 3}
       propertyPath: m_Size.x
       value: 2.5086365
@@ -4559,7 +4563,7 @@ GameObject:
   - component: {fileID: 1301953216}
   - component: {fileID: 1301953218}
   - component: {fileID: 1301953217}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NoPostProsCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14687,7 +14691,7 @@ PrefabInstance:
     - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 2126927595}
+      objectReference: {fileID: 1301953216}
     - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_SortingOrder
       value: 1001
@@ -15174,7 +15178,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -15490,7 +15494,7 @@ PrefabInstance:
     - target: {fileID: 6325242331464177809, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: walk
       value: 
-      objectReference: {fileID: 8300000, guid: d63280b396ae88d4e927de7a95d9cbe5, type: 3}
+      objectReference: {fileID: 8300000, guid: 484246c3546a9634cad04382c67b869d, type: 3}
     - target: {fileID: 7181108053365572762, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -15529,6 +15533,7 @@ SceneRoots:
   - {fileID: 973903864}
   - {fileID: 354190450}
   - {fileID: 619394802}
+  - {fileID: 542222006}
   - {fileID: 6139400348633526419}
   - {fileID: 794342344}
   - {fileID: 749347574}
@@ -15556,7 +15561,6 @@ SceneRoots:
   - {fileID: 1621679853}
   - {fileID: 7921066}
   - {fileID: 2106218581}
-  - {fileID: 542222006}
   - {fileID: 510088244}
   - {fileID: 472671083}
   - {fileID: 1789622669}

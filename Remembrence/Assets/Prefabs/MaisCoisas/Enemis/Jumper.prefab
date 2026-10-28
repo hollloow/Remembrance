@@ -272,7 +272,7 @@ MonoBehaviour:
   howCloseToAttack: 8
   forceX: 750
   forceY: 1100
-  attackAudio: {fileID: 8300000, guid: e0d6650ba0ae25f468351fc5d6e49413, type: 3}
+  attackAudio: {fileID: 8300000, guid: 10f4cfe7b6b6c96488e7877016eb3200, type: 3}
 --- !u!82 &5164900727200517123
 AudioSource:
   m_ObjectHideFlags: 0

@@ -482,7 +482,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6147898620863432324, guid: 7d464d5d7faae7c4bb57b03bf5257eca, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 7a2a53fc293ac03458b43c99b2754921, type: 3}
+  m_Resource: {fileID: 8300000, guid: 23361483f802ba646a5c520cdce3a253, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -4424,7 +4424,7 @@ PrefabInstance:
     - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 2126927595}
+      objectReference: {fileID: 1077968805}
     - target: {fileID: 1724953310536231018, guid: 681f05c8764a60b4c936e4bc28237b19, type: 3}
       propertyPath: m_SortingOrder
       value: 1001
@@ -18345,7 +18345,7 @@ PrefabInstance:
     - target: {fileID: 6325242331464177809, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: walk
       value: 
-      objectReference: {fileID: 8300000, guid: d63280b396ae88d4e927de7a95d9cbe5, type: 3}
+      objectReference: {fileID: 8300000, guid: 484246c3546a9634cad04382c67b869d, type: 3}
     - target: {fileID: 6325242331464177809, guid: bfddcf0ac78028a4aaa53369a5b1015c, type: 3}
       propertyPath: audio
       value: 

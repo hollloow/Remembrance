@@ -18,10 +18,14 @@ public class DontDestroy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
+    private void Update()
+    {
         if (SceneManager.GetActiveScene().name == "OuroPretoComeco")
         {
             Destroy(gameObject);
         }
     }
 }
+
