@@ -5391,7 +5391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
   cam: {fileID: 2126927595}
-  paralaxEffect: 0.6
+  paralaxEffect: 0.4
 --- !u!1 &2126927591
 GameObject:
   m_ObjectHideFlags: 0

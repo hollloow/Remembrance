@@ -4895,6 +4895,10 @@ PrefabInstance:
       value: Dialogo
       objectReference: {fileID: 0}
     - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
+      propertyPath: nukarOobjeto
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195026147148002253, guid: 17ccebf0d58c0e642bdc94104228019a, type: 3}
       propertyPath: quantidadeDeDialogosIngles.Array.size
       value: 3
       objectReference: {fileID: 0}

@@ -1170,30 +1170,30 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
-      e00: -0.00006232259
+      e00: 0
       e01: 0
-      e02: 1e-45
-      e03: 2.1787775e+29
-      e10: 4.5915e-41
+      e02: 0.015181199
+      e03: 1.2884918e+10
+      e10: 0
       e11: 0
-      e12: 0
-      e13: 6.66e-43
-      e20: -0.00006029621
-      e21: 2.1787775e+29
-      e22: -1.346076e-39
-      e23: -5.3006e-10
-      e30: 4.5915e-41
-      e31: 6.66e-43
-      e32: 6.68e-43
-      e33: 6.66e-43
+      e12: 1.39e-43
+      e13: 6.32e-43
+      e20: -0.00001715339
+      e21: 0
+      e22: -1.6142786e+29
+      e23: -8.974481e-26
+      e30: 4.5911e-41
+      e31: 0
+      e32: 6.35e-43
+      e33: 6.32e-43
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -5.300578e-10, g: -5.300578e-10, b: -5.300578e-10, a: -5.300578e-10}
+    m_Data: {r: 0, g: 0, b: 0, a: 0}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -9, y: -12, z: 0}
-  m_Size: {x: 19, y: 14, z: 1}
+  m_Size: {x: 21, y: 14, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3218,6 +3218,14 @@ PrefabInstance:
     - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: nukarOobjeto
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
+      propertyPath: 'quantidadeDeDialogos.Array.data[0]'
+      value: "\"Talvez a terra se lembre por n\xF3s, eu me sinto melhor\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
+      propertyPath: 'quantidadeDeDialogosIngles.Array.data[0]'
+      value: "\"Perhaps the earth remembers for us, I feel .\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 7419467332856237059, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: m_Name

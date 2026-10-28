@@ -13,6 +13,8 @@ public class JumperEnemy : EnemyBase
     [SerializeField] private float forceX;
     [SerializeField] private float forceY;
 
+    private bool noAr = false;
+    
     [SerializeField] private AudioClip attackAudio;
     [SerializeField] private AudioClip atingirChao;
     
@@ -30,6 +32,8 @@ public class JumperEnemy : EnemyBase
     //siga o player
     private void CheckPlayerInRange()
     {
+        if (dead) { GetComponent<CircleCollider2D>().enabled = false; }
+
         Vector3 playerPosition = new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x,
             GameObject.FindGameObjectWithTag("Player").transform.position.y, 1);
         
@@ -42,6 +46,7 @@ public class JumperEnemy : EnemyBase
         {
             //se o inimigo tiver perto attack
             colldown = true;
+            noAr = false;
             StartCoroutine(Attack(direction));
            if (direction > 0)
            {
@@ -50,10 +55,9 @@ public class JumperEnemy : EnemyBase
            else
            {
                GetComponent<SpriteRenderer>().flipX = false;
-               rb.freezeRotation = true;
            }
+           rb.freezeRotation = true;
         }
-        
         if (distanceFromPlayer <= detectRange  && !dead && !colldown)
         {
                 FollowPlayer(direction);
@@ -73,8 +77,6 @@ public class JumperEnemy : EnemyBase
             animator.SetBool("Walking", false);
             rb.linearVelocityX = 0;
         }
-
-        if (dead) { GetComponent<CircleCollider2D>().enabled = false; }
     }
 
     private void FollowPlayer(float direction)
@@ -104,6 +106,7 @@ public class JumperEnemy : EnemyBase
             rb.AddForce(new Vector2(-forceX, forceY), ForceMode2D.Impulse);
         }
         StartCoroutine(OnAudio(attackAudio));
+        noAr = true;
         yield return new WaitForSeconds(2.0f);
         colldown = false;
     }
@@ -114,11 +117,18 @@ public class JumperEnemy : EnemyBase
 
      }
 
+     
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            if(colldown){StartCoroutine(OnAudio(atingirChao));}
+            print(noAr);
+            if (noAr)
+            {
+                StartCoroutine(OnAudio(atingirChao));
+                print(noAr);
+            }
+            noAr = false;
             rb.linearVelocity = Vector2.zero;
             GetComponent<CircleCollider2D>().enabled = false;
         }
