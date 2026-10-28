@@ -8,12 +8,13 @@ public class JumperEnemy : EnemyBase
 {
     [SerializeField] private GameObject attackPrefab;
     [SerializeField] private float howCloseToAttack;
-    private bool colldown;
+    private bool colldown = false;
 
     [SerializeField] private float forceX;
     [SerializeField] private float forceY;
 
     [SerializeField] private AudioClip attackAudio;
+    [SerializeField] private AudioClip atingirChao;
     
     private void FixedUpdate()
     {
@@ -40,8 +41,8 @@ public class JumperEnemy : EnemyBase
         if (distanceFromPlayer <= howCloseToAttack && !colldown && !dead)
         {
             //se o inimigo tiver perto attack
-           StartCoroutine(Attack(direction));   
-           colldown = true;
+            colldown = true;
+            StartCoroutine(Attack(direction));
            if (direction > 0)
            {
                GetComponent<SpriteRenderer>().flipX = true;
@@ -89,7 +90,6 @@ public class JumperEnemy : EnemyBase
          rb.linearVelocityX = 0;
         yield return new WaitForSeconds(0.5f);
 
-        StartCoroutine(OnAudio(attackAudio));
         GetComponent<CircleCollider2D>().enabled = true;
         animator.SetTrigger("Attack");
         
@@ -103,7 +103,7 @@ public class JumperEnemy : EnemyBase
         {
             rb.AddForce(new Vector2(-forceX, forceY), ForceMode2D.Impulse);
         }
-
+        StartCoroutine(OnAudio(attackAudio));
         yield return new WaitForSeconds(2.0f);
         colldown = false;
     }
@@ -118,6 +118,7 @@ public class JumperEnemy : EnemyBase
     {
         if (other.gameObject.CompareTag("Ground"))
         {
+            if(colldown){StartCoroutine(OnAudio(atingirChao));}
             rb.linearVelocity = Vector2.zero;
             GetComponent<CircleCollider2D>().enabled = false;
         }
