@@ -15,7 +15,7 @@ public class PlayerReactions
         Transform tr = GameObject.Find("Player").transform;
         GameObject.Find("GameManager").GetComponent<GameManager>().AudioManager(clip,tr,1);
         PlayerStats.PlayerHp -= dano;
-        GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtHPMudar();
+        GameObject.Find("Canvas").GetComponent<UIManager>().TxtHPMudar();
         if (PlayerStats.PlayerHp <= 0)
         {
             PlayerStats.Dead = true;

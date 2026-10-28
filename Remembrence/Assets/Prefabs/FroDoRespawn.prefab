@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 472709508067901101}
   - component: {fileID: 6453612856990956373}
+  - component: {fileID: 6823017800706462867}
   - component: {fileID: 2275004981499565811}
   - component: {fileID: 1088717852497848827}
   - component: {fileID: 6258622466633376479}
   - component: {fileID: 5059996529242441040}
-  - component: {fileID: 6823017800706462867}
   m_Layer: 0
   m_Name: FroDoRespawn
   m_TagString: Untagged
@@ -96,6 +96,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6823017800706462867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419467332856237059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06814d6e44631e46bdfcae52cc1dd83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComecarOdialogo
+  quantidadeDeDialogos:
+  - A terra se lembrara de voce.
+  quantidadeDeDialogosIngles:
+  - You feel calm
+  travar: 1
+  nukarOobjeto: 1
 --- !u!114 &2275004981499565811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a123349fad386c4a8a50d03f9ab168c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResPawnPosition
+  aberta: {fileID: 1965581252, guid: 8abd58283ddea2149ac4675ef420d135, type: 3}
+  fechada: {fileID: -7995748015731086472, guid: 8abd58283ddea2149ac4675ef420d135, type: 3}
 --- !u!114 &1088717852497848827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,20 +248,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6823017800706462867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7419467332856237059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e06814d6e44631e46bdfcae52cc1dd83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ComecarOdialogo
-  quantidadeDeDialogos:
-  - Voce se sente confortavel
-  quantidadeDeDialogosIngles:
-  - You feel calm
-  travar: 1

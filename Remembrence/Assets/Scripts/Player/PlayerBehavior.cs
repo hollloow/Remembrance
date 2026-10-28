@@ -127,7 +127,7 @@ public class PlayerBehavior : PlayerAnimation
 
     public void OnFinishWaking()
     {
-        audio.SetActive(true);
+        if(SceneManager.GetActiveScene().name == "Floresta1"){audio.SetActive(true);}
         animator.SetBool("Wake", false); 
         GetComponent<BoxCollider2D>().enabled  = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;   
@@ -472,7 +472,7 @@ public class PlayerBehavior : PlayerAnimation
         {
             PlayerStats.PlayerHp = Mathf.RoundToInt(PlayerStats.PlayerHp);
             PlayerStats.PlayerMana = Mathf.RoundToInt(PlayerStats.PlayerMana);
-            GameObject.FindWithTag("UI").GetComponent<UIManager>().TxtManaMudar();
+            GameObject.Find("Canvas").GetComponent<UIManager>().TxtManaMudar();
         }
     }
     

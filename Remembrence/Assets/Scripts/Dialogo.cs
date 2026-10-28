@@ -16,6 +16,8 @@ public class Dialogo : MonoBehaviour
     
     private int index;
 
+    [SerializeField] private bool jaFoi;
+
     private void OnEnable()
     {
         texto.text = "";
@@ -95,6 +97,7 @@ public class Dialogo : MonoBehaviour
             if (GameObject.Find("PlaceHolder_HitboxChaoDestrutivel"))
             {
                 Destroy(GameObject.Find("PlaceHolder_HitboxChaoDestrutivel"));
+                JaFoi.DialogoPapa = true;
             }
             if (travar)
             {

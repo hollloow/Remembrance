@@ -18620,21 +18620,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: quantidadeDeDialogos.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: 'quantidadeDeDialogos.Array.data[0]'
-      value: "\u201COs antigos diziam que nada desaparece por completo."
+      value: "\u201CQue a terra acolhe tudo o que nela vive e guarda, em sil\xEAncio,
+        as marcas de cada exist\xEAncia."
       objectReference: {fileID: 0}
     - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: 'quantidadeDeDialogos.Array.data[1]'
-      value: "Que a terra acolhe tudo o que nela vive e guarda, em sil\xEAncio, as
-        marcas de cada exist\xEAncia. "
+      value: 'Talvez seja por isso que, ao tocar esta flor, sinto saudade de algo
+        que nunca conheci.  '
       objectReference: {fileID: 0}
     - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: 'quantidadeDeDialogos.Array.data[2]'
-      value: 'Talvez seja por isso que, ao tocar esta flor, sinto saudade de algo
-        que nunca conheci. '
+      value: "Talvez a terra se lembre por n\xF3s.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 6823017800706462867, guid: 452c9bc55d4867f4d9a4b48b913b46e4, type: 3}
       propertyPath: 'quantidadeDeDialogos.Array.data[3]'

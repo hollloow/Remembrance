@@ -41,7 +41,7 @@ public class PlayerStats
     public static bool TravarPlayer = false;
     public static bool TrocarScene = false;
 
-    public static string SceneRespawn;
+    public static string SceneRespawn = null;
     public static Vector3 RespawnPosMorte;
 
     public static bool Idioma = true;

@@ -1,6 +1,7 @@
 using System;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComecarOdialogo : MonoBehaviour
 {
@@ -11,13 +12,18 @@ public class ComecarOdialogo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (SceneManager.GetActiveScene().name == PlayerStats.SceneRespawn)
+        { }
+        else
         {
-            GameObject.Find("Dialogue").GetComponent<Dialogo>().lines = quantidadeDeDialogos;
-            GameObject.Find("Dialogue").GetComponent<Dialogo>().linesIngles = quantidadeDeDialogosIngles;
-            GameObject.Find("Dialogue").GetComponent<Dialogo>().travar = travar;
-            GameObject.Find("Dialogue").GetComponent<Dialogo>().enabled = true;
-            if(nukarOobjeto){GetComponent<BoxCollider2D>().enabled = false;}
+            if (other.CompareTag("Player"))
+            {
+                GameObject.Find("Dialogue").GetComponent<Dialogo>().lines = quantidadeDeDialogos;
+                GameObject.Find("Dialogue").GetComponent<Dialogo>().linesIngles = quantidadeDeDialogosIngles;
+                GameObject.Find("Dialogue").GetComponent<Dialogo>().travar = travar;
+                GameObject.Find("Dialogue").GetComponent<Dialogo>().enabled = true;
+                if(nukarOobjeto){GetComponent<BoxCollider2D>().enabled = false;}   
+            }   
         }
     }
 }
