@@ -899,7 +899,7 @@ Transform:
   m_GameObject: {fileID: 665456912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.046663, y: -2.4299994, z: -10}
+  m_LocalPosition: {x: -21.33947, y: -2.4299994, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5122,7 +5122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
   cam: {fileID: 2126927595}
-  paralaxEffect: 0.4
+  paralaxEffect: 0.3
 --- !u!1 &1746583253
 GameObject:
   m_ObjectHideFlags: 0
@@ -5228,7 +5228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundManager
   cam: {fileID: 2126927595}
-  paralaxEffect: 0.6
+  paralaxEffect: 0.4
 --- !u!1001 &1774382274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5558,7 +5558,7 @@ Transform:
   m_GameObject: {fileID: 2126927591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.320778, y: -1.5771365, z: -10}
+  m_LocalPosition: {x: -17.068699, y: -1.5771365, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
